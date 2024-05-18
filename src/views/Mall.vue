@@ -3,16 +3,9 @@
     <CartNav />
     <div class="main">
       <SideMenu />
-      <div class="content">
-      <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
-        <CateTitle :title="category" :link ="`/gameCategory/${category}`"/>
-          <div class="CartList">
-            <CartItem v-for="item in filteredItems(category)"
-              :key="item.id"
-              :item="item"/>
-          </div>
-      </div>
-      </div>  
+      
+        <router-view />
+      
     </div>
   </div>
 </template>
@@ -21,14 +14,10 @@
 import CartNav from '@/components/CartNav.vue';
 import SideMenu from '@/components/SideMenu.vue';
 export default {
-  name: 'Mall',
-  components: {
-    CartNav,
-    SideMenu,
-  },
-  data() {
-  return {
-    cartList: [
+  data(){
+    return{
+      mytitle: "すべて",
+      cartList: [
       {
         id: 1,
         gameCategory: "PS4・PS5",
@@ -174,14 +163,15 @@ export default {
         stock: 1
       }
     ],
-    uniqueCategories: [
-      "PS4・PS5",
-      "Nintendo Switch",
-      "Xbox",
-      "PC",
-    ]
-  }
-},
+
+    }
+  },
+  name: 'Mall',
+  components: {
+    CartNav,
+    SideMenu,
+  },
+  
 methods: {
   filteredItems(category) {
     return this.cartList.filter(item => item.gameCategory === category);
@@ -197,27 +187,14 @@ methods: {
   margin-top: 60px;
 }
 
-.content{
+.content {
   margin-top: 60px;
-  margin-left: 250px;
-  height: calc(100vh - 60px);
-  overflow-y:scroll ;
-  width: calc(100% - 250px);
+  margin-left: 250px; /* Adjust according to the width of SideMenu */
+  height: calc(100vh - 60px); /* Adjust according to the height of CartNav */
+  overflow-y: scroll;
+  width: calc(100% - 250px); /* Adjust according to the width of SideMenu */
 }
 
-.CartListItem{
-  position: relative;
-  margin-right: 107px;
-  left: -55px;
-  top: 162px;
-}
-
-.CartList{
-  display: flex;
-  position: relative;
-  left: 131px;
-  bottom: 56px;
-}
 /* Fixed CartNav */
 .CartNav{
   position: fixed;

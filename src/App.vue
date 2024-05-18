@@ -1,10 +1,8 @@
 <template>
   <div id="app">
 <!-- <Navigation/> -->
-<main>
   <!-- <Lunbo/> -->
     <router-view />
-  </main>
   </div>
 </template>
 

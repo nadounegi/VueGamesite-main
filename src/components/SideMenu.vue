@@ -1,21 +1,22 @@
+<!-- SideMenu.vue -->
 <template>
   <div class="SideMenu">
     <div class="SideMenuItem">
       <h2>カテゴリー</h2>
       <ul>
-        <li><router-link to="">すべて</router-link></li>
-        <li><router-link to="#/PS4・PS5">PS4・PS5</router-link></li>
-        <li><router-link to="#/NS">Nintendo Switch</router-link></li>
-        <li><router-link to="#/Xbox">Xbox</router-link></li>
-        <li><router-link to="#/PC">PCゲーム</router-link></li>
+        <li><router-link to="/MallTop">すべて</router-link></li>
+        <li><router-link to="/Mall/PS4PS5">PS4・PS5</router-link></li>
+        <li><router-link to="/Mall/NintendoSwitch">Nintendo Switch</router-link></li>
+        <li><router-link to="/Mall/Xbox">Xbox</router-link></li>
+        <li><router-link to="/Mall/PCGame">PCゲーム</router-link></li>
       </ul>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
-
+  name: 'SideMenu',
 }
 </script>
 
@@ -23,6 +24,7 @@ export default {
 .SideMenu{
   position: fixed;
   top: 208px;
+  left: 2px;
   height: calc(81vh - 60px);
   width: 308px;
   background-color: #f1f1f1;

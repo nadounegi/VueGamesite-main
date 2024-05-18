@@ -1,21 +1,23 @@
 <template>
-    <div>
-      <Navigation />
-      <main>
-        <Lunbo></Lunbo>
-      </main>
-    </div>
-  </template>
-  
-  <script>
-  import Lunbo from '@/components/Lunbo.vue';
-  export default {
-    comments: {
-      Navigation,
-      Lunbo,
-    },
-  };
-  </script>
+  <div>
+    <Navigation />
+    <Lunbo />
+    <!-- 其他内容 -->
+  </div>
+</template>
+
+<script>
+import Navigation from '@/components/Navigation.vue';
+import Lunbo from '@/components/Lunbo.vue';
+
+export default {
+  name: 'Home',
+  components: {
+    Navigation,
+    Lunbo,
+  },
+};
+</script>
   
   <style scoped>
 *{

@@ -1,29 +1,57 @@
-  import Vue from "vue";
-  import VueRouter from "vue-router";
-  // import Navigation from '@/views/Navigation.vue';
-  import Mall from '@/components/Mall.vue';
-  import Home from '@/views/Home.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Mall from '@/views/Mall.vue';
+import MallTop from '@/views/MallTop.vue';
+import Home from '@/views/Home.vue';
+import PS4PS5 from '@/views/PS4PS5.vue';
+import NintendoSwitch from '@/views/NintendoSwitch.vue'; // 修正拼写
+import Xbox from '@/views/Xbox.vue';
+import PC from '@/views/PCGame.vue';
 
-  // Vue Router 初期化
-  Vue.use(VueRouter);
-  // Vue Router インスタンス生成
-  const router = new VueRouter({
-    mode: "history",
-    base: import.meta.env.BASE_URL,
-    routes: [
-      {
-        path: '/Home',
-        name: 'Home',
-        component: Home,
-      
-      },
-      {
-        path: '/Mall',
-        name: 'Mall',
-        component: Mall,
-      },
-  
-    ],
-  });
+// Vue Router 初期化
+Vue.use(VueRouter);
 
-  export default router;
+// Vue Router インスタンス生成
+const router = new VueRouter({
+  mode: "history",
+  base: import.meta.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+    },
+    {
+      path: '/Mall',
+      component: Mall,
+      redirect: '/MallTop',
+      children: [
+        {
+          path: '/MallTop',
+          component: MallTop,
+        },
+        {
+          path: '/PS4PS5',
+          component: PS4PS5,
+        },
+        {
+          path: '/NS', // 修正拼写
+          component: NintendoSwitch,
+        },
+        {
+          path: '/Xbox',
+          name: 'Xbox',
+          component: Xbox,
+        },
+        {
+          path: '/PC',
+          name: 'PC',
+          component: PC,
+        },
+      ]
+    },
+    
+  ],
+});
+
+export default router;

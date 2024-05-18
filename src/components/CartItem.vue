@@ -31,7 +31,7 @@ export default {
 
 .cartItem{
   display: flex;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 20px;
 }
 .cartItemImg{
@@ -46,6 +46,9 @@ export default {
 }
 .cartItemInfo h3{
   font-size: 15px;
+}
+.cartItemInfo p{
+  font-size: 13px;
 }
 /* ボタン部分 */
 .cartButton{

@@ -3,7 +3,7 @@
   <div class="cateTitle">
         <!-- 类别标题 -->
       <h2>{{title}}</h2>
-      <router-link to = "link" class="more">もっと見る</router-link>
+      <router-link :to = "link" class="more">もっと見る</router-link>
     </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
 /* カテゴリータイトル */
 .cateTitle{
   position: relative;
-  left: 134px;
+  left: 81px;
   bottom: 38px;
   margin-bottom: 20px;
 }

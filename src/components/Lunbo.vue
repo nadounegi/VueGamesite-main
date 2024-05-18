@@ -69,8 +69,8 @@ html,body{
   .carousel{
     width: 25%;
     max-width: 100%;
-    bottom: 94px;
-    left: 557px;
+    bottom: 41px;
+    left: 530px;
     height: 100vh;
     display: flex;
     flex-direction: column;
