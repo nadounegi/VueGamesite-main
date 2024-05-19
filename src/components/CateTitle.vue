@@ -1,43 +1,45 @@
-
 <template>
   <div class="cateTitle">
-        <!-- 类别标题 -->
-      <h2>{{title}}</h2>
-      <router-link :to = "link" class="more">もっと見る</router-link>
-    </div>
+    <h2>{{ title }}</h2>
+    <h4><router-link :to="to" class="more">もっと見る</router-link></h4>
+  </div>
 </template>
 
 <script>
 export default {
-  name:'CateTitle',
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
-    link: {
-      type: String,
-      required: true
-    }
-  }
-}
+    to: {
+      type: [String, Object],
+      required: true,
+    },
+  },
+};
 </script>
 
 <style>
-/* カテゴリータイトル */
-.cateTitle{
+.cateTitle {
   position: relative;
   left: 81px;
   bottom: 38px;
   margin-bottom: 20px;
 }
-.cateTitle h4{
+
+.cateTitle h2 {
+  color: black;
+}
+
+.cateTitle h4 {
   position: relative;
   bottom: 31px;
   left: 240px;
   cursor: pointer;
 }
-.more{
+
+.more {
   color: black;
   font-weight: bold;
   text-decoration: none;

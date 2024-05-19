@@ -1,7 +1,7 @@
 <template>
-  <div class="content">
+  <div>
     <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
-      <CateTitle :title="category" :link="`/gameCategory/${category}`" />
+      <CateTitle :title="category" :link="`/Mall/${category}`" />
       <div class="CartList">
         <CartItem
           v-for="item in filteredItems(category)"
@@ -181,19 +181,13 @@ export default {
   left: 80px;
   bottom: 56px;
 }
-content{
-  margin-top: 467px;
-  margin-left: 250px;
-  height: calc(100vh - 60px);
-  overflow-y:scroll ;
-  width: calc(100% - 250px);
-}
+
 
 .CartListItem{
   position: relative;
   margin-right: 107px;
-  left: 209px;
-  top: 353px;
+  left: 50px;
+  top: 62px;
 }
 
 
@@ -204,7 +198,5 @@ content{
   width: 100%;
   z-index: 1000;
 }
-.title{
 
-}
 </style>

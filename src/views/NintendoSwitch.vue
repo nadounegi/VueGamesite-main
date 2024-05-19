@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CateTitle title="NS" link="/Mall/NS"/>
+    <CateTitle :title="title"/>
         <div class="CartList">
       <CartItem v-for="item in cartItems" :key="item.id" :item="item" />
     </div>
@@ -9,7 +9,9 @@
 
 <script>
 export default {
-
+  data(){
+    return
+  }
 }
 </script>
 

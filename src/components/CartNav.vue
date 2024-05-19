@@ -2,17 +2,17 @@
   <div class="CartNav">
     <header class="headerBar">
       <div>
-        <router-link to ="/" ><img src="src/assets/images/logo.png" alt="logo" class="logo"/></router-link>
+        <router-link to ="/" ><img :src="logo" alt="logo" class="logo"/></router-link>
       </div>
       <div class="rightHeader">
         <form action="#">
           <input type="text" name="keywords" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください" name2="keywords">
-          <button type="submit"><img src="src/assets/images/検索用の虫眼鏡アイコン.png" alt=""></button>
+          <button type="submit"><img :src="searchIcon" alt=""></button>
         </form>
         <div class="cart">
           <a href="">
             <h1>CART</h1> 
-            <img src="src/assets/images/shopping-cart.png" alt="">
+            <img :src="shoppingCart" alt="">
           </a>
         </div>
         <div class="login-sign">
@@ -25,8 +25,19 @@
 </template>
 
 <script>
+import logo from '@/assets/images/logo.png';
+import searchIcon from '@/assets/images/検索用の虫眼鏡アイコン.png';
+import shoppingCart from '@/assets/images/shopping-cart.png';
 export default {
   name: 'CartNav',
+  data(){
+    return{
+      logo,
+      searchIcon,
+      shoppingCart
+    }
+  
+  }
 };
 </script>
 <style >

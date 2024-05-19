@@ -31,26 +31,23 @@ const router = new VueRouter({
           component: MallTop,
         },
         {
-          path: '/PS4PS5',
+          path: '/Mall/PS4PS5',
           component: PS4PS5,
         },
         {
-          path: '/NS', // 修正拼写
+          path: '/Mall/NS', // 修正拼写
           component: NintendoSwitch,
         },
         {
-          path: '/Xbox',
-          name: 'Xbox',
+          path: '/Mall/Xbox',
           component: Xbox,
         },
         {
-          path: '/PC',
-          name: 'PC',
+          path: '/Mall/PC',
           component: PC,
         },
       ]
     },
-    
   ],
 });
 
