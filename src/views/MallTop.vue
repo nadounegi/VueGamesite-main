@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
-      <CateTitle :title="category" :link="`/Mall/${category}`" />
+      <CateTitle :title="category" :to="`/Mall/${gameCategory}`" />
       <div class="CartList">
         <CartItem
           v-for="item in filteredItems(category)"
@@ -17,6 +17,7 @@
 export default {
   data() {
     return {
+      gameCategory:["PS4PS5", "Nintendo Switch", "Xbox", "PC"],
       cartList: [
         {
           id: 1,
@@ -173,24 +174,31 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .CartList{
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  left: 80px;
+  left: 61px;
   bottom: 56px;
 }
 
-
-.CartListItem{
+.CartListItem[data-v-0a7ec0a5]{
   position: relative;
   margin-right: 107px;
-  left: 50px;
-  top: 62px;
+  left: 31px;
+  top: 26px;
 }
 
-
+.cateTitle h4[data-v-0a7ec0a5]{
+  position: relative;
+  bottom: 21px;
+  left: 47px;
+  cursor: pointer;
+}
+.cateTitle h2[data-v-0a7ec0a5] {
+  color: black;
+}
 /* Fixed CartNav */
 .CartNav{
   position: fixed;

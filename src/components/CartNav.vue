@@ -71,6 +71,7 @@ export default {
     bottom: 302px;
     left: 440px;
     position: relative;
+    height: 0;
 }
 
 form{

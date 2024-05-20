@@ -6,7 +6,7 @@ import Home from '@/views/Home.vue';
 import PS4PS5 from '@/views/PS4PS5.vue';
 import NintendoSwitch from '@/views/NintendoSwitch.vue'; // 修正拼写
 import Xbox from '@/views/Xbox.vue';
-import PC from '@/views/PCGame.vue';
+import PCGame from '@/views/PCGame.vue';
 
 // Vue Router 初期化
 Vue.use(VueRouter);
@@ -35,7 +35,7 @@ const router = new VueRouter({
           component: PS4PS5,
         },
         {
-          path: '/Mall/NS', // 修正拼写
+          path: '/Mall/NintendoSwitch', // 修正拼写
           component: NintendoSwitch,
         },
         {
@@ -43,8 +43,8 @@ const router = new VueRouter({
           component: Xbox,
         },
         {
-          path: '/Mall/PC',
-          component: PC,
+          path: '/Mall/PCGame',
+          component: PCGame,
         },
       ]
     },

@@ -1,60 +1,88 @@
 <template>
     <div>
-        <CartTitle title="Xbox" link="/Mall/Xbox"/>
+        <CateTitle :title="gameCategory" />
         <div class="CartList">
-      <CartItem v-for="item in cartItems" :key="item.id" :item="item" />
+      <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
     </div>
     </div>
 </template>
 
 <script>
+import HaloInfinite from '@/assets/images/HaloInfinite.png';
+import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
+import MinecraftLegends from '@/assets/images/MinecraftLegends.png';
+import DeadSpace from '@/assets/images/DeadSpace.png';
+
 export default {
-    name: 'Xbox',
-    data(){
-        return{
-            cartItems:[
-            {
-        id: 9,
-        gameCategory: "Xbox",
-        category: "Xbox Series X",
-        name: "Halo Infinite",
-        url: "src/assets/images/HaloInfinite.png",
-        price: 6209,
-        stock: 6
-      },
+  data() {
+    return {
+      gameCategory: "Xbox", // 确保定义了gameCategory
+      CartItems: [
       {
-        id: 10,
-        gameCategory: "Xbox",
-        category: "Xbox Series X",
-        name: "Forza Motorsport",
-        url: "src/assets/images/ForzaMotorsport.png",
-        price:4800,
-        stock: 4
-      },
-      {
-        id: 11,
-        gameCategory: "Xbox",
-        category: "Xbox One",
-        name: "Minecraft Legends",
-        url: "src/assets/images/MinecraftLegends.png",
-        price: 1586,
-        stock: 3
-      },
-      {
-        id: 12,
-        gameCategory: "Xbox",
-        category: "Xbox Series X",
-        name: "Dead Space",
-        url: "src/assets/images/DeadSpace.png",
-        price: 7775,
-        stock: 2
-      }
-    ]
-        }
-    }
-}
+          id: 9,
+          gameCategory: "Xbox",
+          category: "Xbox Series X",
+          name: "Halo Infinite",
+          url: HaloInfinite,
+          price: 6209,
+          stock: 6,
+        },
+        {
+          id: 10,
+          gameCategory: "Xbox",
+          category: "Xbox Series X",
+          name: "Forza Motorsport",
+          url: ForzaMotorsport,
+          price: 4800,
+          stock: 4,
+        },
+        {
+          id: 11,
+          gameCategory: "Xbox",
+          category: "Xbox One",
+          name: "Minecraft Legends",
+          url: MinecraftLegends,
+          price: 1586,
+          stock: 3,
+        },
+        {
+          id: 12,
+          gameCategory: "Xbox",
+          category: "Xbox Series X",
+          name: "Dead Space",
+          url: DeadSpace,
+          price: 7775,
+          stock: 2,
+        },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
+<style scoped>
+.CartList {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10px;
+  bottom: 0px;
+}
 
+.cateTitle{
+  position: relative;
+  left: 37px;
+  top: 34px;
+  margin-bottom: 20px;
+}
+
+.cateTitle h2 {
+  color: black;
+}
+.cateTitle h4 {
+  position: relative;
+  bottom: 0px;
+  left: 17px;
+  cursor: pointer;
+}
 </style>

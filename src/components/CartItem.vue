@@ -1,4 +1,3 @@
-
 <template>
   <!-- 循环遍历cartList，并在同一个循环中渲染类别标题和项目详细信息，以确保 'item' 已定义 -->
   <div>
@@ -31,7 +30,7 @@ export default {
 
 .cartItem{
   display: flex;
-  margin-right: 10px;
+  margin-left: 22px;
   margin-bottom: 20px;
 }
 .cartItemImg{

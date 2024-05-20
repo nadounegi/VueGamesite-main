@@ -188,7 +188,7 @@ methods: {
 }
 
 .content{
-  margin-top: 169px;
+  margin-top: 213px;
   margin-left: 250px;
   height: calc(100vh - 149px);
   overflow-y:scroll ;

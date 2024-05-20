@@ -1,20 +1,88 @@
 <template>
   <div>
-    <CateTitle :title="title"/>
+    <CateTitle :title="gameCategory" />
         <div class="CartList">
-      <CartItem v-for="item in cartItems" :key="item.id" :item="item" />
+      <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
 
 <script>
+import Splatoon3 from '@/assets/images/スプラトゥーン３.png';
+import Mario8 from '@/assets/images/マリオカート8.png';
+import PaperMario from '@/assets/images/ペーパーマリオRPG.png';
+import Zelda from '@/assets/images/ゼルダの伝説.png';
+
 export default {
   data(){
-    return
-  }
-}
+    return{
+      gameCategory: "NS",
+      CartItems:[
+      {
+          id: 5,
+          gameCategory: "Nintendo Switch",
+          category: "NS",
+          name: "スプラトゥーン3",
+          url: Splatoon3,
+          price: 5618,
+          stock: 7,
+      },
+      {
+          id: 6,
+          gameCategory: "Nintendo Switch",
+          category: "NS",
+          name: "マリオカート8",
+          url: Mario8,
+          price: 5307,
+          stock: 4,
+        },
+        {
+          id: 7,
+          gameCategory: "Nintendo Switch",
+          category: "NS",
+          name: "ペーパーマリオRPG",
+          url: PaperMario,
+          price: 5382,
+          stock: 3,
+        },
+        {
+          id: 8,
+          gameCategory: "Nintendo Switch",
+          category: "NS",
+          name: "ゼルダの伝説",
+          url: Zelda,
+          price: 6120,
+          stock: 3,
+        },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
+<style scoped>
+.CartList {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10px;
+  bottom: 0px;
+}
 
+.cateTitle{
+  position: relative;
+  left: 37px;
+  top: 34px;
+  margin-bottom: 20px;
+}
+
+.cateTitle h2 {
+  color: black;
+}
+.cateTitle h4 {
+  position: relative;
+  bottom: 0px;
+  left: 17px;
+  cursor: pointer;
+}
 </style>
