@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CateTitle :title="gameCategory" />
+    <CateTitle :title="gameCategory"/>
     <div class="CartList">
       <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
     </div>
@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Uncarted4 from '@/assets/images/Uncharted4.png';
-import Biohazard4 from '@/assets/images/バイオハザード４.png';
-import RyuGaGotoku8 from '@/assets/images/龍が如く８.png';
-import SandLand from '@/assets/images/SandLand.png';
+// import Uncarted4 from '@/assets/images/Uncharted4.png';
+// import Biohazard4 from '@/assets/images/バイオハザード４.png';
+// import RyuGaGotoku8 from '@/assets/images/龍が如く８.png';
+// import SandLand from '@/assets/images/SandLand.png';
 
 export default {
   data() {
@@ -23,7 +23,7 @@ export default {
           gameCategory: "PS4・PS5",
           category: "PS4",
           name: "UNCHARTED 4",
-          url: Uncarted4,
+          url: this.$imgUrl.Uncarted4,
           price: 6070,
           stock: 10,
         },
@@ -32,7 +32,7 @@ export default {
           gameCategory: "PS4・PS5",
           category: "PS4",
           name: "バイオハザード 4",
-          url: Biohazard4,
+          url: this.$imgUrl.Biohazard4,
           price: 1266,
           stock: 5,
         },
@@ -41,7 +41,7 @@ export default {
           gameCategory: "PS4・PS5",
           category: "PS5",
           name: "龍が如く8",
-          url: RyuGaGotoku8,
+          url: this.$imgUrl.RyuGaGotoku8,
           price: 6120,
           stock: 3,
         },
@@ -50,7 +50,7 @@ export default {
           gameCategory: "PS4・PS5",
           category: "PS5",
           name: "SandLand",
-          url: SandLand,
+          url: this.$imgUrl.SandLand,
           price: 7038,
           stock: 2,
         },
@@ -60,10 +60,14 @@ export default {
 };
 </script>
 
-<style >
+<style>
+.content{
+  margin-top: 215px;
+}
 .CartList {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 64px;
   position: relative;
   left: 10px;
   bottom: 0px;
@@ -71,8 +75,8 @@ export default {
 
 .cateTitle{
   position: relative;
-  left: 37px;
-  top: 1px;
+  left: 123px;
+  top: 29px;
   margin-bottom: 20px;
 }
 
@@ -80,12 +84,19 @@ export default {
   position: relative;
   color: black;
   bottom: 23px;
-  right: 39px;
+  left: 1px;
 }
 .cateTitle h4 {
   position: relative;
   bottom: 21px; 
   left: 17px;
   cursor: pointer;
+}
+.cartItem {
+    display: flex;
+    position: relative;
+    right: 11px;
+    margin-left: 26px;
+    margin-bottom: 20px;
 }
 </style>

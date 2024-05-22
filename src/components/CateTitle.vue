@@ -1,7 +1,9 @@
 <template>
   <div class="cateTitle">
     <h2>{{ title }}</h2>
-    <h4><router-link :to="to" class="more">もっと見る</router-link></h4>
+    <h4>
+      <router-link :to="to" class="more">もっと見る</router-link>
+    </h4>
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .cateTitle {
   position: relative;
   left: 81px;

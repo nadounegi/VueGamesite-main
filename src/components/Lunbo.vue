@@ -69,7 +69,7 @@ html,body{
   .carousel{
     width: 25%;
     max-width: 100%;
-    bottom: 48px;
+    bottom: 41px;
     left: 574px;
     height: 100vh;
     display: flex;

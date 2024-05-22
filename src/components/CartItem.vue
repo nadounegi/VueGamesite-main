@@ -4,14 +4,19 @@
     <div class="cartItem">
       <!-- 项目详细信息 -->
       <div class="cartItemImg">
-        <img :src="item.url" :alt="item.name" width="120px" height="180px">
+        <!--用 router-link 标签包裹 img 标签，以便在单击图像时导航到详细信息页面 -->
+        <router-link :to="{name: 'GameDetail',params:{id: item.id}}">
+          <img :src="item.url" :alt="item.name" width="120px" height="180px">
+        </router-link>
       </div>
       <div class="cartItemInfo">
-        <h3>カテゴリー:{{ item.category }}</h3>
         <p>ゲーム名:{{ item.name }}</p>
+        <h3>カテゴリー:{{ item.category }}</h3>
         <p>価格:{{ item.price }}</p>
         <p>在庫:残り{{ item.stock }}個</p>
-        <button class="cartButton">カートに入れる</button>
+        <div class="buttonContainer">
+        <button @click="addToCart(item)" class="cartButton">カートに入れる</button>
+      </div>
       </div>
     </div>
 </div>
@@ -19,22 +24,33 @@
 
 <script>
 export default {
-  name:'CartItem',
+  // name:'CartItem',
   props:{
     item:Object
+  },
+  methods:{
+    addToCart(item){
+      
+    }
   }
+
 }
 </script>
 
-<style>
+<style scoped>
 
 .cartItem{
   display: flex;
-  margin-left: 22px;
-  margin-bottom: 20px;
-}
-.cartItemImg{
-  margin-right: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  height: 420px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .cartItemImg img{
@@ -44,15 +60,31 @@ export default {
   flex-grow: 1;
 }
 .cartItemInfo h3{
+  font-weight: normal;
   font-size: 15px;
 }
+.cartItemInfo p:first-child{
+  font-weight: bolder;
+  font-size: 18px;
+}
 .cartItemInfo p{
-  font-size: 13px;
+  font-size: 18px;
+
 }
 /* ボタン部分 */
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .cartButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-weight: bold;
+  margin: auto;
   height: 41px;
   width: 115px;
   border-radius: 20px;
@@ -60,6 +92,8 @@ export default {
   background-image: linear-gradient(to left ,rgb(130, 130, 255),rgb(237, 46, 237));
   cursor: pointer;
   transition: background-image 0.5s ease;
+  position: absolute;
+  bottom: 10px;
 }
 .cartButton:hover{
   animation:gradient-animation 3s infinite alternate;

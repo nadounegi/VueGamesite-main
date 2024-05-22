@@ -16,7 +16,7 @@
           @mouseover="showMenu(item)" 
           @mouseleave="hideMenu(item)" 
           class="dropdown">
-            <a href="">{{ item.title }}</a>
+            <router-link :to="item.href">{{ item.title }}</router-link>
             <ul v-if="item.showMenu" 
             class="dropdown_content">
             <!-- 二级下拉导航栏 -->
@@ -25,10 +25,10 @@
               @mouseover="() => showSubMenu(item, subItem)" 
               @mouseleave="() => hideSubMenu(item, subItem)" 
               class="sub_dropdown">
-              <a href=""><img :src="subItem.icon" alt="" 
+              <router-link :to="subItem.href"><img :src="subItem.icon" alt="" 
                 width="30px" height="30px">
                 {{ subItem.title }}
-               </a>
+              </router-link>
             <!-- 三级下拉导航栏 -->
             
                 <!-- <ul v-if="subItem.showSubMenu" class="sub_dropdown_content">
@@ -41,7 +41,7 @@
                 class="sub_dropdown_content" >
                   <li v-for="subSubItem in subItem.subSubItems" 
                   :key="subSubItem.id">
-                    <a href="">{{ subSubItem.title }}</a>
+                    <router-link :to="subSubItem.href">{{ subSubItem.title }}</router-link>
                   </li>
               </ul>
               </li>
@@ -69,35 +69,36 @@ data() {
     menuItems: [
       {
         title: "ゲーム",
-        href: "#game",
+        href: "/MallTop",
         showMenu: false,
         isMouseOverSubMenu: false,
         subItems: [
           { 
            title: "ビデオゲーム",
-           href: "#videogame",
+           href: "/VideoGame",
            id:"arrow1",
            icon:"src/assets/images/videogames.png",
+
            showSubMenu: false,
            timeoutId: null,
            subSubItems: [
               {
                 title: "PS4/PS5",
-                href: "#ps4"
+                href: "/Mall/PS4PS5"
               },
               {
                 title: "Nintendo Switch",
-                href: "#ns"
+                href: "/Mall/NintendoSwitch"
               },
               {
                 title: "XboxOne",
-                href: "#xboxone"
+                href: "/Mall/Xbox"
               },
               ],
           },
           {
            title: "PCゲーム",
-           href: "#pcgame",
+           href: "/Mall/PCGame",
            icon:"src/assets/images/pcgames.png"
           },     
         ],
@@ -150,6 +151,7 @@ header{
 
 .logo{
 background: none;
+
 }  
 
 .top_header{

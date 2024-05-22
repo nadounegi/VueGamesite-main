@@ -9,10 +9,10 @@
 
 <script>
 
-import FF14 from '@/assets/images/ファイナルファンタジーXIV.png';
-import LittleNightmare from '@/assets/images/リトルナイトメア.png';
-import TalesofARISE from '@/assets/images/TalesofARISE.png';
-import Katamari from '@/assets/images/塊魂.png';
+// import FF14 from '@/assets/images/ファイナルファンタジーXIV.png';
+// import LittleNightmare from '@/assets/images/リトルナイトメア.png';
+// import TalesofARISE from '@/assets/images/TalesofARISE.png';
+// import Katamari from '@/assets/images/塊魂.png';
 
 export default {
   
@@ -25,7 +25,7 @@ export default {
           gameCategory: "PC",
           category: "PC",
           name: "ファイナルファンタジーXIV",
-          url: FF14,
+          url: this.$imgUrl.FF14,
           price: 4200,
           stock: 5,
         },
@@ -34,7 +34,7 @@ export default {
           gameCategory: "PC",
           category: "PC",
           name: "リトルナイトメア",
-          url: LittleNightmare,
+          url: this.$imgUrl.LittleNightmare,
           price: 2420,
           stock: 3,
         },
@@ -43,7 +43,7 @@ export default {
           gameCategory: "PC",
           category: "PC",
           name: "Tales of ARISE",
-          url: TalesofARISE,
+          url: this.$imgUrl.TalesofARISE,
           price: 4400,
           stock: 2,
         },
@@ -52,7 +52,7 @@ export default {
           gameCategory: "PC",
           category: "PC",
           name: "みんな大好き塊魂アンコール",
-          url: Katamari,
+          url: this.$imgUrl.Katamari,
           price: 3960,
           stock: 1,
         },

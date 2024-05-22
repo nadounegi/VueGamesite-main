@@ -1,30 +1,39 @@
 <template>
   <div>
-    <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
-      <CateTitle :title="category" :to="getCategoryLink(category)" />
-      <div class="CartList">
-        <CartItem
-          v-for="item in filteredItems(category)"
-          :key="item.id"
-          :item="item"
-        />
-      </div>
-    </div>
+  <CartNav/>
+  <img :src="game.url" alt="">
+  <div class="gameInfo">
+    <h1>{{ game.name }}</h1>
+    <p>価格:{{ game.price }}</p>
+    <p>在庫:{{game.stock}}個</p>
+  </div>
+    <router-link to="/cart" class="btn btn-primary">カートに追加</router-link>
+    <router-link to="/Mall"><p>戻る</p></router-link>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data(){
     return {
-      cartList: [
+      // ゲームのデータを入れる
+      game: {}
+    }
+  },
+  created(){   // ページが読み込まれたタイミングで実行される
+    const gameId = this.$route.params.id;
+    this.fetchGameDetail(gameId);
+  },
+  methods:{
+    fetchGameDetail(id){
+      // ここに全ゲームのデータを入れる
+      const allGames = [
         {
-          id: 1,
+          id:1,
           gameCategory: "PS4・PS5",
-          href: "/Mall/PS4PS5",
           category: "PS4",
           name: "UNCHARTED 4",
-          url: "src/assets/images/Uncharted4.png",
+          url: this.$imgUrl.Uncarted4,
           price: 6070,
           stock: 10,
         },
@@ -34,7 +43,7 @@ export default {
           href: "/Mall/PS4PS5",
           category: "PS4",
           name: "バイオハザード 4",
-          url: "src/assets/images/バイオハザード４.png",
+          url: this.$imgUrl.Biohazard4,
           price: 1266,
           stock: 5,
         },
@@ -44,7 +53,7 @@ export default {
           href: "/Mall/PS4PS5",
           category: "PS5",
           name: "龍が如く8",
-          url: "src/assets/images/龍が如く８.png",
+          url: this.$imgUrl.RyuGaGotoku8,
           price: 6120,
           stock: 3,
         },
@@ -54,7 +63,7 @@ export default {
           href: "/Mall/PS4PS5",
           category: "PS5",
           name: "SandLand",
-          url: "src/assets/images/SandLand.png",
+          url: this.$imgUrl.SandLand,
           price: 7038,
           stock: 2,
         },
@@ -64,7 +73,7 @@ export default {
           href: "/Mall/NintendoSwitch",
           category: "NS",
           name: "スプラトゥーン3",
-          url: "src/assets/images/スプラトゥーン３.png",
+          url: this.$imgUrl.Splatoon3,
           price: 5618,
           stock: 7,
         },
@@ -74,7 +83,7 @@ export default {
           href: "/Mall/NintendoSwitch",
           category: "NS",
           name: "マリオカート8",
-          url: "src/assets/images/マリオカート8.png",
+          url: this.$imgUrl.Mario8,
           price: 5307,
           stock: 4,
         },
@@ -84,7 +93,7 @@ export default {
           href: "/Mall/NintendoSwitch",
           category: "NS",
           name: "ペーパーマリオRPG",
-          url: "src/assets/images/ペーパーマリオRPG.png",
+          url: this.$imgUrl.PaperMario,
           price: 5382,
           stock: 3,
         },
@@ -94,7 +103,7 @@ export default {
           href: "/Mall/NintendoSwitch",
           category: "NS",
           name: "ゼルダの伝説",
-          url: "src/assets/images/ゼルダの伝説.png",
+          url: this.$imgUrl.Zelda,
           price: 6120,
           stock: 3,
         },
@@ -104,7 +113,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox Series X",
           name: "Halo Infinite",
-          url: "src/assets/images/HaloInfinite.png",
+          url: this.$imgUrl.HaloInfinite,
           price: 6209,
           stock: 6,
         },
@@ -114,7 +123,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox Series X",
           name: "Forza Motorsport",
-          url: "src/assets/images/ForzaMotorsport.png",
+          url: this.$imgUrl.ForzaMotorsport,
           price: 4800,
           stock: 4,
         },
@@ -124,7 +133,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox One",
           name: "Minecraft Legends",
-          url: "src/assets/images/MinecraftLegends.png",
+          url: this.$imgUrl.MinecraftLegends,
           price: 1586,
           stock: 3,
         },
@@ -134,7 +143,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox Series X",
           name: "Dead Space",
-          url: "src/assets/images/DeadSpace.png",
+          url: this.$imgUrl.DeadSpace,
           price: 7775,
           stock: 2,
         },
@@ -144,7 +153,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "ファイナルファンタジーXIV",
-          url: "src/assets/images/ファイナルファンタジーXIV.png",
+          url: this.$imgUrl.FF14,
           price: 4200,
           stock: 5,
         },
@@ -154,7 +163,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "リトルナイトメア",
-          url: "src/assets/images/リトルナイトメア.png",
+          url: this.$imgUrl.LittleNightmare,
           price: 2420,
           stock: 3,
         },
@@ -164,7 +173,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "Tales of ARISE",
-          url: "src/assets/images/TalesofARISE.png",
+          url: this.$imgUrl.TalesofARISE,
           price: 4400,
           stock: 2,
         },
@@ -174,68 +183,18 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "みんな大好き塊魂アンコール",
-          url: "src/assets/images/塊魂.png",
+          url: this.$imgUrl.Katamari,
           price: 3960,
           stock: 1,
         },
-      ],
-      uniqueCategories: ["PS4・PS5", "Nintendo Switch", "Xbox", "PC"],
-    };
-  },
-  methods: {
-    filteredItems(category) {
-      return this.cartList.filter(item => item.gameCategory === category);
-    },
-    getCategoryLink(category) {
-      const item = this.cartList.find(item => item.gameCategory === category);
-      return item ? item.href : '#';
-    },
-  },
-};
+      ];
+      this.game = allGames.find(game => game.id == id);
+    }
+  }
+  }
+
 </script>
 
-<style scoped>
-.CartList {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 64px;
-  position: relative;
-  left: 10px;
-  bottom: 58px;
-}
+<style>
 
-.CartListItem {
-  position: relative;
-  margin-right: 107px;
-  left: 31px;
-  top: 26px;
-}
-
-.cateTitle{
-  position: relative;
-  left: 20px;
-  top: -4px;
-  margin-bottom: 20px;
-}
-
-.cateTitle h4 {
-  position: relative;
-  bottom: 24px;
-  left: 63px;
-  cursor: pointer;
-}
-.cateTitle h2 {
-  position: relative;
-  color: black;
-  bottom: 21px;
-  left: 51px;
-}
-
-/* Fixed CartNav */
-.CartNav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
 </style>

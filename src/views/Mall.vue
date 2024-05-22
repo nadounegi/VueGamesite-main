@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import CartNav from '@/components/CartNav.vue';
 import SideMenu from '@/components/SideMenu.vue';
 export default {
   // data(){
@@ -168,7 +167,6 @@ export default {
   // },
   name: 'Mall',
   components: {
-    CartNav,
     SideMenu,
   },
   
@@ -188,7 +186,7 @@ methods: {
 }
 
 .content{
-  margin-top: 213px;
+  margin-top: 279px;
   margin-left: 250px;
   height: calc(100vh - 149px);
   overflow-y:scroll ;

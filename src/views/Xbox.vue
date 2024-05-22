@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import HaloInfinite from '@/assets/images/HaloInfinite.png';
-import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
-import MinecraftLegends from '@/assets/images/MinecraftLegends.png';
-import DeadSpace from '@/assets/images/DeadSpace.png';
+// import HaloInfinite from '@/assets/images/HaloInfinite.png';
+// import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
+// import MinecraftLegends from '@/assets/images/MinecraftLegends.png';
+// import DeadSpace from '@/assets/images/DeadSpace.png';
 
 export default {
   data() {
@@ -23,7 +23,7 @@ export default {
           gameCategory: "Xbox",
           category: "Xbox Series X",
           name: "Halo Infinite",
-          url: HaloInfinite,
+          url: this.$imgUrl.HaloInfinite,
           price: 6209,
           stock: 6,
         },
@@ -32,7 +32,7 @@ export default {
           gameCategory: "Xbox",
           category: "Xbox Series X",
           name: "Forza Motorsport",
-          url: ForzaMotorsport,
+          url: this.$imgUrl.ForzaMotorsport,
           price: 4800,
           stock: 4,
         },
@@ -41,7 +41,7 @@ export default {
           gameCategory: "Xbox",
           category: "Xbox One",
           name: "Minecraft Legends",
-          url: MinecraftLegends,
+          url: this.$imgUrl.MinecraftLegends,
           price: 1586,
           stock: 3,
         },
@@ -50,7 +50,7 @@ export default {
           gameCategory: "Xbox",
           category: "Xbox Series X",
           name: "Dead Space",
-          url: DeadSpace,
+          url: this.$imgUrl.DeadSpace,
           price: 7775,
           stock: 2,
         },
@@ -60,7 +60,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .CartList {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +78,7 @@ export default {
 
 .cateTitle h2 {
   color: black;
+  left: 4px;
 }
 .cateTitle h4 {
   position: relative;

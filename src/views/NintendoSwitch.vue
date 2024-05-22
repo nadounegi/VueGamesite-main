@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import Splatoon3 from '@/assets/images/スプラトゥーン３.png';
-import Mario8 from '@/assets/images/マリオカート8.png';
-import PaperMario from '@/assets/images/ペーパーマリオRPG.png';
-import Zelda from '@/assets/images/ゼルダの伝説.png';
+// import Splatoon3 from '@/assets/images/スプラトゥーン３.png';
+// import Mario8 from '@/assets/images/マリオカート8.png';
+// import PaperMario from '@/assets/images/ペーパーマリオRPG.png';
+// import Zelda from '@/assets/images/ゼルダの伝説.png';
 
 export default {
   data(){
     return{
-      gameCategory: "NS",
+      gameCategory: "Nintendo Switch",
       CartItems:[
       {
           id: 5,
           gameCategory: "Nintendo Switch",
           category: "NS",
           name: "スプラトゥーン3",
-          url: Splatoon3,
+          url: this.$imgUrl.Splatoon3,
           price: 5618,
           stock: 7,
       },
@@ -32,7 +32,7 @@ export default {
           gameCategory: "Nintendo Switch",
           category: "NS",
           name: "マリオカート8",
-          url: Mario8,
+          url: this.$imgUrl.Mario8,
           price: 5307,
           stock: 4,
         },
@@ -41,7 +41,7 @@ export default {
           gameCategory: "Nintendo Switch",
           category: "NS",
           name: "ペーパーマリオRPG",
-          url: PaperMario,
+          url: this.$imgUrl.PaperMario,
           price: 5382,
           stock: 3,
         },
@@ -50,7 +50,7 @@ export default {
           gameCategory: "Nintendo Switch",
           category: "NS",
           name: "ゼルダの伝説",
-          url: Zelda,
+          url: this.$imgUrl.Zelda,
           price: 6120,
           stock: 3,
         },
@@ -65,18 +65,19 @@ export default {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  left: 10px;
+  left: 42px;
   bottom: 0px;
 }
 
 .cateTitle{
   position: relative;
-  left: 37px;
-  top: 34px;
+  left: 106px;
+  top: 19px;
   margin-bottom: 20px;
 }
 
 .cateTitle h2 {
+  left: 37px;
   color: black;
 }
 .cateTitle h4 {
