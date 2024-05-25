@@ -1,5 +1,6 @@
 <template>
     <div>
+        <BreadCrumb/>
         <CateTitle :title="gameCategory" />
         <div class="CartList">
       <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+
 // import HaloInfinite from '@/assets/images/HaloInfinite.png';
 // import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
 // import MinecraftLegends from '@/assets/images/MinecraftLegends.png';

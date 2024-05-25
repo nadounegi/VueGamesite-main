@@ -1,6 +1,7 @@
 <template>
   <div>
-    <CartNav />
+    <CartNav/>
+    <BreadCrumb/>
     <div class="main">
       <SideMenu />
       <div class="content">
@@ -191,6 +192,11 @@ methods: {
   height: calc(100vh - 149px);
   overflow-y:scroll ;
   width: calc(100% - 250px);
+}
+
+.navList {
+  margin: 20px 0;
+  font-size: 14px;
 }
 
 /* Fixed CartNav */

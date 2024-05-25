@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BreadCrumb />
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
       <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
@@ -8,6 +9,8 @@
 </template>
 
 <script>
+import BreadCrumb from '../components/BreadCrumb.vue';
+
 // import Uncarted4 from '@/assets/images/Uncharted4.png';
 // import Biohazard4 from '@/assets/images/バイオハザード４.png';
 // import RyuGaGotoku8 from '@/assets/images/龍が如く８.png';

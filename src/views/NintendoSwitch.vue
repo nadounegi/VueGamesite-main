@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BreadCrumb/>
     <CateTitle :title="gameCategory" />
         <div class="CartList">
       <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+
 // import Splatoon3 from '@/assets/images/スプラトゥーン３.png';
 // import Mario8 from '@/assets/images/マリオカート8.png';
 // import PaperMario from '@/assets/images/ペーパーマリオRPG.png';
@@ -65,7 +67,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  left: 42px;
+  left: 25px;
   bottom: 0px;
 }
 

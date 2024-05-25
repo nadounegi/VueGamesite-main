@@ -10,6 +10,8 @@ import CartItem from '@/components/CartItem.vue';
 import CateTitle from '@/components/CateTitle.vue';
 import Mall from '@/views/Mall.vue';
 import MallTop from '@/views/MallTop.vue';
+// ナビリストをグローバル登録
+import BreadCrumb from '@/components/BreadCrumb.vue';
 //画像のパスをグローバル登録
 import Uncarted4 from '@/assets/images/Uncharted4.png';
 import Biohazard4 from '@/assets/images/バイオハザード４.png';
@@ -56,6 +58,7 @@ Vue.component('CartItem', CartItem);
 Vue.component('CateTitle', CateTitle);
 Vue.component('MallTop',MallTop)
 Vue.component('Mall',Mall);
+Vue.component('BreadCrumb',BreadCrumb);
 
 new Vue({
   render: h => h(App),

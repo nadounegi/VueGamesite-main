@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navigation />
+    <BreadCrumb/>
     <Lunbo />
     <!-- 其他内容 -->
   </div>
@@ -33,6 +34,15 @@ header {
 }
 .right_nav{
   margin-bottom: 198px;
+}
+
+.breadcrumb{
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 14px;
+    left: 92px;
+    top: 54px;
 }
 
 main{

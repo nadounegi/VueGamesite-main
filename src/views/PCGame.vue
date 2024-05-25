@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BreadCrumb/>
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
       <CartItem v-for="item in CartItems" :key="item.id" :item="item"/>
@@ -8,7 +9,6 @@
 </template>
 
 <script>
-
 // import FF14 from '@/assets/images/ファイナルファンタジーXIV.png';
 // import LittleNightmare from '@/assets/images/リトルナイトメア.png';
 // import TalesofARISE from '@/assets/images/TalesofARISE.png';

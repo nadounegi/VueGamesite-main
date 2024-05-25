@@ -1,7 +1,8 @@
 <template>
   <div>
+      <BreadCrumb/>
     <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
-      <CateTitle :title="category" :to="getCategoryLink(category)" />
+      <CateTitle :title="category" :to="getCategoryLink(category)" :showLink="true"/>
       <div class="CartList">
         <CartItem
           v-for="item in filteredItems(category)"
@@ -14,6 +15,8 @@
 </template>
 
 <script>
+import BreadCrumb from '../components/BreadCrumb.vue';
+
 export default {
   data() {
     return {
@@ -194,7 +197,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .CartList {
   display: flex;
   flex-wrap: wrap;
@@ -229,6 +232,12 @@ export default {
   color: black;
   bottom: 21px;
   left: 51px;
+}
+.breadcrumb {
+  margin-left: 120px;
+  font-size: 14px;
+  top:20px;
+  position: relative;
 }
 
 /* Fixed CartNav */

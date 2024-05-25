@@ -22,10 +22,14 @@ const router = new VueRouter({
       path: '/',
       name: 'Home',
       component: Home,
+   
     },
     {
       path: '/VideoGame',
       component: VideoGame,
+      meta:{
+        breadcrumb: 'ビデオゲーム'
+      }
     },
     {
       path: '/Mall',
@@ -35,30 +39,48 @@ const router = new VueRouter({
         {
           path: '/MallTop',
           component: MallTop,
+          meta:{
+            breadcrumb: 'ゲームショップ'
+          },
         },
         {
           path: '/Mall/PS4PS5',
           component: PS4PS5,
+          meta:{
+            breadcrumb: '/PS4/PS5'
+          },
         },
         {
           path: '/Mall/NintendoSwitch', // 修正拼写
           component: NintendoSwitch,
+          meta:{
+            breadcrumb: 'Nintendo Switch'
+          },
         },
         {
           path: '/Mall/Xbox',
           component: Xbox,
+          meta:{
+            breadcrumb: 'Xbox'
+          },
         },
         {
           path: '/Mall/PCGame',
           component: PCGame,
+          meta:{
+            breadcrumb: 'PCゲーム'
+          },
         },
+        {
+          path: '/GameDetail/:id',
+          name: 'GameDetail',
+          component: GameDetail,
+          meta:{
+            breadcrumb: 'ゲームカート'
+          }
+        }
       ]
     },
-    {
-      path: '/GameDetail/:id',
-      name: 'GameDetail',
-      component: GameDetail,
-    }
   ],
 });
 

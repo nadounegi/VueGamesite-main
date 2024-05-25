@@ -1,7 +1,8 @@
 <template>
   <div class="cateTitle">
-    <h2>{{ title }}</h2>
-    <h4>
+    <h2 v-if="!showLink">{{ title }}</h2>
+    <router-link v-else :to="to"><h2>{{ title }}</h2></router-link>
+    <h4 v-if="showLink">
       <router-link :to="to" class="more">もっと見る</router-link>
     </h4>
   </div>
@@ -17,6 +18,10 @@ export default {
     to: {
       type: [String, Object],
       required: true,
+    },
+    showLink: {
+      type: Boolean,
+      default: false,
     },
   },
 };
