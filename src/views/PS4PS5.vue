@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import BreadCrumb from '../components/BreadCrumb.vue';
 
 // import Uncarted4 from '@/assets/images/Uncharted4.png';
 // import Biohazard4 from '@/assets/images/バイオハザード４.png';
@@ -65,7 +64,10 @@ export default {
 
 <style>
 .content{
+  overflow-y: scroll;
+  overflow-x: hidden;
   margin-top: 215px;
+  height: calc(125vh - 407px);
 }
 .CartList {
   display: flex;
@@ -86,7 +88,7 @@ export default {
 .cateTitle h2{
   position: relative;
   color: black;
-  bottom: 23px;
+  bottom: 7px;
   left: 1px;
 }
 .cateTitle h4 {

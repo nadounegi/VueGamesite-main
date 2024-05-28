@@ -62,14 +62,17 @@ export default {
 };
 </script>
 
-<style scoped>
-.CartList {
+<style >
+.content{
+  margin-top: 134px;
+}
+/* .CartList {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   left: 25px;
   bottom: 0px;
-}
+} */
 
 .cateTitle{
   position: relative;
@@ -79,6 +82,8 @@ export default {
 }
 
 .cateTitle h2 {
+  position: relative;
+  top: 5px;
   left: 37px;
   color: black;
 }

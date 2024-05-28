@@ -12,7 +12,7 @@
       <div class="cartItemInfo">
         <p>ゲーム名:{{ item.name }}</p>
         <h3>カテゴリー:{{ item.category }}</h3>
-        <p>価格:{{ item.price }}</p>
+        <p>価格:{{formattedPrice(item.price) }}</p>
         <p>在庫:残り{{ item.stock }}個</p>
         <div class="buttonContainer">
         <button @click="addToCart(item)" class="cartButton">カートに入れる</button>
@@ -45,7 +45,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   width: 230px;
-  height: 420px;
+  height: 409px;
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;

@@ -2,7 +2,7 @@
     <nav class="breadcrumb">
       <router-link to="/">ホーム</router-link>
       <span v-for="(crumb, index) in breadcrumbs" :key="index">
-        <span v-if="index < breadcrumbs.length - 1">></span>
+        <span v-if="index > 0"> > </span>
         <router-link :to="crumb.path">{{ crumb.meta.breadcrumb }}</router-link>
       </span>
     </nav>

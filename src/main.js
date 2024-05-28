@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router'; 
+//メソッドをグローバル化にするため
+import mixins from './mixins.js'
+
 
 //コンポーネントをグローバル登録
 import Navigation from '@/components/Navigation.vue';
@@ -59,6 +62,9 @@ Vue.component('CateTitle', CateTitle);
 Vue.component('MallTop',MallTop)
 Vue.component('Mall',Mall);
 Vue.component('BreadCrumb',BreadCrumb);
+
+//グローバルメソッドを登録するため
+Vue.mixin(mixins);
 
 new Vue({
   render: h => h(App),

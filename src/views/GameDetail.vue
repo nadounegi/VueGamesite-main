@@ -1,6 +1,7 @@
 <template>
   <div>
   <CartNav/>
+  <div class="cartDetail">
   <BreadCrumb/>
   <div class="gameDetail">
     <div class="gameCard">
@@ -14,15 +15,18 @@
 </div>
 </div>
 <div class="cartItem">
-    <p>価格:{{ game.price }}</p>
+    <!-- <p>価格:{{ game.price }}</p> -->
+    <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included">税込</span></p>
     <p>在庫:{{game.stock}}個</p>
+    <hr>
     <div class="cartBtns">
   <button @click="count--" class="cartBtn">-</button>
   <span>{{ count }}</span>
   <button @click ="count++" class="cartBtn">+</button>
 </div>
-    <router-link to="/cart" class="btn btn-primary"><p>カートに追加</p></router-link>
+    <router-link to="/cart" class="btn-primary"><p>カートに追加</p></router-link>
   </div>
+</div>
   </div>
   </div>
 </template>
@@ -148,7 +152,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox Series X",
           name: "Forza Motorsport",
-          description: "",
+          description: "新しいシングル プレイ モードでライバルに差をつけよう。マルチ プレイヤーでフレンドとレースをしよう。最先端の AI と高度な物理エンジンで、世界的に有名なコースと実在する 500 台以上のクルマをリアルに再現。",
           url: this.$imgUrl.ForzaMotorsport,
           price: 4800,
           stock: 4,
@@ -159,7 +163,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox One",
           name: "Minecraft Legends",
-          description: "",
+          description: "ピグリンたちによるネザーの侵食はオーバーワールド全体に広がりつつあり、触れたもの全てを焼き尽くしていくでしょう。この平穏な大地のヒーローになる準備はいいですか？綿密な戦略を立て、ピグリンたちとの壮大な戦いに挑みましょう。でも気を付けてください… 彼らは必ず反撃してきます。日中はピグリンたちの基地に攻め込み、日が沈んだら仲間たちと守りを固めましょう。宝物と危険が満ち溢れる緑豊かバイオームを旅して新しい仲間と出会い、良く知ったモブたちと再会しましょう。そして仲間たちと共に、世界を救いましょう。",
           url: this.$imgUrl.MinecraftLegends,
           price: 1586,
           stock: 3,
@@ -170,7 +174,7 @@ export default {
           href: "/Mall/Xbox",
           category: "Xbox Series X",
           name: "Dead Space",
-          description: "",
+          description: "SFサバイバルホラーの名作が復活します。オリジナルのスリリングな世界観を忠実に再現しながら、ビジュアル、オーディオ、ゲームプレイの改善を含め、さらに没入感のある体験を提供するために完全に再構築されました。",
           url: this.$imgUrl.DeadSpace,
           price: 7775,
           stock: 2,
@@ -181,7 +185,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "ファイナルファンタジーXIV",
-          description: "",
+          description: "ファイナルファンタジーXIVは、壮大な“エオルゼア”という世界を舞台に、ネットワークを通じて、世界中のプレイヤーと共に冒険できる、オンラインゲームです。冒険は戦いだけでなく、アイテムの製作や、チョコボの育成など様々あり、その遊び方は冒険者であるあなた次第!お馴染みの召喚獣やモーグリ、飛空挺…そして仲間たちが待つ、新たなFFの世界に旅立ちましょう!",
           url: this.$imgUrl.FF14,
           price: 4200,
           stock: 5,
@@ -192,7 +196,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "リトルナイトメア",
-          description: "",
+          description: "子供のころに感じた奇妙な恐怖や不安を覚えていますか？食欲の尽きることがない魔物が巣食う謎の船舶「ザ・モウ」の中、恐ろしくも懐かしい感覚を思い出したあなたの手で、囚われた幼き少女「シックス」を無事に脱出させましょう。",
           url: this.$imgUrl.LittleNightmare,
           price: 2420,
           stock: 3,
@@ -203,7 +207,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "Tales of ARISE",
-          description: "",
+          description: "３００年の支配。謎の仮面。失われた痛みと記憶。強大な炎の剣のただひとりの使い手となり、触れ得ざる少女や仲間たちと共に圧制者に立ち向かえ。進化したグラフィックが描き出す表情豊かなキャラクターたちの織りなす解放の戦いの物語。",
           url: this.$imgUrl.TalesofARISE,
           price: 4400,
           stock: 2,
@@ -214,7 +218,7 @@ export default {
           href: "/Mall/PCGame",
           category: "PC",
           name: "みんな大好き塊魂アンコール",
-          description: "",
+          description: "ふとしたことで宇宙の星々をウッカリ破壊しつくしてしまった大コスモの王様。息子である王子を地球に向かわせ、大きい塊をつくることを命じます。王子は地球上のあらゆるモノを巻き込んで、どんどん塊を大きくしていきました。そうしてつくられた塊たちはキラキラと宇宙に浮かび、失われた星空を甦らせました。星空を復活させると、次第に世界のあちらこちらで王様のファンが増えていきました。ファンからの活躍を願う声に応えたい王様は、みんなの夢を叶えるべく、今日も王子は塊を転がします。そんなゲームです。",
           url: this.$imgUrl.Katamari,
           price: 3960,
           stock: 1,
@@ -228,6 +232,10 @@ export default {
 </script>
 
 <style scoped>
+.cartDetail{
+  position: relative;
+  bottom: 12px;
+}
 .breadcrumb{
   display: flex;
   align-items: center;
@@ -242,6 +250,11 @@ export default {
   margin: 20px;
   left: 58px;
   top: 12px;
+}
+hr{
+  position: relative;
+  top: 34px;
+  border-color: #c5d9dae3;
 }
 .gameCard{
   display: flex;
@@ -261,11 +274,32 @@ export default {
 
 .cartItem{
   display: flex;
+  border-radius: 20px;
   flex-direction: column;
+  background-color: #e0e0e081;
+  width: 200px;
+  height: 278px;
 }
+.cartItem span:nth-child(1){
+  font-size: 35px;
+  position: relative;
+  top: 2px;
+}
+
+.tax-included {
+  font-size: 12px;
+  color: #555;
+  position: relative;
+  top: 1px;
+  margin-left: 8px;
+}
+
 .cartBtns{
   display: flex;
-  gap: 9px
+  margin: auto;
+  gap: 9px;
+  position: relative;
+  bottom: 40px;
 }
 .cartBtn{
   width: 30px;
@@ -275,6 +309,37 @@ export default {
   border-radius: 29%;
   cursor: pointer;
 }
+
+.btn-primary{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 45px;
+  height: 41px;
+  width: 115px;
+  border-radius: 20px;
+  border: none;
+  background-image: linear-gradient(to left ,rgb(130, 130, 255),rgb(237, 46, 237));
+  cursor: pointer;
+  transition: background-image 0.5s ease;
+  position: absolute;
+  bottom: 10px;
+  text-decoration: none;
+}
+.btn-primary:hover{
+  animation:gradient-animation 3s infinite alternate;
+}
+@keyframes gradient-animation{
+  0%{
+    background-image: linear-gradient(to right,rgb(130, 130, 255),rgb(237, 46, 237));
+  }
+  100%{
+    background-image:linear-gradient(to right,rgb(51, 223, 238),rgb(36, 116, 220));
+  }
+}
+
 span{
   position: relative;
   top: 22px;
@@ -299,5 +364,11 @@ span{
 .gameInfo p:nth-child(3){
   margin-left: 16px;
   width: 428px;
+}
+
+.tax-included{
+  font-size: 12px;
+  color: #555;
+  margin-left: 5pxs;
 }
 </style>

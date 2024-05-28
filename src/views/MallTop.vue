@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import BreadCrumb from '../components/BreadCrumb.vue';
 
 export default {
   data() {
@@ -197,42 +196,42 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .CartList {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 64px;
   position: relative;
+  margin-bottom: -46px;
   left: 10px;
-  bottom: 58px;
+  bottom: 0px;
+  max-height: 1600px; /* 固定高度，调整为所需高度 */
+  /* overflow-y: auto; */
 }
-
 .CartListItem {
   position: relative;
   margin-right: 107px;
   left: 31px;
   top: 26px;
 }
-
-.cateTitle{
+.cateTitle {
   position: relative;
-  left: 20px;
-  top: -4px;
+  left: 37px;
+  top: 34px;
   margin-bottom: 20px;
+}
+
+
+.cateTitle h2 {
+  color: black;
 }
 
 .cateTitle h4 {
   position: relative;
-  bottom: 24px;
-  left: 63px;
+  bottom: 0px;
+  left: 17px;
   cursor: pointer;
 }
-.cateTitle h2 {
-  position: relative;
-  color: black;
-  bottom: 21px;
-  left: 51px;
-}
+
 .breadcrumb {
   margin-left: 120px;
   font-size: 14px;

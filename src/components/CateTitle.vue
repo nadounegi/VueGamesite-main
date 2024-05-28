@@ -1,7 +1,7 @@
 <template>
   <div class="cateTitle">
     <h2 v-if="!showLink">{{ title }}</h2>
-    <router-link v-else :to="to"><h2>{{ title }}</h2></router-link>
+    <router-link v-else :to="to" class="titleLink"><h2>{{ title }}</h2></router-link>
     <h4 v-if="showLink">
       <router-link :to="to" class="more">もっと見る</router-link>
     </h4>
@@ -39,6 +39,10 @@ export default {
   color: black;
 }
 
+.titleLink{
+  text-decoration: none;
+}
+
 .cateTitle h4 {
   position: relative;
   bottom: 31px;
@@ -49,9 +53,8 @@ export default {
 .more {
   color: black;
   font-weight: bold;
-  text-decoration: none;
   position: relative;
-  bottom: 31px;
+  top: 7px;
   left: 240px;
   cursor: pointer;
 }

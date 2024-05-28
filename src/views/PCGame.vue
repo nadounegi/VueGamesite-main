@@ -63,6 +63,13 @@ export default {
 </script>
 
 <style scoped>
+.breadcrumb {
+    margin-left: 120px;
+    font-size: 14px;
+    right: 44px;
+    top: 20px;
+    position: relative;
+}
 .CartList {
   display: flex;
   flex-wrap: wrap;
@@ -88,4 +95,5 @@ export default {
   left: 17px;
   cursor: pointer;
 }
+
 </style>

@@ -79,6 +79,8 @@ export default {
 }
 
 .cateTitle h2 {
+  position: relative;
+  bottom: 9px;
   color: black;
   left: 4px;
 }

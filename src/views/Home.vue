@@ -1,7 +1,6 @@
 <template>
   <div>
     <Navigation />
-    <BreadCrumb/>
     <Lunbo />
     <!-- 其他内容 -->
   </div>
