@@ -9,7 +9,9 @@
   <div class="detailItem">
   <div class="gameInfo">
     <h1>{{ game.name }}</h1>
+    <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included2">税込</span></p>
     <p>カテゴリ:{{ game.category }}</p>
+    <hr id="hr1">
     <p>紹介:{{ game.description }}</p> 
   </div>
 </div>
@@ -17,8 +19,8 @@
 <div class="cartItem">
     <!-- <p>価格:{{ game.price }}</p> -->
     <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included">税込</span></p>
-    <p>在庫:{{game.stock}}個</p>
-    <hr>
+    <p id="stockAmount">残り{{game.stock}}個<span id="stock">ご注文は早めに</span></p>
+    <hr id="hr2">
     <div class="cartBtns">
   <button @click="count--" class="cartBtn">-</button>
   <span>{{ count }}</span>
@@ -251,9 +253,21 @@ export default {
   left: 58px;
   top: 12px;
 }
-hr{
+
+#hr1{
   position: relative;
-  top: 34px;
+  top: 9px;
+  left: 17px;
+  width: 425px;
+  border-color: #c5d9dae3;
+}
+
+#hr2{
+  position: relative;
+  top: 18px;
+  left: 9px;
+  text-shadow: #555 2px 2px 2px;
+  width: 180px;
   border-color: #c5d9dae3;
 }
 .gameCard{
@@ -266,10 +280,10 @@ hr{
 }
 .gameImg{
   display: flex;
-  margin-top: 34px;
-  margin-left: 63px;
-  width: 336px;
-  height: 450px;
+  margin-top: 53px;
+  margin-left: 49px;
+  width: 286px;
+  height: 412px;
 }
 
 .cartItem{
@@ -283,15 +297,17 @@ hr{
 .cartItem span:nth-child(1){
   font-size: 35px;
   position: relative;
-  top: 2px;
+  top: 0px;
 }
 
-.tax-included {
-  font-size: 12px;
-  color: #555;
-  position: relative;
-  top: 1px;
-  margin-left: 8px;
+#stockAmount{
+  color: #9f0707;
+  margin-top: 2px;
+}
+
+#stock{
+  margin-left: 14px;
+  font-size: 15px;
 }
 
 .cartBtns{
@@ -299,7 +315,7 @@ hr{
   margin: auto;
   gap: 9px;
   position: relative;
-  bottom: 40px;
+  bottom: 19px;
 }
 .cartBtn{
   width: 30px;
@@ -347,6 +363,7 @@ span{
 
 .gameInfo{
   display: flex;
+  margin-top: 30px;
   flex-direction: column;
 }
 .gameInfo h1{
@@ -361,6 +378,14 @@ span{
   margin-top: 11px;
   margin-left: 18px;
 }
+
+
+.gameInfo p:nth-child(2){
+  position: relative;
+  font-size: 25px;
+  top: -11px;
+}
+
 .gameInfo p:nth-child(3){
   margin-left: 16px;
   width: 428px;
@@ -369,6 +394,16 @@ span{
 .tax-included{
   font-size: 12px;
   color: #555;
-  margin-left: 5pxs;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.tax-included2{
+  font-size: 12px;
+  margin-left: 8px;
+  color: #555;
+  position: relative;
+  top: 25px;
 }
 </style>
