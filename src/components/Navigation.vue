@@ -136,7 +136,7 @@ methods: {
 </script>
 
 
-<style scoped>
+<style>
 *{
 margin: 0;
 padding: 0;
@@ -145,7 +145,7 @@ padding: 0;
 /* ヘッダー部分 */
 header{
   position: relative;
-  top: 53px;
+  top: 37px;
   width: 179vh;
 }
 
@@ -320,7 +320,7 @@ background: none;
 /* 右ナビゲーション部分 */
 /* 検索 */
 .right_nav{
-margin-bottom: 120px;
+  margin-bottom: 163px;
 }
 form{
   list-style-type: none;

@@ -7,6 +7,6 @@ export default{
                 currency: 'JPY',
                 minimumFractionDigits: 0 // 小数点以下の最小桁数
             }).format(price)
-            }
+        },
         }
     };

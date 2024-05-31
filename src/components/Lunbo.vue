@@ -1,3 +1,4 @@
+
 <template>
   <div class="carousel">
     <div class="images">
@@ -47,7 +48,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 html,body{
     overflow: hidden;
@@ -70,7 +71,7 @@ html,body{
     width: 25%;
     max-width: 100%;
     bottom: 41px;
-    left: 574px;
+    left: 557px;
     height: 100vh;
     display: flex;
     flex-direction: column;

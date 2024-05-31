@@ -5,9 +5,9 @@
   <BreadCrumb/>
   <div class="gameDetail">
     <div class="gameCard">
-  <img :src="game.url" alt="" class="gameImg">
+      <imgLunbo :images="game.images"/>
   <div class="detailItem">
-  <div class="gameInfo">
+  <div class="gameInfo" >
     <h1>{{ game.name }}</h1>
     <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included2">税込</span></p>
     <p>カテゴリ:{{ game.category }}</p>
@@ -59,6 +59,12 @@ export default {
           url: this.$imgUrl.Uncarted4,
           price: 6070,
           stock: 10,
+          images:[
+            {url:this.$imgUrl.UNCHARTED},
+            {url:this.$imgUrl.UNCHARTED2},
+            {url:this.$imgUrl.UNCHARTED3},
+            {url:this.$imgUrl.UNCHARTED4}
+          ]
         },
         {
           id: 2,
@@ -70,6 +76,12 @@ export default {
           url: this.$imgUrl.Biohazard4,
           price: 1266,
           stock: 5,
+          images:[
+            {url:this.$imgUrl.BIOHAZARD1},
+            {url:this.$imgUrl.BIOHAZARD2},
+            {url:this.$imgUrl.BIOHAZARD3},
+            {url:this.$imgUrl.BIOHAZARD4}
+          ]
         },
         {
           id: 3,
@@ -81,6 +93,12 @@ export default {
           url: this.$imgUrl.RyuGaGotoku8,
           price: 6120,
           stock: 3,
+          images:[
+            {url:this.$imgUrl.RYUGAGOTOKU1},
+            {url:this.$imgUrl.RYUGAGOTOKU2},
+            {url:this.$imgUrl.RYUGAGOTOKU3},
+            {url:this.$imgUrl.RYUGAGOTOKU4}
+          ]
         },
         {
           id: 4,
@@ -92,6 +110,12 @@ export default {
           url: this.$imgUrl.SandLand,
           price: 7038,
           stock: 2,
+          images:[
+            {url:this.$imgUrl.SandLand1},
+            {url:this.$imgUrl.SandLand2},
+            {url:this.$imgUrl.SandLand3},
+            {url:this.$imgUrl.SandLand4}
+          ]
         },
         {
           id: 5,
@@ -103,6 +127,12 @@ export default {
           url: this.$imgUrl.Splatoon3,
           price: 5618,
           stock: 7,
+          images:[
+            {url:this.$imgUrl.SPLATOON1},
+            {url:this.$imgUrl.SPLATOON2},
+            {url:this.$imgUrl.SPLATOON3},
+            {url:this.$imgUrl.SPLATOON4}
+          ]
         },
         {
           id: 6,
@@ -114,6 +144,12 @@ export default {
           url: this.$imgUrl.Mario8,
           price: 5307,
           stock: 4,
+          images:[
+            {url:this.$imgUrl.MARIOKART1},
+            {url:this.$imgUrl.MARIOKART2},
+            {url:this.$imgUrl.MARIOKART3},
+            {url:this.$imgUrl.MARIOKART4}
+          ]
         },
         {
           id: 7,
@@ -125,6 +161,12 @@ export default {
           url: this.$imgUrl.PaperMario,
           price: 5382,
           stock: 3,
+          images:[
+            {url:this.$imgUrl.PAPER1},
+            {url:this.$imgUrl.PAPER2},
+            {url:this.$imgUrl.PAPER3},
+            {url:this.$imgUrl.PAPER4}
+          ]
         },
         {
           id: 8,
@@ -136,6 +178,12 @@ export default {
           url: this.$imgUrl.Zelda,
           price: 6120,
           stock: 3,
+          images:[
+            {url:this.$imgUrl.ZELDA1},
+            {url:this.$imgUrl.ZELDA2},
+            {url:this.$imgUrl.ZELDA3},
+            {url:this.$imgUrl.ZELDA4}
+          ]
         },
         {
           id: 9,
@@ -147,6 +195,12 @@ export default {
           url: this.$imgUrl.HaloInfinite,
           price: 6209,
           stock: 6,
+          images:[
+            {url:this.$imgUrl.HALO1},
+            {url:this.$imgUrl.HALO2},
+            {url:this.$imgUrl.HALO3},
+            {url:this.$imgUrl.HALO4}
+          ]
         },
         {
           id: 10,
@@ -158,6 +212,12 @@ export default {
           url: this.$imgUrl.ForzaMotorsport,
           price: 4800,
           stock: 4,
+          images:[
+            {url:this.$imgUrl.FORZA1},
+            {url:this.$imgUrl.FORZA2},
+            {url:this.$imgUrl.FORZA3},
+            {url:this.$imgUrl.FORZA4}
+          ]
         },
         {
           id: 11,
@@ -169,6 +229,12 @@ export default {
           url: this.$imgUrl.MinecraftLegends,
           price: 1586,
           stock: 3,
+          images:[
+            {url:this.$imgUrl.MINECRAFT1},
+            {url:this.$imgUrl.MINECRAFT2},
+            {url:this.$imgUrl.MINECRAFT3},
+            {url:this.$imgUrl.MINECRAFT4}
+          ]
         },
         {
           id: 12,
@@ -180,6 +246,12 @@ export default {
           url: this.$imgUrl.DeadSpace,
           price: 7775,
           stock: 2,
+          images:[
+            {url:this.$imgUrl.DEADSPACE1},
+            {url:this.$imgUrl.DEADSPACE2},
+            {url:this.$imgUrl.DEADSPACE3},
+            {url:this.$imgUrl.DEADSPACE4}
+          ] 
         },
         {
           id: 13,
@@ -191,6 +263,12 @@ export default {
           url: this.$imgUrl.FF14,
           price: 4200,
           stock: 5,
+          images:[
+            {url:this.$imgUrl.FINALFANTASY1},
+            {url:this.$imgUrl.FINALFANTASY2},
+            {url:this.$imgUrl.FINALFANTASY3},
+            {url:this.$imgUrl.FINALFANTASY4}
+          ]
         },
         {
           id: 14,
@@ -202,6 +280,12 @@ export default {
           url: this.$imgUrl.LittleNightmare,
           price: 2420,
           stock: 3,
+          images:[
+            {url:this.$imgUrl.Little1},
+            {url:this.$imgUrl.Little2},
+            {url:this.$imgUrl.Little3},
+            {url:this.$imgUrl.Little4}
+        ]
         },
         {
           id: 15,
@@ -213,6 +297,12 @@ export default {
           url: this.$imgUrl.TalesofARISE,
           price: 4400,
           stock: 2,
+          images:[
+            {url:this.$imgUrl.TALES1},
+            {url:this.$imgUrl.TALES2},
+            {url:this.$imgUrl.TALES3},
+            {url:this.$imgUrl.TALES4}
+          ]
         },
         {
           id: 16,
@@ -224,6 +314,13 @@ export default {
           url: this.$imgUrl.Katamari,
           price: 3960,
           stock: 1,
+          images:[
+            {url:this.$imgUrl.KATAMARI1},
+            {url:this.$imgUrl.KATAMARI2},
+            {url:this.$imgUrl.KATAMARI3},
+            {url:this.$imgUrl.KATAMARI4}
+          ]
+        
         },
       ];
       this.game = allGames.find(game => game.id == id);
@@ -363,8 +460,10 @@ span{
 
 .gameInfo{
   display: flex;
+  position: relative;
   margin-top: 30px;
   flex-direction: column;
+  right: 76px;
 }
 .gameInfo h1{
   font-weight: bold;
