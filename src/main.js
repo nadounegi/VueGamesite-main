@@ -17,22 +17,11 @@ import MallTop from '@/views/MallTop.vue';
 // ナビリストをグローバル登録
 import BreadCrumb from '@/components/BreadCrumb.vue';
 //画像のパスをグローバル登録
-import Uncarted4 from '@/assets/images/Uncharted4.png';
-import Biohazard4 from '@/assets/images/バイオハザード４.png';
-import RyuGaGotoku8 from '@/assets/images/龍が如く８.png';
-import SandLand from '@/assets/images/SandLand.png';
-import Splatoon3 from '@/assets/images/スプラトゥーン３.png';
-import Mario8 from '@/assets/images/マリオカート8.png';
-import PaperMario from '@/assets/images/ペーパーマリオRPG.png';
-import Zelda from '@/assets/images/ゼルダの伝説.png';
-import HaloInfinite from '@/assets/images/HaloInfinite.png';
-import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
-import MinecraftLegends from '@/assets/images/MinecraftLegends.png';
-import DeadSpace from '@/assets/images/DeadSpace.png';
-import FF14 from '@/assets/images/ファイナルファンタジーXIV.png';
-import LittleNightmare from '@/assets/images/リトルナイトメア.png';
-import TalesofARISE from '@/assets/images/TalesofARISE.png';
-//小図片をグローバルに登録
+import UNCHARTED1 from '@/assets/images/UNCHARTED1.png';
+import UNCHARTED2 from '@/assets/images/UNCHARTED2.png';
+import UNCHARTED3 from '@/assets/images/UNCHARTED3.png';
+import UNCHARTED4 from '@/assets/images/UNCHARTED4.png';
+
 import BIOHAZARD1 from '@/assets/images/BIOHAZARD1.png';
 import BIOHAZARD2 from '@/assets/images/BIOHAZARD2.png';
 import BIOHAZARD3 from '@/assets/images/BIOHAZARD3.png';
@@ -112,22 +101,12 @@ import KATAMARI4 from '@/assets/images/KATAMARI4.png';
 Vue.config.productionTip = false;
 //画像のパスをVueインスタンスのプロパティに登録
 Vue.prototype.$imgUrl = {
-  Uncarted4,
-  Biohazard4,
-  RyuGaGotoku8,
-  SandLand,
-  Splatoon3,
-  Mario8,
-  PaperMario,
-  Zelda,
-  HaloInfinite,
-  ForzaMotorsport,
-  MinecraftLegends,
-  DeadSpace,
-  FF14,
-  LittleNightmare,
-  TalesofARISE,
   
+  UNCHARTED1,
+  UNCHARTED2,
+  UNCHARTED3,
+  UNCHARTED4,
+
   BIOHAZARD1,
   BIOHAZARD2,
   BIOHAZARD3,

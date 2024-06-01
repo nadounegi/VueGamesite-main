@@ -43,7 +43,7 @@ methods: {
   /* bottom: 43px; */
   overflow-y: auto;
   overflow-x: hidden;
-  width: 1231px;
+  width: 1627px;
 }
 .navList {
   margin: 20px 0;

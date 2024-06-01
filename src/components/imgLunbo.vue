@@ -79,6 +79,9 @@
       display: flex;
       justify-content: center;
       margin-top: 10px;
+      margin-right: 27px;
+      position: relative;
+      left: 389px;
   }
   .lunboBtn {
       width: 100px;
