@@ -10,10 +10,10 @@
           <button type="submit"><img :src="searchIcon" alt=""></button>
         </form>
         <div class="cart">
-          <a href="">
+          <router-link :to="cartLink">
             <h1>CART</h1> 
             <img :src="shoppingCart" alt="">
-          </a>
+          </router-link>
         </div>
         <div class="login-sign">
           <a href="">ログイン</a>
@@ -34,7 +34,8 @@ export default {
     return{
       logo,
       searchIcon,
-      shoppingCart
+      shoppingCart,
+      cartLink: "/GameDetail/:id/CartInfo"
     }
   
   }
@@ -125,8 +126,8 @@ h1{
 }
 
 .cart img{
-  position: relative;
-  bottom: 23px;
+    position: relative;
+    bottom: 16px;
     right: 53px;
     width: 30px;
     height: 30px;

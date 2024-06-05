@@ -9,6 +9,7 @@ import NintendoSwitch from '@/views/NintendoSwitch.vue'; // 修正拼写
 import Xbox from '@/views/Xbox.vue';
 import PCGame from '@/views/PCGame.vue';
 import VideoGame from '@/views/VideoGame.vue';
+import CartInfo from '@/views/CartInfo.vue';
 
 // Vue Router 初期化
 Vue.use(VueRouter);
@@ -77,6 +78,13 @@ const router = new VueRouter({
           component: GameDetail,
           meta:{
             breadcrumb: 'ゲームカート'
+          }
+        },
+        { 
+          path: '/GameDetail/:id/CartInfo',
+          component: CartInfo,
+          meta:{
+            breadcrumb: 'ショッピングカート'
           }
         }
       ]

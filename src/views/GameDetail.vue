@@ -1,6 +1,5 @@
 <template>
   <div>
-  <CartNav/>
   <div class="cartDetail">
   <BreadCrumb/>
   <div class="gameDetail">
@@ -22,11 +21,11 @@
     <p id="stockAmount">残り{{game.stock}}個<span id="stock">ご注文は早めに</span></p>
     <hr id="hr2">
     <div class="cartBtns">
-  <button @click="count--" class="cartBtn">-</button>
+  <button @click="decreaseCount" :disabled="count <= 0" class="cartBtn">-</button>
   <span>{{ count }}</span>
-  <button @click ="count++" class="cartBtn">+</button>
+  <button @click ="increaseCount" :disabled="count >= game.stock" class="cartBtn">+</button>
 </div>
-    <router-link to="/cart" class="btn-primary"><p>カートに追加</p></router-link>
+<button class="btn-primary" @click="addToCart">カートに追加</button>
   </div>
 </div>
   </div>
@@ -45,8 +44,27 @@ export default {
   created(){   // ページが読み込まれたタイミングで実行される
     const gameId = this.$route.params.id;
     this.fetchGameDetail(gameId);
+    console.log(this.$store);
   },
   methods:{
+    addToCart(){
+      this.$store.dispatch('addToCart',{// カートに追加
+        id: this.game.id,
+        name:this.game.name,
+        price:this.game.price,
+        quantity:this.count
+      });   
+    },
+    increaseCount(){
+      if(this.count < this.game.stock){
+        this.count++;
+      }
+    },
+    decreaseCount(){
+      if(this.count > 0){
+        this.count--;
+      }
+    },
     fetchGameDetail(id){
       // ここに全ゲームのデータを入れる
       const allGames = [

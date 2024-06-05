@@ -3,8 +3,7 @@ import App from './App.vue';
 import router from './router'; 
 //メソッドをグローバル化にするため
 import mixins from './mixins.js'
-
-
+import store from './stores';
 //コンポーネントをグローバル登録
 import imgLunbo from '@/components/imgLunbo.vue';
 import Navigation from '@/components/Navigation.vue';
@@ -36,7 +35,6 @@ import SandLand1 from '@/assets/images/SandLand1.png';
 import SandLand2 from '@/assets/images/SandLand2.png';
 import SandLand3 from '@/assets/images/SandLand3.png';
 import SandLand4 from '@/assets/images/SandLand4.png';
-
 
 import SPLATOON1 from '@/assets/images/SPLATOON1.png';
 import SPLATOON2 from '@/assets/images/SPLATOON2.png';
@@ -196,6 +194,7 @@ Vue.component('imgLunbo',imgLunbo);
 Vue.mixin(mixins);
 
 new Vue({
-  render: h => h(App),
   router,
+  store,
+  render: h => h(App),
 }).$mount('#app');

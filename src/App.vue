@@ -15,6 +15,9 @@ import logo from '@/assets/images/logo.png';
 import searchIcon from '@/assets/images/検索用の虫眼鏡アイコン.png';
 import shoppingCart from '@/assets/images/shopping-cart.png';
 export default {
+  created(){
+   
+  },
   data(){
     return{
       logo,
