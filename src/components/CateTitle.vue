@@ -27,28 +27,28 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .cateTitle {
   position: relative;
-  left: 81px;
-  bottom: 38px;
-  margin-bottom: 20px;
+  left: 168px;
+  top: 34px;
+  margin-bottom: 40px;
 }
 
 .cateTitle h2 {
   color: black;
 }
 
+.cateTitle h4 {
+  position: relative;
+  bottom: 42px;
+  left: 74px;
+  cursor: pointer;
+}
 .titleLink{
   text-decoration: none;
 }
 
-.cateTitle h4 {
-  position: relative;
-  bottom: 31px;
-  left: 240px;
-  cursor: pointer;
-}
 
 .more {
   color: black;

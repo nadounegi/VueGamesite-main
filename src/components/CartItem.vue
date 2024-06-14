@@ -14,6 +14,7 @@
         <h3>カテゴリー:{{ item.category }}</h3>
         <p>価格:{{formattedPrice(item.price) }}</p>
         <p>在庫:残り{{ item.stock }}個</p>
+        
         <div class="buttonContainer">
         <button @click="addToCart(item)" class="cartButton">カートに入れる</button>
       </div>
@@ -37,14 +38,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 .cartItem{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 230px;
+  width: 245px;
   height: 409px;
   margin: 10px;
   border: 1px solid #ccc;
@@ -93,7 +94,7 @@ export default {
   cursor: pointer;
   transition: background-image 0.5s ease;
   position: absolute;
-  bottom: 10px;
+  bottom: 23px;
 }
 .cartButton:hover{
   animation:gradient-animation 3s infinite alternate;

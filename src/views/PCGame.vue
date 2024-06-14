@@ -63,25 +63,27 @@ export default {
 </script>
 
 <style scoped>
-.breadcrumb {
-    margin-left: 120px;
-    font-size: 14px;
-    right: 44px;
-    top: 20px;
-    position: relative;
+.breadcrumb{
+  margin-left: 120px;
+  font-size: 14px;
+  top: 191px;
+  left: 268px;
+  position: fixed;
 }
+
 .CartList {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 5px;
   position: relative;
-  left: 10px;
+  left: 111px;
   bottom: 0px;
 }
 
-.cateTitle {
+.cateTitle{
   position: relative;
-  left: 37px;
-  top: 34px;
+  left: 123px;
+  top: 0px;
   margin-bottom: 20px;
 }
 

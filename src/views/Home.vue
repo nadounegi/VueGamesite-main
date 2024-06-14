@@ -26,10 +26,9 @@ export default {
 }
 
 header {
-    position: relative;
-    top: 50px;
-    right: 8px;
-    width: 179vh;
+  position: relative;
+  top: -34px;
+  right: 2px;
 }
 .right_nav{
   margin-bottom: 198px;
@@ -47,6 +46,32 @@ header {
 main{
   position: relative;
   top: 52px;
+}
+
+/* レスポンシブ */
+@media(max-width: 768px){
+  header{
+    width: 100%;
+  }
+  .breadcrumb{
+    left: 20px;
+    top: 20px;
+    font-size: 12px;
+  }
+  .right_nav{
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 480px){
+  .breadcrumb{
+    left: 10px;
+    top: 10px;
+    font-size: 10px;
+  }
+  .right_nav{
+    margin-bottom: 50px;
+  }
 }
   </style>
   

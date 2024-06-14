@@ -26,7 +26,7 @@
   };
   </script>
   
-  <style scoped>
+  <style>
   .breadcrumb {
     display: flex;
     align-items: center;

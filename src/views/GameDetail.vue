@@ -11,7 +11,7 @@
     <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included2">税込</span></p>
     <p>カテゴリ:{{ game.category }}</p>
     <hr id="hr1">
-    <p>紹介:{{ game.description }}</p> 
+    <p class="syokai">紹介:{{ game.description }}</p> 
   </div>
 </div>
 </div>
@@ -44,12 +44,13 @@ export default {
   created(){   // ページが読み込まれたタイミングで実行される
     const gameId = this.$route.params.id;
     this.fetchGameDetail(gameId);
-    console.log(this.$store);
   },
   methods:{
+    
     addToCart(){
       this.$store.dispatch('addToCart',{// カートに追加
         id: this.game.id,
+        url:this.game.url,
         name:this.game.name,
         price:this.game.price,
         quantity:this.count
@@ -354,19 +355,20 @@ export default {
   bottom: 12px;
 }
 .breadcrumb{
-  display: flex;
-  align-items: center;
-  margin-left: 84px;
+  margin-left: 120px;
   font-size: 14px;
+  top: 191px;
+  left: 268px;
+  position: fixed;
 }
+
 .gameDetail{
   display: flex;
   position: relative;
   width: 1222px;
   gap: 20px;
   margin: 20px;
-  left: 58px;
-  top: 12px;
+  left: 96px;
 }
 
 #hr1{
@@ -387,7 +389,8 @@ export default {
 }
 .gameCard{
   display: flex;
-  gap: 20px;
+  position: relative;
+  left: 76px;
   border-radius: 20px;
   width: 873px;
   height: 556px;
@@ -405,6 +408,7 @@ export default {
   display: flex;
   border-radius: 20px;
   flex-direction: column;
+  margin-left: 71px;
   background-color: #e0e0e081;
   width: 200px;
   height: 278px;
@@ -430,7 +434,7 @@ export default {
   margin: auto;
   gap: 9px;
   position: relative;
-  bottom: 19px;
+  bottom: 56px;
 }
 .cartBtn{
   width: 30px;
@@ -447,7 +451,7 @@ export default {
   justify-content: center;
   color: white;
   font-weight: bold;
-  margin-left: 45px;
+  margin-left: 13px;
   height: 41px;
   width: 115px;
   border-radius: 20px;
@@ -484,19 +488,18 @@ span{
   right: 76px;
 }
 .gameInfo h1{
+  position: relative;
+  left: 2px;
   font-weight: bold;
-  font-size: 24px;
-  right: 7px;
-  top: 16px;
+  font-size: 22px;
 }
-.gameInfo p{
+/* .gameInfo p{
   position: relative;
   top: 8px;
   width: 384px;
   margin-top: 11px;
   margin-left: 18px;
-}
-
+} */
 
 .gameInfo p:nth-child(2){
   position: relative;
@@ -505,10 +508,12 @@ span{
 }
 
 .gameInfo p:nth-child(3){
-  margin-left: 16px;
+  margin-left: 19px;
   width: 428px;
 }
-
+.syokai{
+  width: 428px;
+}
 .tax-included{
   font-size: 12px;
   color: #555;

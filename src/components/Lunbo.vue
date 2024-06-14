@@ -1,6 +1,6 @@
 
 <template>
-  <div class="carousel">
+  <div class="carousel" style="margin: 0 auto;">
     <div class="images">
       <div
         class="img"
@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
 html,body{
     overflow: hidden;
@@ -68,28 +68,26 @@ html,body{
   }
       
   .carousel{
-    width: 25%;
-    max-width: 100%;
-    bottom: 41px;
-    left: 557px;
-    height: 100vh;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-
-     
+    bottom: 34px;
   }
 
-  .images{
-    width: 270%;
-    max-width: 268%;
-    height: 60%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .carousel .images{
+      width: 100%;
+      /* 高さを設定し、画像の比率を維持 */
+      height: 60vh;
+      max-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
   }
 
   .img{
@@ -143,10 +141,8 @@ html,body{
         }
         
         .navigation{
-          width: 272%;
-          max-width: 283%;
+          width: 100%;
           height: 120px;
-          left: 23px;
           margin-top: 20px;
           background-color: rgba(0, 0, 0, .5);
           display: flex;
@@ -155,7 +151,7 @@ html,body{
           flex-direction: row;
           overflow-x: auto;
           padding: 10px;
-          bottom: 122px;
+          bottom: 160px;
           position: relative;
         }
 

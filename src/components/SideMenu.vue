@@ -23,7 +23,7 @@ export default {
 <style>
 .SideMenu{
   position: fixed;
-  top: 208px;
+  top: 237px;
   left: 2px;
   height: calc(81vh - 60px);
   width: 308px;

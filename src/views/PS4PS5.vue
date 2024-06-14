@@ -62,26 +62,35 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .content{
   overflow-y: scroll;
   overflow-x: hidden;
   margin-top: 215px;
   height: calc(125vh - 407px);
 }
+
+.breadcrumb{
+  margin-left: 120px;
+  font-size: 14px;
+  top: 191px;
+  left: 268px;
+  position: fixed;
+}
+
 .CartList {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 64px;
+  margin-left: 5px;
   position: relative;
-  left: 10px;
+  left: 111px;
   bottom: 0px;
 }
 
 .cateTitle{
   position: relative;
   left: 123px;
-  top: 29px;
+  top: 0px;
   margin-bottom: 20px;
 }
 

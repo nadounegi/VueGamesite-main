@@ -30,7 +30,7 @@ methods: {
 <style >
 html,body{
   height: 100%;
-  margin: 0;
+  /* margin: 0; */
   overflow: hidden;
 }
 
@@ -38,18 +38,18 @@ html,body{
   display: flex;
   margin-top: 60px;
   height: calc(100vh - 60px);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
-.content{
+.main .content{
   position: relative;
-  margin-top: 153px;
-  margin-left: 291px;
-  height: calc(125vh - 488px);
-  /* bottom: 43px; */
+  left: 203px;
+  margin-top: 200px;
+  margin-left: -211px;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 1627px;
+  width: 1339px;
+
 }
 .navList {
   margin: 20px 0;

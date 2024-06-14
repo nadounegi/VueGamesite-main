@@ -137,52 +137,86 @@ export default {
 </script>
 
 <style scoped>
+.CartNav {
+    position: fixed;
+    top: -36px;
+    left: 132px;
+    width: 100%;
+    z-index: 1000;
+}
+
 .mainContainer{
   height: 84vh;
   position: relative;
   overflow-y: auto;
-  top: 101px;
+  top: 68px;
+  margin-top: 187px;
 }
 .SideMenu{
-  top: 197px;
+  position: fixed;
+  top: 241px;
+  left: 2px;
+  height: calc(81vh - 60px);
+  width: 308px;
+  background-color: #f1f1f1;
+  border-right: solid 1px #8080804d;
+  z-index: 1000;
 }
 
-.cateTitle[data-v-f2ca8994]{
+.mainContainer .cateTitle{
   position: relative;
-  left: 427px;
-  top: 113px;
+  left: 332px;
+  top: 28px;
   margin-bottom: 20px;
 }
 
-.breadcrumb {
-    margin-left: 120px;
-    font-size: 14px;
-    top: 90px;
-    position: relative;
-    left: 312px;
+.breadcrumb{
+  margin-left: 120px;
+  font-size: 14px;
+  top: 191px;
+  left: 268px;
+  position: fixed;
 }
 
 .CartList {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  left: 2px;
-  top: 98px;
-  padding-left: 369px;
+  line-height: 1;
+  left: 105px;
+  top: 25px;
+  padding-left: 212px;
   max-height: calc(100vh - 215px); 
 }
 .cartItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 230px;
-    left: 155px;
-    height: 409px;
-    margin-left: 157px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 264px;
+  height: 379px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.CartList.buttonContainer .cartButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin: auto;
+  height: 41px;
+  width: 115px;
+  border-radius: 20px;
+  border: none;
+  background-image: linear-gradient(to left ,rgb(130, 130, 255),rgb(237, 46, 237));
+  cursor: pointer;
+  transition: background-image 0.5s ease;
+  position: absolute;
+  bottom: 43px;
 }
 </style>

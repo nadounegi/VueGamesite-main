@@ -62,22 +62,31 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .content{
   margin-top: 134px;
 }
-/* .CartList {
+
+.breadcrumb{
+  margin-left: 120px;
+  font-size: 14px;
+  top: 191px;
+  left: 268px;
+  position: fixed;
+}
+.CartList {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 5px;
   position: relative;
-  left: 25px;
+  left: 111px;
   bottom: 0px;
-} */
+}
 
 .cateTitle{
   position: relative;
-  left: 106px;
-  top: 19px;
+  left: 123px;
+  top: 0px;
   margin-bottom: 20px;
 }
 

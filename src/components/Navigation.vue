@@ -4,9 +4,9 @@
       <h3>NadouGame</h3>
     </div>
     <div class="bottom_header">
-      <router-link to ="#/Home" class="logo">
+      <router-link to ="#/Home" >
         <img src="src/assets/images/logo.png" alt=""
-         width="150" height="150">
+         width="150" height="150" class="logo">
       </router-link> 
      <!-- ナビゲーション部分 -->
       <nav class="nav_list">
@@ -143,15 +143,19 @@ padding: 0;
 }
 
 /* ヘッダー部分 */
-header{
-  position: relative;
-  top: 37px;
-  width: 179vh;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.logo{
-background: none;
+header{
+  max-width: 206vh;
+}
 
+.bottom_header.logo{
+  position: relative;
+  top: 0px;
+  background: none;
 }  
 
 .top_header{
@@ -179,7 +183,7 @@ background: none;
   align-items: center;
   height: 75px;
   margin-left: 190px;
-  margin-top: -112px;
+  margin-top: -261px;
 }
 
 .nav_list li{
@@ -188,10 +192,9 @@ background: none;
 
 }
 
-
 .nav_list li a{
   color: black;
-  bottom: 20px;
+  bottom: 1px;
   background: none;
   width: 137px;
   margin-right: 76px;
@@ -254,7 +257,12 @@ background: none;
 }
 .sub_dropdown{
   margin-top: 22px;
-  margin-left: 20px;
+  position: relative;
+  right: 12px;
+}
+
+.sub_dropdown img{
+  margin-top: 0px;
 }
 
 .sub_dropdown_content{
@@ -323,7 +331,16 @@ background: none;
   margin-bottom: 163px;
 }
 form{
+  position: relative;
   list-style-type: none;
+  bottom: 18px;
+}
+
+form button{
+  width: 23px;
+    position: relative;
+    left: -33px;
+    top: 18px
 }
 input {
   margin-top: 154px;
@@ -343,7 +360,7 @@ button img{
   width: 20px;
   position: relative;
   left: -22px;
-  top: 6px;
+  top: 18px;
 }
 :placeholder-shown {
   padding-top: 5px;

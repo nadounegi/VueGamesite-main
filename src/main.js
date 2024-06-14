@@ -4,6 +4,7 @@ import router from './router';
 //メソッドをグローバル化にするため
 import mixins from './mixins.js'
 import store from './stores';
+import 'bootstrap/dist/css/bootstrap.css';
 //コンポーネントをグローバル登録
 import imgLunbo from '@/components/imgLunbo.vue';
 import Navigation from '@/components/Navigation.vue';

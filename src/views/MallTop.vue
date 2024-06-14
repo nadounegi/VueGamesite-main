@@ -196,31 +196,29 @@ export default {
 };
 </script>
 
-<style>
-.CartList {
+<style scoped>
+
+.CartListItem .CartList {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-bottom: -46px;
-  left: 10px;
-  bottom: 0px;
-  max-height: 1600px; /* 固定高度，调整为所需高度 */
-  /* overflow-y: auto; */
+  line-height: 1;
+  left: 7px;
+  bottom: 30px;
 }
 .CartListItem {
   position: relative;
   margin-right: 107px;
-  left: 31px;
-  top: 26px;
+  margin-top: -29px;
+  left: 166px;
+  top: 5px;
 }
 .cateTitle {
   position: relative;
-  left: 37px;
+  left: 27px;
   top: 34px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-
-
 .cateTitle h2 {
   color: black;
 }
@@ -232,11 +230,26 @@ export default {
   cursor: pointer;
 }
 
+.cartItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 246px;
+    left: 155px;
+    height: 409px;
+    margin-left: 157px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
 .breadcrumb {
   margin-left: 120px;
   font-size: 14px;
-  top:20px;
-  position: relative;
+  top: 191px;
+  left: 268px;
+  position: fixed;
 }
 
 /* Fixed CartNav */

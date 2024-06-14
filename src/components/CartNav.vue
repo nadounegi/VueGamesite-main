@@ -1,17 +1,19 @@
 <template>
   <div class="CartNav">
-    <header class="headerBar">
+    <header>
       <div>
-        <router-link to ="/" ><img :src="logo" alt="logo" class="logo"/></router-link>
+        <router-link to="/">
+          <img :src="logo" alt="logo" class="logo"/>
+        </router-link>
       </div>
       <div class="rightHeader">
         <form action="#">
-          <input type="text" name="keywords" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください" name2="keywords">
+          <input type="text" name="keywords" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください">
           <button type="submit"><img :src="searchIcon" alt=""></button>
         </form>
         <div class="cart">
           <router-link :to="cartLink">
-            <h1>CART</h1> 
+            <h1>CART({{ cartQuantity }})</h1> 
             <img :src="shoppingCart" alt="">
           </router-link>
         </div>
@@ -28,132 +30,146 @@
 import logo from '@/assets/images/logo.png';
 import searchIcon from '@/assets/images/検索用の虫眼鏡アイコン.png';
 import shoppingCart from '@/assets/images/shopping-cart.png';
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'CartNav',
-  data(){
-    return{
+  data() {
+    return {
       logo,
       searchIcon,
       shoppingCart,
       cartLink: "/GameDetail/:id/CartInfo"
-    }
-  
+    };
+  },
+  computed: {
+    ...mapGetters({
+      cartQuantity: 'cartQuantity'
+    })
   }
 };
 </script>
-<style >
 
-*{
+<style>
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* ヘッダー部分 */
-.headerBar {
+.CartNav {
   position: fixed;
-  left: 10px;
-  top: -59px;
+  top: -35px;
   width: 100%;
   z-index: 1000;
-  background-color: #ffffff;
-  height: 250px;
 }
 
-/* 页面主体部分的样式 */
-.logo{
-    width: 300px;
-    height: 300px;
-    top: 44px;
+.CartNav header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* 右ヘッダー部分 */
-/* 検索 */
-.rightHeader{
-    bottom: 302px;
-    left: 440px;
-    position: relative;
-    height: 0;
+.logo {
+  position: relative;
+  height: 300px;
+  bottom: 31px;
+  right: 260px;
 }
 
-form{
-    bottom: 44px;
-    list-style-type: none;
-    position: relative;
+.rightHeader {
+  display: flex;
+  position: relative;
+  bottom: 123px;
+  right: 304px;
+  align-items: center;
+  gap: 16px;
 }
+
+.rightHeader form {
+  list-style-type: none;
+  position: relative;
+  left: 75px;
+  top: 2px;
+}
+
 input {
   margin-top: 200px;
-    border-radius: 10px;
-    border: none;
-    width: 451px;
-    background-color: #8080804d;
-    height: 53px;
+  border-radius: 10px;
+  border: none;
+  width: 451px;
+  background-color: #8080804d;
+  height: 53px;
 }
 
 button {
-    margin-top: 20px;
-    background-color: transparent;
-    border: none;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
 }
 
-button img{ 
-    width: 23px;
-    position: relative;
-    left: -33px;
-    top: 6px;
+button img {
+  width: 23px;
+  position: relative;
+  left: -13px;
+  top: -18px;
 }
+
 :placeholder-shown {
-    padding-top: 5px;
-    padding-left: 20px;
+  padding-top: 5px;
+  padding-left: 20px;
 }
 
-/* ショップカート部分 */
-.cart{
-    position: relative;
-    width: 188px;
-    height: 64px;
-    left: 573px;
-    bottom: 104px;
-    border-radius: 10px;
-    background-color: #8080804d;
+.cart {
+  position: relative;
+  width: 188px;
+  height: 64px;
+  left: 55px;
+  top: 101px;
+  border-radius: 10px;
+  background-color: #8080804d;
 }
 
-h1{
-    font-weight: bold;
-    font-size: 25px;
-    position: relative;
-    left: 21px;
-    top: 16px;
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  left: 21px;
+  top: 16px;
 }
 
-.cart img{
-    position: relative;
-    bottom: 16px;
-    right: 53px;
-    width: 30px;
-    height: 30px;
-}
-.cart a{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.cart img {
+  position: relative;
+  bottom: 22px;
+  right: 53px;
+  width: 30px;
+  height: 30px;
 }
 
-/* ログイン新規登録部分 */
-.login-sign{
-    position: relative;
-    left: 776px;
-    bottom: 139px;
-    display: flex;
-    justify-content: space-around;
-    width: 200px;
+.cart a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.login-sign a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
+
+.login-sign {
+  position: relative;
+  top: 114px;
+  left: 92px;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.login-sign a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>
