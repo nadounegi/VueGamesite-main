@@ -20,7 +20,7 @@
     <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included">税込</span></p>
     <p id="stockAmount">残り{{game.stock}}個<span id="stock">ご注文は早めに</span></p>
     <hr id="hr2">
-    <div class="cartBtns">
+<div class="cartBtns">
   <button @click="decreaseCount" :disabled="count <= 0" class="cartBtn">-</button>
   <span>{{ count }}</span>
   <button @click ="increaseCount" :disabled="count >= game.stock" class="cartBtn">+</button>

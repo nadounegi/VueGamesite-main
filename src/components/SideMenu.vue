@@ -4,7 +4,7 @@
     <div class="SideMenuItem">
       <h2>カテゴリー</h2>
       <ul>
-        <li><router-link to="/MallTop">すべて</router-link></li>
+        <li><router-link to="/MallTopTest">すべて</router-link></li>
         <li><router-link to="/Mall/PS4PS5">PS4・PS5</router-link></li>
         <li><router-link to="/Mall/NintendoSwitch">Nintendo Switch</router-link></li>
         <li><router-link to="/Mall/Xbox">Xbox</router-link></li>

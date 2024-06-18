@@ -40,6 +40,8 @@
   
   .breadcrumb span {
     margin: 0 5px;
+    position: relative;
+    top: 0px;
   }
   </style>
   

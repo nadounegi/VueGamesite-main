@@ -4,6 +4,11 @@
     <div v-for="category in uniqueCategories" :key="category" class="CartListItem">
       <CateTitle :title="category" :to="getCategoryLink(category)" :showLink="true"/>
       <div class="CartList">
+        <!-- <CartItemTest
+          v-for="item in filteredItems(category)"
+          :key="item.id"
+          :item="item"
+        /> -->
         <CartItem
           v-for="item in filteredItems(category)"
           :key="item.id"
@@ -185,10 +190,10 @@ export default {
     };
   },
   methods: {
-    filteredItems(category) {
+    filteredItems(category) {// 过滤项目
       return this.cartList.filter(item => item.gameCategory === category);
     },
-    getCategoryLink(category) {
+    getCategoryLink(category) {// 获取类别链接
       const item = this.cartList.find(item => item.gameCategory === category);
       return item ? item.href : '#';
     },

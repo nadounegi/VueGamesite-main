@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Mall from '@/views/Mall.vue';
 import MallTop from '@/views/MallTop.vue';
+import MallTopTest from '@/views/MallTopTest.vue';
 import GameDetail from '@/views/GameDetail.vue';
 import Home from '@/views/Home.vue';
 import PS4PS5 from '@/views/PS4PS5.vue';
@@ -32,14 +33,25 @@ const router = new VueRouter({
         breadcrumb: 'ビデオゲーム'
       }
     },
+    // {
+    //   path: '/Mall',
+    //   component: Mall,
+    //   redirect: '/MallTop',
+    //   children: [
+    //     {
+    //       path: '/MallTop',
+    //       component: MallTop,
+    //       meta:{
+    //         breadcrumb: 'ゲームショップ'
+    //       },
     {
       path: '/Mall',
       component: Mall,
-      redirect: '/MallTop',
+      redirect: '/MallTopTest',
       children: [
         {
-          path: '/MallTop',
-          component: MallTop,
+          path: '/MallTopTest',
+          component: MallTopTest,
           meta:{
             breadcrumb: 'ゲームショップ'
           },

@@ -69,7 +69,7 @@ data() {
     menuItems: [
       {
         title: "ゲーム",
-        href: "/MallTop",
+        href: "/MallTopTest",
         showMenu: false,
         isMouseOverSubMenu: false,
         subItems: [
