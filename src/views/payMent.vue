@@ -44,5 +44,26 @@ export default {
 </script>
 
 <style>
+h1 {
+  text-align: left;
+  left: 136px;
+}
+
+
+table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.thead th {
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.thead {
+  background-color: #f2f2f2;
+}
 
 </style>

@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //コンポーネントをグローバル登録
 import imgLunbo from '@/components/imgLunbo.vue';
 import Navigation from '@/components/Navigation.vue';
+import NavigationTest from '@/components/NavigationTest.vue';
 import Lunbo from '@/components/Lunbo.vue';
 import CartNav from '@/components/CartNav.vue';
 import CartItem from '@/components/CartItem.vue';
@@ -18,8 +19,8 @@ import NS from '@/components/NS.vue';
 import Xbox from '@/components/Xbox.vue';
 import PC from '@/components/PC.vue';
 //ビューをグローバル登録
+import Home from '@/views/Home.vue';
 import Mall from '@/views/Mall.vue';
-import MallTop from '@/views/MallTop.vue';
 import MallTopTest from '@/views/MallTopTest.vue';
 // ナビリストをグローバル登録
 import BreadCrumb from '@/components/BreadCrumb.vue';
@@ -190,6 +191,7 @@ Vue.prototype.$imgUrl = {
 };
 
 Vue.component('Navigation', Navigation);
+Vue.component('NavigationTest', NavigationTest);
 Vue.component('Lunbo', Lunbo);
 Vue.component('CartNav', CartNav);
 Vue.component('CartItem', CartItem);
@@ -199,9 +201,9 @@ Vue.component('PS4PS5', PS4PS5);
 Vue.component('NS', NS);
 Vue.component('Xbox', Xbox);
 Vue.component('PC', PC);
-Vue.component('MallTop',MallTop)
 Vue.component('MallTopTest',MallTopTest)
 Vue.component('Mall',Mall);
+Vue.component('Home',Home);
 Vue.component('BreadCrumb',BreadCrumb);
 Vue.component('imgLunbo',imgLunbo);
 //グローバルメソッドを登録するため

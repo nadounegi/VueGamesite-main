@@ -38,19 +38,18 @@ html,body{
   display: flex;
   margin-top: 60px;
   height: calc(100vh - 60px);
-  /* overflow-y: hidden; */
 }
 
 .main .content{
   position: relative;
   left: 203px;
-  margin-top: 200px;
-  margin-left: -211px;
+  margin-top: 177px;
+  margin-left: -3px;
   overflow-y: auto;
   overflow-x: hidden;
   width: 1339px;
-
 }
+
 .navList {
   margin: 20px 0;
   font-size: 14px;

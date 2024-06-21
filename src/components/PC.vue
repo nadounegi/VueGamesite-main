@@ -1,6 +1,6 @@
 <template>
     <div>
-        <CateTitle id="PCTitle" :title="gameCategory" :to="getCategoryLink(gameCategory)" :showLink="true"/>
+        <CateTitle id="PCTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
         <div class="CartListItem">
             <div class="CartList">
             <CartItemTest v-for="item in PCList" :key="item.id" :item="item"/>
@@ -11,56 +11,23 @@
     
     <script>
     export default {
-        data(){
-            return{
-                gameCategory: "PC",
-                PCList:[
-                {
-                  id: 13,
-                  gameCategory: "PC",
-                  href: "/Mall/PCGame",
-                  category: "PC",
-                  name: "ファイナルファンタジーXIV",
-                  url: "src/assets/images/FINALFANTASY1.png",
-                  price: 4200,
-                  stock: 5,
-                },
-                {
-                  id: 14,
-                  gameCategory: "PC",
-                  href: "/Mall/PCGame",
-                  category: "PC",
-                  name: "リトルナイトメア",
-                  url: "src/assets/images/Little1.png",
-                  price: 2420,
-                  stock: 3,
-                },
-                {
-                  id: 15,
-                  gameCategory: "PC",
-                  href: "/Mall/PCGame",
-                  category: "PC",
-                  name: "Tales of ARISE",
-                  url: "src/assets/images/TALES1.png",
-                  price: 4400,
-                  stock: 2,
-                },
-                {
-                  id: 16,
-                  gameCategory: "PC",
-                  href: "/Mall/PCGame",
-                  category: "PC",
-                  name: "みんな大好き塊魂アンコール",
-                  url: "src/assets/images/KATAMARI1.png",
-                  price: 3960,
-                  stock: 1,
-                },
-                ]
-            }
+        computed:{
+        gameCategory(){
+            return "PC";
+        },
+        PCList(){
+            return this.$store.getters['PC/PCList']
+        },
+        categoryLink(){
+            return this.getCategoryLink();
+        },
+    },
+        created(){
+            this.$store.dispatch('PC/getPCList')
         },
         methods:{
             getCategoryLink(category){
-                const item = this.PCList.find(item => item.category === category);
+                const item = this.PCList.find(item => item.category === "PC");
                 return item ? item.href : '#';
             }
         }

@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@ export default {
   position: relative;
   height: 300px;
   bottom: 31px;
-  right: 260px;
+  right: 214px;
 }
 
 .rightHeader {
@@ -114,7 +114,7 @@ button img {
   width: 23px;
   position: relative;
   left: -13px;
-  top: -18px;
+  top: -16px;
 }
 
 :placeholder-shown {
@@ -172,4 +172,75 @@ h1 {
   font-size: 20px;
   font-weight: bold;
 }
+/* レスポンシブ */
+@media (max-width: 1200px){
+
+  .logo {
+    position: relative;
+    height: 300px;
+    bottom: 31px;
+    right: 138px;
+  }
+
+  .login-sign {
+    position: relative;
+    top: 114px;
+    left: 151px;
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+  }
+
+  .cart {
+    position: relative;
+    width: 188px;
+    height: 64px;
+    left: 145px;
+    top: 101px;
+    border-radius: 10px;
+    background-color: #8080804d;
+  }
+
+  .rightHeader form {
+    list-style-type: none;
+    position: relative;
+    left: 153px;
+    top: 2px;
+}
+} 
+
+@media (max-width: 1060px){
+  .logo {
+        position: relative;
+        height: 221px;
+        bottom: 51px;
+        right: 141px;
+    }
+
+    button img {
+        width: 23px;
+        position: relative;
+        left: 446px;
+        top: -74px;
+    }
+    
+    .cart {
+        position: relative;
+        width: 188px;
+        height: 64px;
+        left: 145px;
+        top: 80px;
+        border-radius: 10px;
+        background-color: #8080804d;
+    }
+    .login-sign {
+        position: relative;
+        top: 81px;
+        left: 151px;
+        display: flex;
+        justify-content: space-around;
+        width: 200px;
+    }
+}
+
 </style>

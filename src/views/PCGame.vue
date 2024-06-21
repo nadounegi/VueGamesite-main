@@ -3,62 +3,26 @@
     <BreadCrumb/>
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
-      <CartItem v-for="item in CartItems" :key="item.id" :item="item"/>
+      <CartItem v-for="item in PCList" :key="item.id" :item="item"/>
     </div>
   </div>
 </template>
 
 <script>
-// import FF14 from '@/assets/images/ファイナルファンタジーXIV.png';
-// import LittleNightmare from '@/assets/images/リトルナイトメア.png';
-// import TalesofARISE from '@/assets/images/TalesofARISE.png';
-// import Katamari from '@/assets/images/塊魂.png';
 
 export default {
-  
-  data() {
-    return {
-      gameCategory: "PCGame",
-      CartItems: [
-        {
-          id: 13,
-          gameCategory: "PC",
-          category: "PC",
-          name: "ファイナルファンタジーXIV",
-          url: this.$imgUrl.FINALFANTASY1,
-          price: 4200,
-          stock: 5,
+  computed:{
+        gameCategory(){
+            return "PC";
         },
-        {
-          id: 14,
-          gameCategory: "PC",
-          category: "PC",
-          name: "リトルナイトメア",
-          url: this.$imgUrl.Little1,
-          price: 2420,
-          stock: 3,
+        PCList(){
+            return this.$store.getters['PC/PCList']
         },
-        {
-          id: 15,
-          gameCategory: "PC",
-          category: "PC",
-          name: "Tales of ARISE",
-          url: this.$imgUrl.TALES1,
-          price: 4400,
-          stock: 2,
+    
         },
-        {
-          id: 16,
-          gameCategory: "PC",
-          category: "PC",
-          name: "みんな大好き塊魂アンコール",
-          url: this.$imgUrl.KATAMARI1,
-          price: 3960,
-          stock: 1,
+        created(){
+            this.$store.dispatch('PC/getPCList')
         },
-      ],
-    };
-  },
 };
 </script>
 

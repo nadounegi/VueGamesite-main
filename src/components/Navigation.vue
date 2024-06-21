@@ -6,7 +6,7 @@
     <div class="bottom_header">
       <router-link to ="#/Home" >
         <img src="src/assets/images/logo.png" alt=""
-         width="150" height="150" class="logo">
+         width="150" height="150">
       </router-link> 
      <!-- ナビゲーション部分 -->
       <nav class="nav_list">
@@ -152,11 +152,11 @@ header{
   max-width: 206vh;
 }
 
-.bottom_header.logo{
+/* .bottom_header.logo{
   position: relative;
   top: 0px;
   background: none;
-}  
+}   */
 
 .top_header{
  background-color: black;
@@ -172,9 +172,10 @@ header{
   border-bottom: solid 1px black;
 }
 .bottom_header img{
-  margin-left: -17px;
-  margin-top: -39px;
+  margin-left: 23px;
+  margin-top: -41px;
 }
+
 /* ナビゲーション部分 */
 .nav_list{
   list-style: none;
@@ -183,7 +184,7 @@ header{
   align-items: center;
   height: 75px;
   margin-left: 190px;
-  margin-top: -261px;
+  margin-top: -114px;
 }
 
 .nav_list li{
@@ -357,10 +358,10 @@ button {
 }
 
 button img{ 
-  width: 20px;
+  width: 23px;
   position: relative;
-  left: -22px;
-  top: 18px;
+  right: 26px;
+  top: 1px;
 }
 :placeholder-shown {
   padding-top: 5px;

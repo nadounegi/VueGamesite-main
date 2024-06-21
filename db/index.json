@@ -1,19 +1,282 @@
 {
-  "gameList":[
+  "VGList":[
+    {
+      "id": 1,
+      "href": "/Mall/PS4PS5",
+      "category": "PS4",
+      "name": "UNCHARTED 4",
+      "url": "/src/assets/images/UNCHARTED1.png",
+      "price": 6070,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "href": "/Mall/PS4PS5",
+      "category": "PS4",
+      "name": "バイオハザード 4",
+      "url": "/src/assets/images/BIOHAZARD1.png",
+      "price": 1266,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "href": "/Mall/PS4PS5",
+      "category": "PS5",
+      "name": "龍が如く8",
+      "url": "/src/assets/images/RYUGAGOTOKU1.png",
+      "price": 6120,
+      "stock": 3
+    },
+    {
+      "id": 4,
+      "href": "/Mall/PS4PS5",
+      "category": "PS5",
+      "name": "SandLand",
+      "url": "/src/assets/images/SandLand1.png",
+      "price": 7038,
+      "stock": 2
+    },
+    {
+      "id": 5,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "スプラトゥーン3",
+      "url": "/src/assets/images/SPLATOON1.png",
+      "price": 5618,
+      "stock": 7
+    },
+    {
+      "id": 6,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "マリオカート8",
+      "url": "/src/assets/images/MARIOKART1.png",
+      "price": 5307,
+      "stock": 4
+    },
+    {
+      "id": 7,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "ペーパーマリオRPG",
+      "url": "/src/assets/images/PAPER1.png",
+      "price": 5382,
+      "stock": 3
+    },
+    {
+      "id": 8,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "ゼルダの伝説",
+      "url": "/src/assets/images/ZELDA1.png",
+      "price": 6120,
+      "stock": 3
+    },
+    {
+      "id": 9,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Halo",
+      "url": "/src/assets/images/HALO1.png",
+      "price": 6209,
+      "stock": 6
+    },
+    {
+      "id": 10,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Forza Motorsport",
+      "url": "/src/assets/images/FORZA1.png",
+      "price": 4800,
+      "stock": 4
+    },
+    {
+      "id": 11,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Minecraft Legends",
+      "url": "/src/assets/images/MINECRAFT1.png",
+      "price": 1586,
+      "stock": 3
+    },
+    {
+      "id": 12,
+      "href": "/Mall/Xbox",
+      "category": "Xbox Series X",
+      "name": "Dead Space",
+      "url": "/src/assets/images/DEADSPACE1.png",
+      "price": 7775,
+      "stock": 2
+    }
+  ],
+  "PS4PS5List":[
+    {
+      "id": 1,
+      "href": "/Mall/PS4PS5",
+      "category": "PS4",
+      "name": "UNCHARTED 4",
+      "url": "/src/assets/images/UNCHARTED1.png",
+      "price": 6070,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "href": "/Mall/PS4PS5",
+      "category": "PS4",
+      "name": "バイオハザード 4",
+      "url": "/src/assets/images/BIOHAZARD1.png",
+      "price": 1266,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "href": "/Mall/PS4PS5",
+      "category": "PS5",
+      "name": "龍が如く8",
+      "url": "/src/assets/images/RYUGAGOTOKU1.png",
+      "price": 6120,
+      "stock": 3
+    },
+    {
+      "id": 4,
+      "href": "/Mall/PS4PS5",
+      "category": "PS5",
+      "name": "SandLand",
+      "url": "/src/assets/images/SandLand1.png",
+      "price": 7038,
+      "stock": 2
+    }
+  ],
+  "NSList":[
+    {
+      "id": 5,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "スプラトゥーン3",
+      "url": "/src/assets/images/SPLATOON1.png",
+      "price": 5618,
+      "stock": 7
+    },
+    {
+      "id": 6,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "マリオカート8",
+      "url": "/src/assets/images/MARIOKART1.png",
+      "price": 5307,
+      "stock": 4
+    },
+    {
+      "id": 7,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "ペーパーマリオRPG",
+      "url": "/src/assets/images/PAPER1.png",
+      "price": 5382,
+      "stock": 3
+    },
+    {
+      "id": 8,
+      "href": "/Mall/NintendoSwitch",
+      "category": "NS",
+      "name": "ゼルダの伝説",
+      "url": "/src/assets/images/ZELDA1.png",
+      "price": 6120,
+      "stock": 3
+    }
+  ],
+  "XboxList":[
+    {
+      "id": 9,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Halo",
+      "url": "/src/assets/images/HALO1.png",
+      "price": 6209,
+      "stock": 6
+    },
+    {
+      "id": 10,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Forza Motorsport",
+      "url": "/src/assets/images/FORZA1.png",
+      "price": 4800,
+      "stock": 4
+    },
+    {
+      "id": 11,
+      "href": "/Mall/Xbox",
+      "category": "Xbox",
+      "name": "Minecraft Legends",
+      "url": "/src/assets/images/MINECRAFT1.png",
+      "price": 1586,
+      "stock": 3
+    },
+    {
+      "id": 12,
+      "href": "/Mall/Xbox",
+      "category": "Xbox Series X",
+      "name": "Dead Space",
+      "url": "/src/assets/images/DEADSPACE1.png",
+      "price": 7775,
+      "stock": 2
+    }
+  ],
+  "PCList":[
+    {
+      "id": 13,
+      "href": "/Mall/PCGame",
+      "category": "PC",
+      "name": "ファイナルファンタジーXIV",
+      "url": "/src/assets/images/FINALFANTASY1.png",
+      "price": 4200,
+      "stock": 5
+    },
+    {
+      "id": 14,
+      "href": "/Mall/PCGame",
+      "category": "PC",
+      "name": "リトルナイトメア",
+      "url": "/src/assets/images/Little1.png",
+      "price": 2420,
+      "stock": 3
+    },
+    {
+      "id": 15,
+      "href": "/Mall/PCGame",
+      "category": "PC",
+      "name": "Tales of ARISE",
+      "url": "/src/assets/images/TALES1.png",
+      "price": 4400,
+      "stock": 2
+    },
+    {
+      "id": 16,
+      "gameCategory": "PC",
+      "href": "/Mall/PCGame",
+      "category": "PC",
+      "name": "みんな大好き塊魂アンコール",
+      "url": "/src/assets/images/KATAMARI1.png",
+      "price": 3960,
+      "stock": 1
+    }
+  ],
+  "allGames":[
     {
       "id":1,
       "gameCategory": "PS4・PS5",
       "category": "PS4",
       "name": "UNCHARTED 4",
       "description": "シリーズの主人公でトレジャーハンターのネイサン・ドレイク（ネイト）は、これまでに財宝を求めて世界各地で冒険を繰り広げてきた。そんなネイトが今回、兄のサムとともに挑むのは、18世紀に存在したとされる幻の国に眠る海賊王の秘宝だ。しかも本作『アンチャーテッド 海賊王と最後の秘宝』は、なんとネイトの最後の冒険になる。",
-      "url": "UNCHARTED1",
+      "url": "/src/assets/images/BIOHAZARD1.png",
       "price": 6070,
       "stock": 10,
       "images":[
-        {"url":"UNCHARTED1"},
-        {"url":"UNCHARTED2"},
-        {"url":"UNCHARTED3"},
-        {"url":"UNCHARTED4"}
+        {"url":"/src/assets/images/UNCHARTED1.png"},
+        {"url":"/src/assets/images/UNCHARTED2.png"},
+        {"url":"/src/assets/images/UNCHARTED3.png"},
+        {"url":"/src/assets/images/UNCHARTED4.png"}
       ]
     },
     {
@@ -23,14 +286,14 @@
       "category": "PS4",
       "name": "バイオハザード 4",
       "description": "『バイオハザード4』は従来作の固定視点でのゲームプレイから、プレイヤーの背後からの視点“ビハインドビュー”へと変革を遂げた。アクション、シューティングゲームの新たなスタイルを高い次元で結実させた「4」は「バイオハザード」シリーズ作品のみならず、続く多くの作品に影響を与えた。サバイバルホラー、そしてアクションゲームのマスターピースとして、誕生から多くの年月を重ねた今もその完成度は色褪せることがない。",
-      "url": "BIOHAZARD1",
+      "url": "/src/assets/images/BIOHAZARD1.png",
       "price": 1266,
       "stock": 5,
       "images":[
-        {"url":"BIOHAZARD1"},
-        {"url":"BIOHAZARD2"},
-        {"url":"BIOHAZARD3"},
-        {"url":"BIOHAZARD4"}
+        {"url":"/src/assets/images/BIOHAZARD1.png"},
+        {"url":"/src/assets/images/BIOHAZARD2.png"},
+        {"url":"/src/assets/images/BIOHAZARD3.png"},
+        {"url":"/src/assets/images/BIOHAZARD4.png"}
       ]
     },
     {
@@ -40,14 +303,14 @@
       "category": "PS5",
       "name": "龍が如く8",
       "description": "再びどん底から這い上がる男、春日一番と人生最期の戦いに挑む男、桐生一馬。二人の主人公が繰り広げる、シリーズ最高のドラマを描いた超大作RPG。戦いは、より戦略性を増した「新ライブコマンドRPGバトル」へと進化。新ジョブの追加や充実のカスタマイズ、育成要素で最強のパーティを作り上げろ！そして舞台は、シリーズ初の海外ステージ「ハワイ」へ。ハワイならではの様々なプレイスポットを遊び尽くせ!",
-      "url": "RYUGAGOTOKU1",
+      "url": "/src/assets/images/RYUGAGOTOKU1.png",
       "price": 6120,
       "stock": 3,
       "images":[
-        {"url":"RYUGAGOTOKU1"},
-        {"url":"RYUGAGOTOKU2"},
-        {"url":"RYUGAGOTOKU3"},
-        {"url":"RYUGAGOTOKU4"}
+        {"url":"/src/assets/images/RYUGAGOTOKU1.png"},
+        {"url":"/src/assets/images/RYUGAGOTOKU2.png"},
+        {"url":"/src/assets/images/RYUGAGOTOKU3.png"},
+        {"url":"/src/assets/images/RYUGAGOTOKU4.png"}
       ]
     },
     {
@@ -57,14 +320,14 @@
       "category": "PS5",
       "name": "SandLand",
       "description": "乾き切った砂漠の世界を救うワルでピュアな悪魔！「ドラゴンボール」原作者である鳥山明が手掛けた魅力溢れる世界を、多彩なメカと広大なフィールドで描いたアクションRPG。魔物も人間も水不足にあえぐ砂漠の世界――サンドランド。正義感の強い保安官ラオが水不足を解消するために協力を求めたのは、この世で最も恐れられている悪魔達だった。ラオは悪魔の王子ベルゼブブとお目付け役の魔物シーフと共に、砂漠のどこかにある「幻の泉」を探す冒険の旅へと出発する!",
-      "url": "SandLand1",
+      "url": "/src/assets/images/SandLand1.png",
       "price": 7038,
       "stock": 2,
       "images":[
-        {"url":"SandLand1"},
-        {"url":"SandLand2"},
-        {"url":"SandLand3"},
-        {"url":"SandLand4"}
+        {"url":"/src/assets/images/SandLand1.png"},
+        {"url":"/src/assets/images/SandLand2.png"},
+        {"url":"/src/assets/images/SandLand3.png"},
+        {"url":"/src/assets/images/SandLand4.png"}
       ]
     },
     {
@@ -74,14 +337,14 @@
       "category": "NS",
       "name": "スプラトゥーン3",
       "description": "大自然で! 大都会で! さらに広がるナワバリバトル!ヒトの姿に変身する不思議なイカたちによる、アクションシューティングがパワーアップして登場!4対4のチームに分かれて、地面を塗った面積で勝敗を決める基本的なルールはそのままに、新たなブキやスペシャルウェポン、バトルアクションが追加。",
-      "url": "SPLATOON1",
+      "url": "/src/assets/images/SPLATOON1.png",
       "price": 5618,
       "stock": 7,
       "images":[
-        {"url":"SPLATOON1"},
-        {"url":"SPLATOON2"},
-        {"url":"SPLATOON3"},
-        {"url":"SPLATOON4"}
+        {"url":"/src/assets/images/SPLATOON1.png"},
+        {"url":"/src/assets/images/SPLATOON2.png"},
+        {"url":"/src/assets/images/SPLATOON3.png"},
+        {"url":"/src/assets/images/SPLATOON4.png"}
       ]
     },
     {
@@ -91,14 +354,14 @@
       "category": "NS",
       "name": "マリオカート8",
       "description": "あらゆる場所がサーキット。レース、バトル、すべてがデラックス。今までにないキャラクター、コース、マシンが加わり、『マリオカート8』がデラックスに。Wii U『マリオカート8』の追加コンテンツを全て収録し、本作独自の新しいキャラクターやコース、マシンなどの新要素がプラスされ、シリーズ最大ボリュームのマリオカートとして新たに登場。",
-      "url": "MARIOKART1",
+      "url": "/src/assets/images/MARIOKART1.png",
       "price": 5307,
       "stock": 4,
       "images":[
-        {"url":"MARIOKART1"},
-        {"url":"MARIOKART2"},
-        {"url":"MARIOKART3"},
-        {"url":"MARIOKART4"}
+        {"url":"/src/assets/images/MARIOKART1.png"},
+        {"url":"/src/assets/images/MARIOKART2.png"},
+        {"url":"/src/assets/images/MARIOKART3.png"},
+        {"url":"/src/assets/images/MARIOKART4.png"}
       ]
     },
     {
@@ -108,14 +371,14 @@
       "category": "NS",
       "name": "ペーパーマリオRPG",
       "description": "『ペーパーマリオRPG』（ペーパーマリオアールピージー、PAPER MARIO RPG、Paper Mario: The Thousand-Year Door）は、インテリジェントシステムズ開発、任天堂発売のアクションRPG。ペーパーマリオシリーズの2作目。タイトルでは繋がっていないものの、NINTENDO64で発売された『マリオストーリー』の実質的な続編[注 1]。続編として、『スーパーペーパーマリオ』が2007年4月19日に発売された（ただし、ジャンルはRPGではなくアクションアドベンチャー）",
-      "url": "PAPER1",
+      "url": "/src/assets/images/PAPER1.png",
       "price": 5382,
       "stock": 3,
       "images":[
-        {"url":"PAPER1"},
-        {"url":"PAPER2"},
-        {"url":"PAPER3"},
-        {"url":"PAPER4"}
+        {"url":"/src/assets/images/PAPER1.png"},
+        {"url":"/src/assets/images/PAPER2.png"},
+        {"url":"/src/assets/images/PAPER3.png"},
+        {"url":"/src/assets/images/PAPER4.png"}
       ]
     },
     {
@@ -125,14 +388,14 @@
       "category": "NS",
       "name": "ゼルダの伝説",
       "description": "果てなき冒険は、大空へ広がる。『ゼルダの伝説　ブレス オブ ザ ワイルド』続編が登場。どこまでも続く広大な「大地」、そしてはるか雲の上の「大空」まで広がった世界で、どこへ行くのも、何をするのもあなた次第です。空を翔けめぐり、不思議な空島を探索するのか？リンクの手にした新たな力で、ハイラルの異変に立ち向かうのか？あなただけの果てなき冒険が、再び始まります。",
-      "url": "ZELDA1",
+      "url": "/src/assets/images/ZELDA1.png",
       "price": 6120,
       "stock": 3,
       "images":[
-        {"url":"ZELDA1"},
-        {"url":"ZELDA2"},
-        {"url":"ZELDA3"},
-        {"url":"ZELDA4"}
+        {"url":"/src/assets/images/ZELDA1.png"},
+        {"url":"/src/assets/images/ZELDA2.png"},
+        {"url":"/src/assets/images/ZELDA3.png"},
+        {"url":"/src/assets/images/ZELDA4.png"}
       ]
     },
     {
@@ -142,14 +405,14 @@
       "category": "Xbox Series X",
       "name": "Halo Infinite",
       "description": "すべての希望が失われ、人類の運命が岐路に立つ時、マスターチーフはこれまでに直面したことのないもっとも冷酷な敵に立ち向かう。アーマーに身を包んだ人類最高のヒーローがついに Halo リングの謎に迫る。『Halo』史上もっとも壮大なマスターチーフの物語を携えて、新たなスタートとなるシリーズ最新作で壮大な冒険を体験しよう。Halo の謎に迫る壮大なキャンペーン モード。豊富な種類の武器や乗り物、装備品を組み合わせて無限の組み合わせで戦闘力を高めよう。フェア スタート、マップ内装備配置、4人チーム制など原点に立ち返り、エキサイティングなアリーナ シューターを体験。奥深いプレイヤー カスタマイズ システムで、自分だけのスパルタンになろう。Xbox Series Xでは、最大 120 FPSやロード時間の大幅な短縮などによるスムーズなゲーム プレイを提供。",
-      "url":"HALO1",
+      "url": "/src/assets/images/HALO1.png",
       "price": 6209,
       "stock": 6,
       "images":[
-        {"url":"HALO1"},
-        {"url":"HALO2"},
-        {"url":"HALO3"},
-        {"url":"HALO4"}
+        {"url":"/src/assets/images/HALO1.png"},
+        {"url":"/src/assets/images/HALO2.png"},
+        {"url":"/src/assets/images/HALO3.png"},
+        {"url":"/src/assets/images/HALO4.png"}
       ]
     },
     {
@@ -159,14 +422,14 @@
       "category": "Xbox Series X",
       "name": "Forza Motorsport",
       "description": "新しいシングル プレイ モードでライバルに差をつけよう。マルチ プレイヤーでフレンドとレースをしよう。最先端の AI と高度な物理エンジンで、世界的に有名なコースと実在する 500 台以上のクルマをリアルに再現。",
-      "url": "FORZA1",
+      "url": "/src/assets/images/FORZA1.png",
       "price": 4800,
       "stock": 4,
       "images":[
-        {"url":"FORZA1"},
-        {"url":"FORZA2"},
-        {"url":"FORZA3"},
-        {"url":"FORZA4"}
+        {"url":"/src/assets/images/FORZA1.png"},
+        {"url":"/src/assets/images/FORZA2.png"},
+        {"url":"/src/assets/images/FORZA3.png"},
+        {"url":"/src/assets/images/FORZA4.png"}
       ]
     },
     {
@@ -176,14 +439,14 @@
       "category": "Xbox One",
       "name": "Minecraft Legends",
       "description": "ピグリンたちによるネザーの侵食はオーバーワールド全体に広がりつつあり、触れたもの全てを焼き尽くしていくでしょう。この平穏な大地のヒーローになる準備はいいですか？綿密な戦略を立て、ピグリンたちとの壮大な戦いに挑みましょう。でも気を付けてください… 彼らは必ず反撃してきます。日中はピグリンたちの基地に攻め込み、日が沈んだら仲間たちと守りを固めましょう。宝物と危険が満ち溢れる緑豊かバイオームを旅して新しい仲間と出会い、良く知ったモブたちと再会しましょう。そして仲間たちと共に、世界を救いましょう。",
-      "url": "MINECRAFT1",
+      "url": "/src/assets/images/MINECRAFT1.png",
       "price": 1586,
       "stock": 3,
       "images":[
-        {"url":"MINECRAFT1"},
-        {"url":"MINECRAFT2"},
-        {"url":"MINECRAFT3"},
-        {"url":"MINECRAFT4"}
+        {"url":"/src/assets/images/MINECRAFT1.png"},
+        {"url":"/src/assets/images/MINECRAFT2.png"},
+        {"url":"/src/assets/images/MINECRAFT3.png"},
+        {"url":"/src/assets/images/MINECRAFT4.png"}
       ]
     },
     {
@@ -193,14 +456,14 @@
       "category": "Xbox Series X",
       "name": "Dead Space",
       "description": "SFサバイバルホラーの名作が復活します。オリジナルのスリリングな世界観を忠実に再現しながら、ビジュアル、オーディオ、ゲームプレイの改善を含め、さらに没入感のある体験を提供するために完全に再構築されました。",
-      "url": "DEADSPACE1",
+      "url": "/src/assets/images/DEADSPACE1.png",
       "price": 7775,
       "stock": 2,
       "images":[
-        {"url":"DEADSPACE1"},
-        {"url":"DEADSPACE2"},
-        {"url":"DEADSPACE3"},
-        {"url":"DEADSPACE4"}
+        {"url":"/src/assets/images/DEADSPACE1.png"},
+        {"url":"/src/assets/images/DEADSPACE2.png"},
+        {"url":"/src/assets/images/DEADSPACE3.png"},
+        {"url":"/src/assets/images/DEADSPACE4.png"}
       ] 
     },
     {
@@ -210,14 +473,14 @@
       "category": "PC",
       "name": "ファイナルファンタジーXIV",
       "description": "ファイナルファンタジーXIVは、壮大な“エオルゼア”という世界を舞台に、ネットワークを通じて、世界中のプレイヤーと共に冒険できる、オンラインゲームです。冒険は戦いだけでなく、アイテムの製作や、チョコボの育成など様々あり、その遊び方は冒険者であるあなた次第!お馴染みの召喚獣やモーグリ、飛空挺…そして仲間たちが待つ、新たなFFの世界に旅立ちましょう!",
-      "url": "FINALFANTASY1",
+      "url": "/src/assets/images/FINALFANTASY1.png",
       "price": 4200,
       "stock": 5,
       "images":[
-        {"url":"FINALFANTASY1"},
-        {"url":"FINALFANTASY2"},
-        {"url":"FINALFANTASY3"},
-        {"url":"FINALFANTASY4"}
+        {"url":"/src/assets/images/FINALFANTASY1.png"},
+        {"url":"/src/assets/images/FINALFANTASY2.png"},
+        {"url":"/src/assets/images/FINALFANTASY3.png"},
+        {"url":"/src/assets/images/FINALFANTASY4.png"}
       ]
     },
     {
@@ -227,14 +490,14 @@
       "category": "PC",
       "name": "リトルナイトメア",
       "description": "子供のころに感じた奇妙な恐怖や不安を覚えていますか？食欲の尽きることがない魔物が巣食う謎の船舶「ザ・モウ」の中、恐ろしくも懐かしい感覚を思い出したあなたの手で、囚われた幼き少女「シックス」を無事に脱出させましょう。",
-      "url": "Little1",
+      "url": "/src/assets/images/Little1.png",
       "price": 2420,
       "stock": 3,
       "images":[
-        {"url":"Little1"},
-        {"url":"Little2"},
-        {"url":"Little3"},
-        {"url":"Little4"}
+        {"url":"/src/assets/images/Little1.png"},
+        {"url":"/src/assets/images/Little2.png"},
+        {"url":"/src/assets/images/Little3.png"},
+        {"url":"/src/assets/images/Little4.png"}
     ]
     },
     {
@@ -244,14 +507,14 @@
       "category": "PC",
       "name": "Tales of ARISE",
       "description": "３００年の支配。謎の仮面。失われた痛みと記憶。強大な炎の剣のただひとりの使い手となり、触れ得ざる少女や仲間たちと共に圧制者に立ち向かえ。進化したグラフィックが描き出す表情豊かなキャラクターたちの織りなす解放の戦いの物語。",
-      "url": "TALES1",
+      "url": "/src/assets/images/TALES1.png",
       "price": 4400,
       "stock": 2,
       "images":[
-        {"url":"TALES1"},
-        {"url":"TALES2"},
-        {"url":"TALES3"},
-        {"url":"TALES4"}
+        {"url":"/src/assets/images/TALES1.png"},
+        {"url":"/src/assets/images/TALES2.png"},
+        {"url":"/src/assets/images/TALES3.png"},
+        {"url":"/src/assets/images/TALES4.png"}
       ]
     },
     {
@@ -261,35 +524,29 @@
       "category": "PC",
       "name": "みんな大好き塊魂アンコール",
       "description": "ふとしたことで宇宙の星々をウッカリ破壊しつくしてしまった大コスモの王様。息子である王子を地球に向かわせ、大きい塊をつくることを命じます。王子は地球上のあらゆるモノを巻き込んで、どんどん塊を大きくしていきました。そうしてつくられた塊たちはキラキラと宇宙に浮かび、失われた星空を甦らせました。星空を復活させると、次第に世界のあちらこちらで王様のファンが増えていきました。ファンからの活躍を願う声に応えたい王様は、みんなの夢を叶えるべく、今日も王子は塊を転がします。そんなゲームです。",
-      "url": "KATAMARI1",
+      "url": "/src/assets/images/KATAMARI1.png",
       "price": 3960,
       "stock": 1,
       "images":[
-        {"url":"KATAMARI1"},
-        {"url":"KATAMARI2"},
-        {"url":"KATAMARI3"},
-        {"url":"KATAMARI4"}
+        {"url":"/src/assets/images/KATAMARI1.png"},
+        {"url":"/src/assets/images/KATAMARI2.png"},
+        {"url":"/src/assets/images/KATAMARI3.png"},
+        {"url":"/src/assets/images/KATAMARI4.png"}
       ]
-    
     }
   ],
-
-  "cart": [
-    { "id": 1, "stock": 10, "name": "UNCHARTED 4","url":"UNCHARTED1","price":6070},
-    { "id": 2, "stock": 5, "name": "バイオハザード 4","url":"BIOHAZARD1","price":1266},
-    { "id": 3, "stock": 3, "name": "龍が如く8","url":"RYUGAGOTOKU1","price":6120},
-    { "id": 4, "stock": 2, "name": "SandLand", "url":"SandLand1","price":7038},
-    { "id": 5, "stock": 7, "name": "スプラトゥーン3","url":"SPLATOON1","price":5618},
-    { "id": 6, "stock": 4, "name": "マリオカート8","url":"MARIOKART1","price":5307},
-    { "id": 7, "stock": 3, "name": "ペーパーマリオRPG","url":"PAPER1","price":5382},
-    { "id": 8, "stock": 3, "name": "ゼルダの伝説","url":"ZELDA1","price":6120},
-    { "id": 9, "stock": 6, "name": "Halo Infinite","url":"HALO1","price":6209},
-    { "id": 10,"stock": 4, "name": "Forza Motorsport","url":"FORZA1","price":4800},
-    { "id": 11,"stock": 3, "name": "Minecraft Legends","url":"MINECRAFT1","price":1586},
-    { "id": 12,"stock": 2, "name": "Dead Space","url":"DEADSPACE1","price":7775},
-    { "id": 13,"stock": 5, "name": "ファイナルファンタジーXIV","url":"FINALFANTASY1","price":4200},
-    { "id": 14,"stock": 3, "name": "リトルナイトメア","url":"Little1","price":2420},
-    { "id": 15,"stock": 2, "name": "Tales of ARISE","url":"TALES1","price":4400},
-    { "id": 16,"stock": 1, "name": "みんな大好き塊魂アンコール","url":"KATAMARI1","price":3960}
+  "imagesList": [
+    { "url": "src/assets/images/神秘海域.png", 
+      "title": "UNCHARTED 4", 
+      "description": "シリーズ完結編！" 
+    },
+    { "url": "src/assets/images/Horizon.png", 
+      "title": "Horizon 2 Forbidden West", 
+      "description": "1000年後の未来、アメリカ西部を舞台に描かれる『Horizon Forbidden West』。" 
+    },
+    { "url": "src/assets/images/BioHazard.png", 
+      "title": "BioHazard RE:4", 
+      "description": "エイダ・ウォンを主人公に、『バイオハザード RE:4』本編のミッシングリンクを描いたストーリーコンテンツ。" 
+    }
   ]
 }

@@ -80,7 +80,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   width: 245px;
-  height: 409px;
+  height: 432px;
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -146,8 +146,10 @@ span {
 
 .buttonContainer {
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100%;
+  top: 46px;
 }
 
 .cartButton {

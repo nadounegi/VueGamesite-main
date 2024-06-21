@@ -3,62 +3,25 @@
     <BreadCrumb />
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
-      <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
+      <CartItem v-for="item in PS4PS5List" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
 
 <script>
 
-// import Uncarted4 from '@/assets/images/Uncharted4.png';
-// import Biohazard4 from '@/assets/images/バイオハザード４.png';
-// import RyuGaGotoku8 from '@/assets/images/龍が如く８.png';
-// import SandLand from '@/assets/images/SandLand.png';
-
 export default {
-  data() {
-    return {
-      gameCategory: "PS4・PS5", // 确保定义了gameCategory
-      CartItems: [
-        {
-          id: 1,
-          gameCategory: "PS4・PS5",
-          category: "PS4",
-          name: "UNCHARTED 4",
-          url: this.$imgUrl.UNCHARTED1,
-          price: 6070,
-          stock: 10,
+  computed:{
+        gameCategory(){
+            return "PS4・PS5";
         },
-        {
-          id: 2,
-          gameCategory: "PS4・PS5",
-          category: "PS4",
-          name: "バイオハザード 4",
-          url: this.$imgUrl.BIOHAZARD1,
-          price: 1266,
-          stock: 5,
+        PS4PS5List(){
+            return this.$store.getters['PS4PS5/PS4PS5List']
         },
-        {
-          id: 3,
-          gameCategory: "PS4・PS5",
-          category: "PS5",
-          name: "龍が如く8",
-          url: this.$imgUrl.RYUGAGOTOKU1,
-          price: 6120,
-          stock: 3,
+    },
+        created(){
+            this.$store.dispatch('PS4PS5/getPS4PS5List')
         },
-        {
-          id: 4,
-          gameCategory: "PS4・PS5",
-          category: "PS5",
-          name: "SandLand",
-          url: this.$imgUrl.SandLand1,
-          price: 7038,
-          stock: 2,
-        },
-      ],
-    };
-  },
 };
 </script>
 

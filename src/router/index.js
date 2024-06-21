@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Mall from '@/views/Mall.vue';
-import MallTop from '@/views/MallTop.vue';
+// import MallTop from '@/views/MallTop.vue';
 import MallTopTest from '@/views/MallTopTest.vue';
 import GameDetail from '@/views/GameDetail.vue';
 import Home from '@/views/Home.vue';
@@ -11,7 +11,7 @@ import Xbox from '@/views/Xbox.vue';
 import PCGame from '@/views/PCGame.vue';
 import VideoGame from '@/views/VideoGame.vue';
 import CartInfo from '@/views/CartInfo.vue';
-
+import payMent from '@/views/payMent.vue';
 // Vue Router 初期化
 Vue.use(VueRouter);
 
@@ -97,6 +97,13 @@ const router = new VueRouter({
           component: CartInfo,
           meta:{
             breadcrumb: 'ショッピングカート'
+          }
+        },
+        {
+          path: '/PayMent',
+          component: payMent,
+          meta:{
+            breadcrumb: 'お支払い'
           }
         }
       ]

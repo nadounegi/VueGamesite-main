@@ -99,7 +99,8 @@ export default {
       }
     },
     pay() {
-      this.$router.push('/pay');
+      this.$store.dispatch('addOrder');
+      this.$router.push('/payMent');
     }
   },
   watch: {

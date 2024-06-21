@@ -3,62 +3,25 @@
         <BreadCrumb/>
         <CateTitle :title="gameCategory" />
         <div class="CartList">
-      <CartItem v-for="item in CartItems" :key="item.id" :item="item" />
+      <CartItemTest v-for="item in XboxList" :key="item.id" :item="item" />
     </div>
     </div>
 </template>
 
 <script>
 
-// import HaloInfinite from '@/assets/images/HaloInfinite.png';
-// import ForzaMotorsport from '@/assets/images/ForzaMotorsport.png';
-// import MinecraftLegends from '@/assets/images/MinecraftLegends.png';
-// import DeadSpace from '@/assets/images/DeadSpace.png';
-
 export default {
-  data() {
-    return {
-      gameCategory: "Xbox", // 确保定义了gameCategory
-      CartItems: [
-      {
-          id: 9,
-          gameCategory: "Xbox",
-          category: "Xbox Series X",
-          name: "Halo Infinite",
-          url: this.$imgUrl.HALO1,
-          price: 6209,
-          stock: 6,
+  computed:{
+        gameCategory(){
+            return "Xbox";
         },
-        {
-          id: 10,
-          gameCategory: "Xbox",
-          category: "Xbox Series X",
-          name: "Forza Motorsport",
-          url: this.$imgUrl.FORZA1,
-          price: 4800,
-          stock: 4,
+        XboxList(){
+            return this.$store.getters['Xbox/XboxList']
         },
-        {
-          id: 11,
-          gameCategory: "Xbox",
-          category: "Xbox One",
-          name: "Minecraft Legends",
-          url: this.$imgUrl.MINECRAFT1,
-          price: 1586,
-          stock: 3,
+    },
+        created(){
+            this.$store.dispatch('Xbox/getXboxList')
         },
-        {
-          id: 12,
-          gameCategory: "Xbox",
-          category: "Xbox Series X",
-          name: "Dead Space",
-          url: this.$imgUrl.DEADSPACE1,
-          price: 7775,
-          stock: 2,
-        },
-      ],
-    };
-  },
 };
 </script>
 
