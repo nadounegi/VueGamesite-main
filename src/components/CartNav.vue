@@ -126,7 +126,7 @@ button img {
   position: relative;
   width: 188px;
   height: 64px;
-  left: 55px;
+  left: 93px;
   top: 101px;
   border-radius: 10px;
   background-color: #8080804d;

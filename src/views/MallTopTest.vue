@@ -32,13 +32,14 @@ export default {
 <style scoped>
 
 .CartListItem .CartList {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  line-height: 1;
-  left: 7px;
-  bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    line-height: 1;
+    left: 198px;
+    bottom: 65px;
 }
+
 .CartListItem {
   position: relative;
   margin-right: 107px;

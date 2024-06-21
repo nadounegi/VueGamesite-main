@@ -164,19 +164,23 @@ export default {
 }
 
 .nav_list {
-  list-style: none;
-  display: flex;
-  padding: 20px;
-  align-items: center;
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    right: 161px;
 }
 
 .nav_list li {
-  list-style: none;
-  display: flex;
-  padding: 20px;
-  position: relative;
-  right: 188px;
-  align-items: center;
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    margin-top: -13px;
+    right: 196px;
+    width: 145px;
+    align-items: center;
 }
 
 .nav_list li a {
@@ -194,14 +198,15 @@ export default {
 }
 
 .dropdown_content {
-  display: none;
-  list-style: none;
-  width: 119px;
-  font-weight: bolder;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+    display: none;
+    list-style: none;
+    width: 142px;
+    font-weight: bolder;
+    position: absolute;
+    top: 55px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .nav_list .dropdown:hover .dropdown_content {
@@ -217,15 +222,16 @@ export default {
 }
 
 .sub_dropdown_content {
-  display: none;
-  list-style: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  width: 133px;
-  margin-left: 116px;
-  margin-top: -46px;
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 163px;
+    left: 1px;
+    margin-left: 305px;
+    margin-top: 128px;
 }
 
 .sub_dropdown_content li a{
@@ -237,11 +243,13 @@ export default {
 }
 
 .dropdown_content li a {
-  color: black;
-  font-weight: bolder;
-  width: 173px;
-  padding: 12px 5px;
-  text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    width: 51vw;
+    position: relative;
+    text-decoration: none;
+    margin-right: -19px;
+    left: 169px;
 }
 
 .right_nav {
@@ -335,28 +343,80 @@ button img {
 
   .nav_list li {
     margin-right: -1px;
-    width: 11vw;
+    width: 16vw;
     position: relative;
-    right: 22px;
+    right: 34px;
+  }
+
+  .dropdown_content {
+    display: none;
+    list-style: none;
+    width: 131px;
+    font-weight: bolder;
+    position: absolute;
+    top: 56px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .dropdown_content li {
+    position: relative;
+    margin-bottom: -56px;
+    bottom: 26px;
+  }
+
+  .dropdown_content li a {
+    color: black;
+    font-weight: bolder;
+    width: 173px;
+    text-decoration: none;
+    position: relative;
+    right: 10px;
+  }
+
+  .sub_dropdown_content {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 14vw;
+    margin-left: 116px;
+    margin-top: -46px;
+  }
+
+  .sub_dropdown_content li {
+    width: 33vh;
   }
 
   form {
     position: relative;
-    top: 80px !important;
-    right: 38px !important;
+    top: 94px;
+    right: 59px;
     list-style-type: none;
+  }
+
+  input {
+    border-radius: 20px;
+    border: solid 1px #cac9c9;
+    width: 292px;
+    height: 37px;
+    padding-left: 9px;
+    padding-top: 10px;
   }
 
   button img {
     width: 23px;
     position: relative;
-    right: 33px;
-    top: 0;
+    left: 257px;
+    top: -27px;
   }
 }
 
-/* max-width:1024px max-height: 874px */
-@media only screen and (max-width: 1024px) and (max-height: 874px) {
+/* max-width:1024px max-height: 745 */
+@media only screen and (max-width: 1024px) and (max-height: 745px) {
   .hamburger {
     display: none;
   }
@@ -368,11 +428,46 @@ button img {
     padding: 0 20px;
     border-bottom: solid 1px black;
   }
+
   .nav_list li {
-    margin-right: 3px;
-    width: 12vw;
+    margin-right: -68px;
+    width: 19vw;
     position: relative;
+    right: 38px;
   }
+
+  .dropdown_content {
+    display: none;
+    list-style: none;
+    width: 143px;
+    font-weight: bolder;
+    position: absolute;
+    top: 75px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .dropdown_content li a {
+    color: black;
+    font-weight: bolder;
+    width: 173px;
+    text-decoration: none;
+    margin-bottom: -29px;
+  }
+
+  .sub_dropdown_content {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 133px;
+    margin-left: 129px;
+    margin-top: 197px;
+  }
+
   .right_nav {
     margin-bottom: 143px;
   }
@@ -383,6 +478,7 @@ button img {
     right: 19px !important;
     list-style-type: none;
   }
+
 }
 
 /* iphone 14 Pro Max max-width: 430px max-height: 932px */

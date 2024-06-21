@@ -40,14 +40,14 @@ html,body{
   height: calc(100vh - 60px);
 }
 
-.main .content{
-  position: relative;
-  left: 203px;
-  margin-top: 177px;
-  margin-left: -3px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  width: 1339px;
+.main .content {
+    position: relative;
+    left: 198px;
+    margin-top: 177px;
+    margin-left: -19px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 1339px;
 }
 
 .navList {

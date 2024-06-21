@@ -122,7 +122,7 @@ export default {
   align-items: center;
   gap: 9px;
   position: relative;
-  bottom: 30px;
+  top: 8px;
   left: 0;
 }
 
@@ -149,7 +149,7 @@ span {
   position: relative;
   justify-content: center;
   width: 100%;
-  top: 46px;
+  top: 90px;
 }
 
 .cartButton {
