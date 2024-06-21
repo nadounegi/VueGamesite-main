@@ -179,7 +179,7 @@ html, body {
 .nav-button img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .nav-button:hover {
@@ -222,10 +222,11 @@ html, body {
 .nav-button:hover > img {
   transform: scale(1);
 }
-
-@media (max-width: 900px) {
+/* 响应式样式 */
+/* max-width:1024px max-height: 1366px*/
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
   .carousel {
-    width: 80%;
+    width: 94%;
     max-width: 1000px;
     height: auto;
     display: flex;
@@ -247,7 +248,8 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+/* max-width:1024px max-height: 874px */
+@media only screen and (max-width: 1024px) and (max-height: 874px)  {
   .carousel{
     width: 80%;
     max-width: 1000px;
@@ -256,7 +258,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    bottom: 3px;
+    bottom: 0;
   }
   .carousel.active {
     width: 80%;
@@ -275,7 +277,7 @@ html, body {
 
   .carousel .images {
     width: 100%;
-    height: 45vh;
+    height: 56vh;
     max-height: 600px;
     display: flex;
     align-items: center;
@@ -297,8 +299,64 @@ html, body {
   }
 
   .nav-button {
-    width: 60px;
+    width: 113px;
     height: 60px;
+  }
+}
+
+/* iphone 14 Pro Max max-width: 430px max-height: 932px */
+@media only screen and (max-width: 430px) and (max-height: 932px){
+  .carousel {
+    width: 94%;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 2px;
+  }
+  .carousel .images {
+    width: 100%;
+    height: 26vh;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img > div > h1{
+    position: relative;
+    top: -76px;
+    left: 3px;
+    font-size: 30px;
+    animation: h1Animation-dc813642 .4s ease-out;
+    z-index: 1;
+  }
+
+  .img > div > span{
+    position: relative;
+    bottom: 79px;
+    padding-left: 10px;
+    font-size: 17px;
+    animation: h1Animation-dc813642 .7s ease-out;
+  }
+  
+  .navigation {
+    width: 100%;
+    height: 92px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+    bottom: 135px;
+    position: relative;
   }
 }
 </style>

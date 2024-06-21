@@ -7,7 +7,6 @@ import store from './stores';
 import 'bootstrap/dist/css/bootstrap.css';
 //コンポーネントをグローバル登録
 import imgLunbo from '@/components/imgLunbo.vue';
-import Navigation from '@/components/Navigation.vue';
 import NavigationTest from '@/components/NavigationTest.vue';
 import Lunbo from '@/components/Lunbo.vue';
 import CartNav from '@/components/CartNav.vue';
@@ -190,7 +189,6 @@ Vue.prototype.$imgUrl = {
   KATAMARI4,
 };
 
-Vue.component('Navigation', Navigation);
 Vue.component('NavigationTest', NavigationTest);
 Vue.component('Lunbo', Lunbo);
 Vue.component('CartNav', CartNav);

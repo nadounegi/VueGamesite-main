@@ -33,15 +33,16 @@
         </li>
         <li><router-link to="/Mall">ゲーム購入</router-link></li>
         <li><router-link to="/info">最新情報</router-link></li>
+        <div class="right_nav">
+          <form action="#">
+            <input type="text" name="search" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください" name2="keywords">
+            <button type="submit">
+              <img src="src/assets/images/検索用の虫眼鏡アイコン.svg" alt=""  class="search-icon">
+            </button>
+          </form>
+        </div>
       </nav>
-      <div class="right_nav">
-        <form action="#">
-          <input type="text" name="search" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください" name2="keywords">
-          <button type="submit"><img src="src/assets/images/検索用の虫眼鏡アイコン.png" alt=""></button>
-        </form>
-      </div>
     </div>
-    <router-view></router-view>
   </header>
 </template>
 
@@ -126,7 +127,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -152,6 +153,7 @@ export default {
 .bottom_header {
   display: flex;
   align-items: center;
+  height: 4vw;
   justify-content: space-between;
   padding: 0 20px;
   border-bottom: solid 1px black;
@@ -169,8 +171,12 @@ export default {
 }
 
 .nav_list li {
-  margin-right: 20px;
+  list-style: none;
+  display: flex;
+  padding: 20px;
   position: relative;
+  right: 188px;
+  align-items: center;
 }
 
 .nav_list li a {
@@ -190,6 +196,7 @@ export default {
 .dropdown_content {
   display: none;
   list-style: none;
+  width: 119px;
   font-weight: bolder;
   position: absolute;
   background-color: #f9f9f9;
@@ -216,8 +223,13 @@ export default {
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  margin-left: 146px;
+  width: 133px;
+  margin-left: 116px;
   margin-top: -46px;
+}
+
+.sub_dropdown_content li a{
+  width: 20px;
 }
 
 .nav_list .sub_dropdown:hover .sub_dropdown_content {
@@ -245,9 +257,19 @@ form {
 
 input {
   border-radius: 20px;
-  border: solid 1px #cac9c9;
-  width: 399px;
-  height: 37px;
+    border: solid 1px #cac9c9;
+    width: 349px;
+    height: 37px;
+    padding-left: 9px;
+    padding-top: 10px;
+}
+
+/* 确保各个浏览器都支持的占位符样式 */
+input::placeholder {
+    font-size: 12px;
+    position: relative;
+    left: 15px;
+    bottom: 7px;
 }
 
 button {
@@ -255,11 +277,16 @@ button {
   border: none;
 }
 
+.search-icon {
+  width: 23px;
+  filter: invert(56%) sepia(0%) saturate(4425%) hue-rotate(159deg) brightness(143%) contrast(92%);
+}
+
 button img {
   width: 23px;
   position: relative;
-  right: 26px;
-  top: -16px;
+  right: 37px;
+  top: -2px;
 }
 
 /* 汉堡菜单样式 */
@@ -293,75 +320,112 @@ button img {
 }
 
 /* 响应式样式 */
-@media (max-width: 1279px) {
-  .right_nav {
-    margin-bottom: 143px;
+
+
+/* max-width: 1024px max-height: 1366px */
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  .bottom_header {
+    display: flex;
+    align-items: center;
+    height: 9vw;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: solid 1px black;
+  }
+
+  .nav_list li {
+    margin-right: -1px;
+    width: 11vw;
+    position: relative;
+    right: 22px;
+  }
+
+  form {
+    position: relative;
+    top: 80px !important;
+    right: 38px !important;
+    list-style-type: none;
   }
 
   button img {
     width: 23px;
     position: relative;
-    left: 368px;
-    top: -44px;
+    right: 33px;
+    top: 0;
   }
 }
 
-@media (max-width: 900px) {
-  .hd {
-    width: 100vw;
-    position: relative;
-    top: 0px;
-  }
-
-  .nav_list li {
-    margin-left: -85px;
-    position: relative;
-    left: 39px;
-  }
-
-  .sub_dropdown a{
-    position: relative;
-    left: 39px;
-  }
-  .sub_dropdown_content{
+/* max-width:1024px max-height: 874px */
+@media only screen and (max-width: 1024px) and (max-height: 874px) {
+  .hamburger {
     display: none;
-    list-style: none;
-    position: absolute;
-    width: 162px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    margin-left: 205px;
-    margin-top: -46px;
+  }
+  .bottom_header {
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: solid 1px black;
+  }
+  .nav_list li {
+    margin-right: 3px;
+    width: 12vw;
+    position: relative;
+  }
+  .right_nav {
+    margin-bottom: 143px;
   }
 
-  .sub_dropdown_content li a{
+  form {
     position: relative;
-    left: 67px;
-  }
-
-
-  .logo {
-    position: relative;
-    height: 136px;
+    top: 72px !important;
+    right: 19px !important;
+    list-style-type: none;
   }
 }
 
-@media (max-width: 768px) {
+/* iphone 14 Pro Max max-width: 430px max-height: 932px */
+@media only screen and (max-width: 430px) and (max-height: 932px) {
   .hd {
     width: 100vw;
     position: relative;
     top: -3px;
   }
-  .nav_list li {
-    margin-left: -85px;
-    position: relative;
-    left: 81px;
+
+  .top_header {
+    display: flex;
+    background-color: black;
+    height: 3.5vh;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
+
+  .top_header h3 {
+    display: flex;
+    color: white;
+    font-size: 17px;
+    margin-right: 20px;
+    font-weight: bolder;
+  }
+  .nav_list li {
+  position: relative; /* 确保伪元素的位置相对于父元素 */
+  display: flex;
+  margin-left: -99px;
+  left: 60px;
+  bottom: 23px;
+  line-height: 0.1;
+  width: 54vw;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #cac9c9; /* 设置伪元素的border-bottom */
+
+}
+
 
   .hamburger {
     position: relative;
-    left: 447px;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
@@ -369,10 +433,24 @@ button img {
     height: 30px;
   }
 
+  .bottom_header {
+    display: flex;
+    align-items: center;
+    height: 17vw;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: solid 1px black;
+  }
   .bottom_header img {
     margin-left: 10px;
   }
 
+  .logo {
+    position: relative;
+    width: 12vh;
+    height: 13vh;
+    right: 39px;
+  }
   .nav_list {
     display: none;
     flex-direction: column;
@@ -399,6 +477,26 @@ button img {
     bottom: 84px;
   }
 
+  form {
+    position: relative;
+    top: 97px;
+    right: 97px;
+    list-style-type: none;
+  }
+  input {
+    position: relative;
+    width: 32vh;
+    top: 6px;
+    left: 29px;
+    padding-left: 0px;
+    padding-top: 10px;
+    }
+  input::placeholder{
+    font-size: 12px;
+    position: relative;
+    left: 15px;
+    bottom: 7px;
+  }
   .hamburger {
     display: flex;
   }
