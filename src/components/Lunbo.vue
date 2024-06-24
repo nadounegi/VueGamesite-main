@@ -1,27 +1,27 @@
 <template>
-  <div :class="['carousel', {active: menuActive}]" style="margin: 0 auto;">
-    <div class="images">
+  <div :class="['carousel', {'carousel--active': menuActive}]" style="margin: 0 auto;">
+    <div class="carousel__images">
       <div
-        class="img"
+        class="carousel__img"
         v-for="(item, index) in imagesList"
         :key="index"
         :style="{ backgroundImage: 'url(' + item.url + ')' }"
         :class="{ active: activeIndex === index }"
       >
         <div>
-          <h1>{{ item.title }}</h1>
-          <span>{{ item.description }}</span>
+          <h1 class="carousel__title">{{ item.title }}</h1>
+          <span class="carousel__description">{{ item.description }}</span>
         </div>
       </div>
     </div>
-    <div class="navigation">
+    <div class="carousel__navigation">
       <div
-        class="nav-button"
+        class="carousel__nav-button"
         v-for="(item, index) in imagesList"
         :key="index"
         @mouseover="setActiveIndex(index)"
       >
-        <img :src="item.url" :alt="item.title" >
+        <img :src="item.url" :alt="item.title" class="carousel__nav-img">
       </div>
     </div>
   </div>
@@ -51,11 +51,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 html, body {
   overflow: hidden;
   width: 100%;
-  max-width: 1520px;
+  max-width: 1024px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@ html, body {
 }
 
 .carousel {
-  width: 80%;
+  width: 88vw;
   max-width: 1000px;
   height: auto;
   display: flex;
@@ -74,13 +74,9 @@ html, body {
   align-items: center;
 }
 
-.carousel.menu-active {
-  margin-top: 150px; /* Adjust carousel margin when menu is active */
-}
-
-.carousel .images {
-  width: 100%;
-  height: 69vh;
+.carousel__images {
+  width: 99%;
+  height: 80vh;
   max-height: 600px;
   display: flex;
   align-items: center;
@@ -89,11 +85,7 @@ html, body {
   overflow: hidden;
 }
 
-.carousel.menu-active .images {
-  height: 69vh; /* Adjust image container height when menu is active */
-}
-
-.img {
+.carousel__img {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,24 +95,21 @@ html, body {
   background-position: center;
   display: none;
 }
-
-.img.active {
+/* 这个.img.active不能删 */
+.carousel__img.active {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
 }
 
-.img > div {
+.carousel__title {
   z-index: 1;
   color: white;
-}
-
-.img > div > h1 {
   position: relative;
   top: -76px;
   font-size: 40px;
-  animation: h1Animation .4s ease-out;
+  animation: h1Animation 0.4s ease-out;
   z-index: 1;
 }
 
@@ -135,31 +124,33 @@ html, body {
   }
 }
 
-.img > div > span {
+.carousel__description {
+  z-index: 1;
+  color: white;
   position: relative;
   bottom: 181px;
   padding-left: 10px;
   font-size: 20px;
-  animation: h1Animation .7s ease-out;
+  animation: h1Animation 0.7s ease-out;
 }
 
-.navigation {
-  width: 100%;
+.carousel__navigation {
+  width: 98.9%;
   height: 120px;
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   overflow-x: auto;
   padding: 10px;
-  bottom: 160px;
+  bottom: 141px;
   position: relative;
 }
 
-.nav-button {
-  width: 100px;
+.carousel__nav-button {
+  width: 178px;
   height: 100px;
   position: relative;
   border: 4px solid transparent;
@@ -176,14 +167,14 @@ html, body {
   cursor: pointer;
 }
 
-.nav-button img {
+.carousel__nav-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.nav-button:hover {
-  border: 4px solid #005A9E; 
+.carousel__nav-button:hover {
+  border: 4px solid #005A9E;
 }
 
 @keyframes imgAnimation {
@@ -195,16 +186,16 @@ html, body {
   }
 }
 
-.nav-button > * {
-  transition: all .2s ease-out;
+.carousel__nav-button > * {
+  transition: all 0.2s ease-out;
 }
 
-.nav-button > h1 {
+.carousel__nav-button > h1 {
   margin-left: 10px;
   opacity: 1;
 }
 
-.nav-button > img {
+.carousel__nav-button > img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -214,149 +205,8 @@ html, body {
   transition: transform 0.3s ease-out;
 }
 
-.nav-buttonhover > h1 {
-  margin-left: 10px;
-  opacity: 1;
+.carousel__nav-button:hover > img {
+  transform: scale(1.1);
 }
 
-.nav-button:hover > img {
-  transform: scale(1);
-}
-/* 响应式样式 */
-/* max-width:1024px max-height: 1366px*/
-@media only screen and (max-width: 1024px) and (max-height: 1366px) {
-  .carousel {
-    width: 94%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-  }
-
-  .carousel .images {
-    width: 100%;
-    height: 53vh;
-    max-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-/* max-width:1024px max-height: 874px */
-@media only screen and (max-width: 1024px) and (max-height: 874px)  {
-  .carousel{
-    width: 80%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-  }
-  .carousel.active {
-    width: 80%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top:90px;
-  }
-
-  .carousel.menu-active {
-    margin-top: 150px;
-  }
-
-  .carousel .images {
-    width: 100%;
-    height: 56vh;
-    max-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .carousel.menu-active .images {
-    height: calc(45vh - 100px); /* Adjust image container height when menu is active */
-  }
-
-  .img > div > h1 {
-    font-size: 1.8rem;
-  }
-
-  .img > div > span {
-    font-size: 1rem;
-  }
-
-  .nav-button {
-    width: 113px;
-    height: 60px;
-  }
-}
-
-/* iphone 14 Pro Max max-width: 430px max-height: 932px */
-@media only screen and (max-width: 430px) and (max-height: 932px){
-  .carousel {
-    width: 94%;
-    max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    bottom: 2px;
-  }
-  .carousel .images {
-    width: 100%;
-    height: 26vh;
-    max-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .img > div > h1{
-    position: relative;
-    top: -76px;
-    left: 3px;
-    font-size: 30px;
-    animation: h1Animation-dc813642 .4s ease-out;
-    z-index: 1;
-  }
-
-  .img > div > span{
-    position: relative;
-    bottom: 79px;
-    padding-left: 10px;
-    font-size: 17px;
-    animation: h1Animation-dc813642 .7s ease-out;
-  }
-  
-  .navigation {
-    width: 100%;
-    height: 92px;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 10px;
-    bottom: 135px;
-    position: relative;
-  }
-}
 </style>

@@ -3,7 +3,7 @@
         <CateTitle id="NSTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
         <div class="CartListItem">
             <div class="CartList">
-            <CartItemTest v-for="item in NSList" :key="item.id" :item="item"/>
+            <CartItemTest class="NS" v-for="item in NSList" :key="item.id" :item="item"/>
         </div>
         </div>
         </div>
@@ -38,7 +38,8 @@
     <style>
     #NSTitle {
         position: relative;
-        left: 137px;
+        left: 215px;
+        top: 9px;
         margin-top: -54px;
     }
     

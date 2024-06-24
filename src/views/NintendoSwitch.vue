@@ -3,7 +3,7 @@
     <BreadCrumb/>
     <CateTitle :title="gameCategory" />
         <div class="CartList">
-      <CartItem v-for="item in NSList" :key="item.id" :item="item" />
+      <CartItemTest v-for="item in NSList" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
 
 .cateTitle{
   position: relative;
-  left: 123px;
+  left: 226px;
   top: 0px;
   margin-bottom: 20px;
 }

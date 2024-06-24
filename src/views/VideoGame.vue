@@ -1,13 +1,17 @@
 <template>
-  <div>
+  <div class="main-component">
     <CartNav/>
-    <div class="main">
-      <SideMenu/>
-      <div class="mainContainer">
-        <BreadCrumb/>
-        <CateTitle :title="titleCategory"/>
-        <div class="CartList">
-          <CartItemTest v-for="item in VGList" :key="item.id" :item="item"/>
+    <div class="main-component__content">
+     <SideMenu/>
+      <div class="main-component__container">
+        <BreadCrumb class="main-component__breadcrumb"/>
+        <CateTitle :title="titleCategory"  :to="'/MallTopTest'" :showLink="false" class="main-component__cate-title"/>
+        <div class="main-component__cart-list">
+          <CartItemTest 
+          class="main-component__cart-item"
+          v-for="item in VGList" 
+          :key="item.id" 
+          :item="item"/>
         </div>
       </div>
     </div>
@@ -15,11 +19,8 @@
 </template>
 
 <script>
-import SideMenu from '@/components/SideMenu.vue';
 export default {
-  components: {
-    SideMenu,
-  },
+
   computed:{
         titleCategory(){
             return "テレビゲーム";
@@ -42,74 +43,64 @@ html, body {
   padding: 0;
 }
 
-.main {
+.main-component__content {
   display: flex;
-  height: 100vh; /* 确保整个视口高度 */
+  height: 100vh;
+  margin-top: 0;
 }
 
-.CartNav {
-  position: fixed;
-  top: 0;
-  left: 132px;
-  width: 100%;
-  z-index: 1000;
-}
-
-.mainContainer {
+.main-component__container {
   flex-grow: 1;
-  margin-left: 310px; /* 留出 SideMenu 的空间 */
-  height: calc(100vh - 60px); /* 适合视口高度 */
-  margin-top: 308px;
-  overflow-y: auto;
+  margin-left: 8px;
+  margin-top: 200px;
+  padding: 20px;
 }
 
-.SideMenu {
-  position: fixed;
-  top: 296px;
-  left: 0;
-  height: calc(100vh - 60px);
-  width: 308px;
-  background-color: #f1f1f1;
-  border-right: solid 1px #8080804d;
-  z-index: 1000;
-}
-
-.breadcrumb {
-  margin-left: 320px;
-   font-size: 14px;
-   top: 248px;
-   left: 73px;
-   position: fixed;
-}
-
-.cateTitle {
-  margin-left: 320px;
-  top: 300px; /* 根据需要调整 */
+.main-component__breadcrumb {
+  margin-left: 22px;
+  font-size: 14px;
+  top: 118px;
+  left: 254px;
   position: fixed;
 }
 
-.CartList {
+.main-component__cate-title {
+  margin-left: 275px;
+  top: 236px;
+  position: fixed;
+}
+
+.main-component__cart-list {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow-y: auto;
-    height: calc(100vh - 377px);
-}
-.cartItem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 246px;
-    left: 155px;
-    height: 409px;
-    margin-left: 157px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: calc(87vh - 160px);
+  overflow-x: hidden;
+  margin-left: 20px;
+  position: relative;
+  left: 21px;
 }
 
+.main-component__cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 266px;
+  height: 381px;
+  margin-left: -20px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  right: 11px;
+  bottom: 48px;
+}
+
+.cartItemImg img {
+    border-radius: 10px;
+    height: 12vw;
+    width: 10vw;
+}
 .CartList.buttonContainer .cartButton {
   display: flex;
   align-items: center;
@@ -124,15 +115,5 @@ html, body {
   background-image: linear-gradient(to left, rgb(130, 130, 255), rgb(237, 46, 237));
   cursor: pointer;
   transition: background-image 0.5s ease;
-}
-
-@media (max-width: 1060px){
-  .breadcrumb{
-    margin-left: 320px;
-    font-size: 14px;
-    top: 214px;
-    left: 73px;
-    position: fixed;
-}
 }
 </style>

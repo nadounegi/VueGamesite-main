@@ -1,6 +1,6 @@
 <template>
 <div>
-    <CateTitle :title="gameCategory" :to="categoryLink" :showLink="true"/>
+    <CateTitle id="PS4PS5Title" :title="gameCategory" :to="categoryLink" :showLink="true"/>
     <div class="CartListItem">
         <div class="CartList">
         <CartItemTest class="PS4PS5" v-for="item in PS4PS5List" :key="item.id" :item="item"/>
@@ -34,11 +34,11 @@ export default {
     }
 </script>
 
-<style>
-.cateTitle {
+<style scoped>
+#PS4PS5Title {
     position: relative;
-    left: 137px;
-    top: 3px;
+    left: 221px;
+    top: 8px;
     margin-bottom: 40px;
 }
 
@@ -58,5 +58,6 @@ export default {
     position: relative;
     bottom: 30px;
     left: 46px;
-}    
+}  
+
 </style>

@@ -29,21 +29,8 @@ const router = new VueRouter({
     {
       path: '/VideoGame',
       component: VideoGame,
-      meta:{
-        breadcrumb: 'ビデオゲーム'
-      }
+      meta: { breadcrumb: 'ビデオゲーム' },
     },
-    // {
-    //   path: '/Mall',
-    //   component: Mall,
-    //   redirect: '/MallTop',
-    //   children: [
-    //     {
-    //       path: '/MallTop',
-    //       component: MallTop,
-    //       meta:{
-    //         breadcrumb: 'ゲームショップ'
-    //       },
     {
       path: '/Mall',
       component: Mall,
@@ -52,9 +39,7 @@ const router = new VueRouter({
         {
           path: '/MallTopTest',
           component: MallTopTest,
-          meta:{
-            breadcrumb: 'ゲームショップ'
-          },
+          meta: { breadcrumb: 'ゲームショップ' },
         },
         {
           path: '/Mall/PS4PS5',

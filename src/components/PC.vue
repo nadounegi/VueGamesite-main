@@ -3,7 +3,7 @@
         <CateTitle id="PCTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
         <div class="CartListItem">
             <div class="CartList">
-            <CartItemTest v-for="item in PCList" :key="item.id" :item="item"/>
+            <CartItemTest class="PC" v-for="item in PCList" :key="item.id" :item="item"/>
         </div>
         </div>
         </div>
@@ -37,7 +37,8 @@
     <style>
     #PCTitle {
         position: relative;
-        left: 137px;
+        left: 218px;
+        top: 9px;
         margin-top: -54px;
     }
     

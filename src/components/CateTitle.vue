@@ -25,6 +25,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style>
@@ -36,6 +37,9 @@ export default {
 }
 
 .cateTitle h2 {
+  position: relative;
+  bottom: 48px;
+  right: 164px;
   color: black;
 }
 

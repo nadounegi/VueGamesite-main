@@ -47,7 +47,7 @@ html,body{
     margin-left: -19px;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 1339px;
+    width: 1530px;
 }
 
 .navList {

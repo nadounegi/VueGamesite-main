@@ -1,6 +1,6 @@
 <template>
   <div>
-      <BreadCrumb/>
+    <BreadCrumb/>
     <PS4PS5/>
     <NS/>
     <Xbox/>
@@ -44,8 +44,8 @@ export default {
   position: relative;
   margin-right: 107px;
   margin-top: -29px;
-  left: 166px;
-  top: 5px;
+  left: -20px;
+  top: 27px;
 }
 .cateTitle {
   position: relative;
@@ -65,18 +65,18 @@ export default {
 }
 
 .cartItem{
-    display: flex;
+  display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 246px;
-    left: 155px;
-    height: 409px;
-    margin-left: 157px;
+    width: 271px;
+    height: 432px;
+    margin: 10px;
     border: 1px solid #ccc;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
+    left: 100px;
 }
 .breadcrumb {
   margin-left: 120px;
@@ -93,4 +93,7 @@ export default {
   width: 100%;
   z-index: 1000;
 }
+
+
+
 </style>

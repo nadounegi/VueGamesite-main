@@ -1,14 +1,39 @@
 <!-- SideMenu.vue -->
 <template>
-  <div class="SideMenu">
-    <div class="SideMenuItem">
-      <h2>カテゴリー</h2>
-      <ul>
-        <li><router-link to="/MallTopTest">すべて</router-link></li>
-        <li><router-link to="/Mall/PS4PS5">PS4・PS5</router-link></li>
-        <li><router-link to="/Mall/NintendoSwitch">Nintendo Switch</router-link></li>
-        <li><router-link to="/Mall/Xbox">Xbox</router-link></li>
-        <li><router-link to="/Mall/PCGame">PCゲーム</router-link></li>
+  <div class="side-menu">
+    <div class="side-menu__item">
+      <h2 class="side-menu__title">カテゴリー</h2>
+      <ul class="side-menu__list">
+        <li class="side-menu__list-item">
+          <router-link class="side-menu__list-link" 
+          to="/MallTopTest">
+          すべて
+        </router-link>
+        </li>
+        <li class="side-menu__list-item">
+          <router-link class="side-menu__list-link" 
+          to="/Mall/PS4PS5">
+          PS4・PS5
+          </router-link>
+        </li>
+        <li class="side-menu__list-item">
+          <router-link class="side-menu__list-link" 
+          to="/Mall/NintendoSwitch">
+          Nintendo Switch
+          </router-link>
+        </li>
+        <li class="side-menu__list-item">
+          <router-link class="side-menu__list-link" 
+          to="/Mall/Xbox">
+          Xbox
+          </router-link>
+        </li>
+        <li class="side-menu__list-item">
+          <router-link class="side-menu__list-link" 
+          to="/Mall/PCGame">
+          PCゲーム
+          </router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -20,48 +45,59 @@ export default {
 }
 </script>
 
-<style>
-.SideMenu{
-  position: fixed;
-  top: 237px;
-  left: 2px;
-  height: calc(81vh - 60px);
-  width: 308px;
-  background-color: #f1f1f1;
-  border-right: solid 1px #8080804d;
-  z-index: 1000;
+<style scoped>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.SideMenuItem{
-  position: relative;
-  bottom: 89px;
+.side-menu {
+    position: fixed;
+    top: 181px;
+    left: 0;
+    width: 250px;
+    height: 70%;
+    background-color: #f1f1f1;
+    border-right: solid 1px #8080804d;
+    z-index: 1000;
+    padding-top: 150px;
+    box-sizing: border-box;
 }
 
-.SideMenu h2{
-  position: relative;
-  left: 45px;
-  bottom: 311px;
-  font-size: 35px;
-  margin-top: 0px;
+.side-menu__item  {
+    padding: 20px;
+    position: relative;
+    bottom: 135px;
 }
 
-.SideMenu ul{
-  top: 168px;
-  position: relative;
-  }
-
-.SideMenu li{
-  position: relative;
-  left: 45px;
-  bottom: 46px;
-  list-style-type: none;
-  line-height: 2.0;
-  margin-top: 10px;
+.side-menu__title{
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.SideMenu a{
+.side-menu__list{
+   list-style-type: none;
+   padding: 0;
+}
+
+.side-menu__list-item{
+   margin: 10px 0;
+   text-align: center;
+}
+
+.side-menu__list-link{
   text-decoration: none;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
+  display: block;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.side-menu__link:hover {
+  background-color: #ddd;
 }
 </style>

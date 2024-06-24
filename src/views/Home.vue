@@ -7,75 +7,33 @@
 </template>
 
 <script>
-import NavigationTest from '@/components/NavigationTest.vue';
-import Lunbo from '@/components/Lunbo.vue';
-
 export default {
   data() {
     return {
       menuActive: false,
     };
   },
-  methods: {
+  methods: {// 用于接收子组件传递的值
     updateDropdownActive(value) {
       this.menuActive = value;
     }
-  },
-  components: {
-    NavigationTest,
-    Lunbo,
   },
 };
 </script>
 
 <style scoped>
-/* Scoped styles for Home.vue */
-/* * {
-  margin: 0;
-  padding: 0;
+.hd {
+    width: 100vw;
+    position: relative;
+    top: 69px;
+    background-color: white;
+    z-index: 1000;
 }
 
-.right_nav {
-  margin-bottom: 198px;
+.bottom_header img{
+    position: relative;
+    width: 97px;
+    height: 129px;
+    bottom: -1px;
 }
-
-.breadcrumb {
-  display: flex;
-  position: relative;
-  align-items: center;
-  font-size: 14px;
-  left: 92px;
-  top: 54px;
-}
-
-main {
-  position: relative;
-  top: 52px;
-} */
-
-/* レスポンシブ */
-/* @media(max-width: 768px) {
-  header {
-    width: 100%;
-  }
-  .breadcrumb {
-    left: 20px;
-    top: 20px;
-    font-size: 12px;
-  }
-  .right_nav {
-    margin-bottom: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .breadcrumb {
-    left: 10px;
-    top: 10px;
-    font-size: 10px;
-  }
-  .right_nav {
-    margin-bottom: 50px;
-  }
-} */
 </style>

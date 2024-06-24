@@ -4,13 +4,13 @@ import router from './router';
 //メソッドをグローバル化にするため
 import mixins from './mixins.js'
 import store from './stores';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 //コンポーネントをグローバル登録
 import imgLunbo from '@/components/imgLunbo.vue';
 import NavigationTest from '@/components/NavigationTest.vue';
+import SideMenu from '@/components/SideMenu.vue';
 import Lunbo from '@/components/Lunbo.vue';
 import CartNav from '@/components/CartNav.vue';
-import CartItem from '@/components/CartItem.vue';
 import CartItemTest from '@/components/CartItemTest.vue';
 import CateTitle from '@/components/CateTitle.vue';
 import PS4PS5 from '@/components/PS4PS5.vue';
@@ -103,6 +103,12 @@ import KATAMARI1 from '@/assets/images/KATAMARI1.png';
 import KATAMARI2 from '@/assets/images/KATAMARI2.png';
 import KATAMARI3 from '@/assets/images/KATAMARI3.png';
 import KATAMARI4 from '@/assets/images/KATAMARI4.png';
+//iconを登録
+import { library} from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+library.add(faTrash);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 //画像のパスをVueインスタンスのプロパティに登録
@@ -190,9 +196,9 @@ Vue.prototype.$imgUrl = {
 };
 
 Vue.component('NavigationTest', NavigationTest);
+Vue.component('SideMenu', SideMenu);
 Vue.component('Lunbo', Lunbo);
 Vue.component('CartNav', CartNav);
-Vue.component('CartItem', CartItem);
 Vue.component('CartItemTest', CartItemTest);
 Vue.component('CateTitle', CateTitle);
 Vue.component('PS4PS5', PS4PS5);

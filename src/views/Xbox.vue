@@ -42,9 +42,10 @@ export default {
   left: 111px;
   bottom: 0px;
 }
+
 .cateTitle{
   position: relative;
-  left: 123px;
+  left: 226px;
   top: 0px;
   margin-bottom: 20px;
 }

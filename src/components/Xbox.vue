@@ -3,7 +3,7 @@
         <CateTitle id="XboxTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
         <div class="CartListItem">
             <div class="CartList">
-            <CartItemTest v-for="item in XboxList" :key="item.id" :item="item"/>
+            <CartItemTest class="Xbox" v-for="item in XboxList" :key="item.id" :item="item"/>
         </div>
         </div>
         </div>
@@ -37,7 +37,8 @@
     <style>
     #XboxTitle {
         position: relative;
-        left: 137px;
+        left: 219px;
+        top: 9px;
         margin-top: -54px;
     }
     
@@ -51,11 +52,12 @@
     }
 
     .cartBtns {
-    display: flex;
-    margin: auto;
-    gap: 9px;
-    position: relative;
-    bottom: 30px;
-    left: 46px;
-}    
+        display: flex;
+        margin: auto;
+        gap: 9px;
+        position: relative;
+        bottom: 30px;
+        left: 46px;
+    }    
+  
     </style>

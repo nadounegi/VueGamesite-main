@@ -2,7 +2,7 @@
   <div class="CartNav">
     <header>
       <div>
-        <router-link to="/">
+        <router-link to="/" id="logo">
           <img :src="logo" alt="logo" class="logo"/>
         </router-link>
       </div>
@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -59,7 +59,8 @@ export default {
 
 .CartNav {
   position: fixed;
-  top: -35px;
+  top: 44px;
+  left: 133px;
   width: 100%;
   z-index: 1000;
 }
@@ -68,15 +69,21 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 76px;
   width: 100%;
   z-index: 1000;
 }
 
+#logo{
+  position: relative;
+  bottom: 87px;
+  right: 194px;
+}
+
 .logo {
   position: relative;
-  height: 300px;
-  bottom: 31px;
-  right: 214px;
+  height: 158px;
+  top: 66px;
 }
 
 .rightHeader {
@@ -91,7 +98,7 @@ export default {
 .rightHeader form {
   list-style-type: none;
   position: relative;
-  left: 75px;
+  left: 99px;
   top: 2px;
 }
 
@@ -99,7 +106,7 @@ input {
   margin-top: 200px;
   border-radius: 10px;
   border: none;
-  width: 451px;
+  width: 331px;
   background-color: #8080804d;
   height: 53px;
 }
@@ -171,76 +178,6 @@ h1 {
   color: black;
   font-size: 20px;
   font-weight: bold;
-}
-/* レスポンシブ */
-@media (max-width: 1200px){
-
-  .logo {
-    position: relative;
-    height: 300px;
-    bottom: 31px;
-    right: 138px;
-  }
-
-  .login-sign {
-    position: relative;
-    top: 114px;
-    left: 151px;
-    display: flex;
-    justify-content: space-around;
-    width: 200px;
-  }
-
-  .cart {
-    position: relative;
-    width: 188px;
-    height: 64px;
-    left: 145px;
-    top: 101px;
-    border-radius: 10px;
-    background-color: #8080804d;
-  }
-
-  .rightHeader form {
-    list-style-type: none;
-    position: relative;
-    left: 153px;
-    top: 2px;
-}
-} 
-
-@media (max-width: 1060px){
-  .logo {
-        position: relative;
-        height: 221px;
-        bottom: 51px;
-        right: 141px;
-    }
-
-    button img {
-        width: 23px;
-        position: relative;
-        left: 446px;
-        top: -74px;
-    }
-    
-    .cart {
-        position: relative;
-        width: 188px;
-        height: 64px;
-        left: 145px;
-        top: 80px;
-        border-radius: 10px;
-        background-color: #8080804d;
-    }
-    .login-sign {
-        position: relative;
-        top: 81px;
-        left: 151px;
-        display: flex;
-        justify-content: space-around;
-        width: 200px;
-    }
 }
 
 </style>
