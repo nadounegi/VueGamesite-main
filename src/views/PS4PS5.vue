@@ -1,6 +1,5 @@
 <template>
   <div>
-    <BreadCrumb />
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
       <CartItemTest v-for="item in PS4PS5List" :key="item.id" :item="item" />
@@ -69,7 +68,7 @@ export default {
   left: 17px;
   cursor: pointer;
 }
-.cartItem {
+.cart-item {
     display: flex;
     position: relative;
     right: 11px;

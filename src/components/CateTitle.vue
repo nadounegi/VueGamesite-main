@@ -1,10 +1,9 @@
 <template>
-  <div class="cateTitle">
+  <div class="cate-title">
     <h2 v-if="!showLink">{{ title }}</h2>
-    <router-link v-else :to="to" class="titleLink"><h2>{{ title }}</h2></router-link>
-    <h4 v-if="showLink">
-      <router-link :to="to" class="more">もっと見る</router-link>
-    </h4>
+    <router-link v-else :to="to" class="cate-title__link"><h2>{{ title }}</h2></router-link>
+   
+      <router-link v-if="showLink" :to="to" class="cate-title__link"><h4>もっと見る</h4></router-link>
   </div>
 </template>
 
@@ -29,36 +28,36 @@ export default {
 </script>
 
 <style>
-.cateTitle {
+.cate-title {
   position: relative;
   left: 168px;
   top: 34px;
   margin-bottom: 40px;
 }
 
-.cateTitle h2 {
+.cate-title h2 {
   position: relative;
-  bottom: 48px;
-  right: 164px;
+  top: 61px;
+  right: -9px;
   color: black;
 }
 
-.cateTitle h4 {
+/* .cate-title h4 {
   position: relative;
   bottom: 42px;
   left: 74px;
   cursor: pointer;
-}
-.titleLink{
+} */
+
+.cate-title__link{
   text-decoration: none;
 }
 
-
-.more {
+.cate-title__link h4{
   color: black;
   font-weight: bold;
   position: relative;
-  top: 7px;
+  top: 10px;
   left: 240px;
   cursor: pointer;
 }

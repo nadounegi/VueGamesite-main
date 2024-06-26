@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <BreadCrumb/>
-    <PS4PS5/>
-    <NS/>
-    <Xbox/>
-    <PC/>
+  <div class="main">
+    <PS4PS5 class="main__ps4ps5"/>
+    <NS class="main__ns"/>
+    <!-- <Xbox class="main__xobx"/>
+    <PC class="main__pc"/>  -->
   </div>
 </template>
 
@@ -12,8 +11,7 @@
 
 export default {
   data() {
-    return {
-    
+    return {   
       uniqueCategories: ["PS4・PS5", "Nintendo Switch", "Xbox", "PC"],
     };
   },
@@ -31,7 +29,7 @@ export default {
 
 <style scoped>
 
-.CartListItem .CartList {
+.main__cart-list-item .main__cart-list {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -40,43 +38,43 @@ export default {
     bottom: 65px;
 }
 
-.CartListItem {
+.main__cart-list-item {
   position: relative;
   margin-right: 107px;
   margin-top: -29px;
   left: -20px;
   top: 27px;
 }
-.cateTitle {
+.cate-title {
   position: relative;
   left: 27px;
   top: 34px;
   margin-bottom: 40px;
 }
-.cateTitle h2 {
+.cate-title__h2 {
   color: black;
 }
 
-.cateTitle h4 {
+.cate-title__h4 {
   position: relative;
   bottom: 0px;
   left: 17px;
   cursor: pointer;
 }
 
-.cartItem{
+.cart-item{
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 271px;
-    height: 432px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    position: relative;
-    left: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 271px;
+  height: 432px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  left: 100px;
 }
 .breadcrumb {
   margin-left: 120px;
@@ -87,7 +85,7 @@ export default {
 }
 
 /* Fixed CartNav */
-.CartNav {
+.cart-nav {
   position: fixed;
   top: 0;
   width: 100%;

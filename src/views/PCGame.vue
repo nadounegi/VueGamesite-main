@@ -1,6 +1,5 @@
 <template>
   <div>
-    <BreadCrumb/>
     <CateTitle :title="gameCategory"/>
     <div class="CartList">
       <CartItemTest v-for="item in PCList" :key="item.id" :item="item"/>

@@ -41,13 +41,13 @@ html,body{
 }
 
 .main .content {
-    position: relative;
-    left: 198px;
-    margin-top: 177px;
-    margin-left: -19px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 1530px;
+  position: relative;
+  left: 198px;
+  margin-top: 110px;
+  margin-left: -19px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 1530px;
 }
 
 .navList {

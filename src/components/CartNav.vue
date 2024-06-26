@@ -1,25 +1,27 @@
 <template>
-  <div class="CartNav">
-    <header>
-      <div>
-        <router-link to="/" id="logo">
-          <img :src="logo" alt="logo" class="logo"/>
+  <div class="cart-nav">
+    <header class="cart-nav__header">
+      <div class="cart-nav__logo-container">
+        <router-link to="/" class="cart-nav__logo-link">
+          <img :src="logo" alt="logo" class="cart-nav__logo"/>
         </router-link>
       </div>
-      <div class="rightHeader">
-        <form action="#">
-          <input type="text" name="keywords" id="search" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください">
-          <button type="submit"><img :src="searchIcon" alt=""></button>
+      <div class="cart-nav__right-header">
+        <form action="#" class="cart-nav__form">
+          <input type="text" name="keywords" class="cart-nav__search-input" size="50" placeholder="ゲーム名、又はカテゴリなどを入力してください">
+          <button type="submit" class="cart-nav__search-button"><img :src="searchIcon" alt=""></button>
         </form>
-        <div class="cart">
-          <router-link :to="cartLink">
-            <h1>CART({{ cartQuantity }})</h1> 
-            <img :src="shoppingCart" alt="">
+        <div class="cart-nav__cart">
+          <router-link :to="cartLink" class="cart-nav__cart-link">
+            <div class="cart-nav__cart-content">
+            <img class="cart-nav__cart-icon" :src="shoppingCart" alt="">
+            <h1 class="cart-nav__cart-title">CART({{ cartQuantity }})</h1> 
+          </div>
           </router-link>
         </div>
-        <div class="login-sign">
-          <a href="">ログイン</a>
-          <a href="">新規登録</a>
+        <div class="cart-nav__login-sign">
+          <a href="" class="cart-nav__login-link">ログイン</a>
+          <a href="" class="cart-nav__signup-link">新規登録</a>
         </div>
       </div>  
     </header>
@@ -28,7 +30,7 @@
 
 <script>
 import logo from '@/assets/images/logo.png';
-import searchIcon from '@/assets/images/検索用の虫眼鏡アイコン.png';
+import searchIcon from '@/assets/images/検索用の虫眼鏡アイコン.svg';
 import shoppingCart from '@/assets/images/shopping-cart.png';
 import { mapGetters } from 'vuex';
 
@@ -50,14 +52,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.CartNav {
+.cart-nav {
   position: fixed;
   top: 44px;
   left: 133px;
@@ -65,7 +67,7 @@ export default {
   z-index: 1000;
 }
 
-.CartNav header {
+.cart-nav__header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,88 +76,107 @@ export default {
   z-index: 1000;
 }
 
-#logo{
+.cart-nav__logo {
+  width: 150px;
+  height: auto;
   position: relative;
-  bottom: 87px;
-  right: 194px;
+  right: 183px;
+  top: 59px;
 }
 
-.logo {
+.cart-nav__logo-link {
   position: relative;
+  right: 195px;
   height: 158px;
-  top: 66px;
+  top: -80px;
 }
 
-.rightHeader {
+.cart-nav__right-header {
   display: flex;
   position: relative;
   bottom: 123px;
-  right: 304px;
+  right: 202px;
+  width: 393px;
+  height: 249px;
   align-items: center;
   gap: 16px;
 }
 
-.rightHeader form {
+.cart-nav__form {
   list-style-type: none;
+  height: 50px;
   position: relative;
-  left: 99px;
-  top: 2px;
+  right: 121px;
+  top: 105px;
 }
 
-input {
-  margin-top: 200px;
+.cart-nav__search-input{
   border-radius: 10px;
   border: none;
-  width: 331px;
+  width: 350px;
   background-color: #8080804d;
   height: 53px;
 }
 
-button {
-  margin-top: 20px;
+.cart-nav__search-input:placeholder-shown {
+  padding-top: 5px;
+  padding-left: 8px;
+}
+
+
+.cart-nav__search-button {
   background-color: transparent;
   border: none;
-}
-
-button img {
-  width: 23px;
   position: relative;
-  left: -13px;
-  top: -16px;
+  bottom: 38px;
+  left: 317px;
 }
 
-:placeholder-shown {
-  padding-top: 5px;
-  padding-left: 20px;
-}
-
-.cart {
+.cart-nav__search-button img {
+  width: 22px;
   position: relative;
-  width: 188px;
-  height: 64px;
-  left: 93px;
-  top: 101px;
+  right: 3px;
+  top: 4px;
+}
+
+.cart-nav__cart {
+  position: relative;
+  width: 154px;
+  height: 50px;
+  right: 93px;
+  top: 105px;
+  box-sizing: border-box;
   border-radius: 10px;
   background-color: #8080804d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
+.cart-nav__cart-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+}
+
+.cart-nav__cart-title {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 18px;
   position: relative;
-  left: 21px;
-  top: 16px;
+  left: 12px;
+  top: 3px;
 }
 
-.cart img {
+.cart-nav__cart-icon {
   position: relative;
-  bottom: 22px;
-  right: 53px;
-  width: 30px;
-  height: 30px;
+  bottom: 0px;
+  left: 0;
+  width: 24px;
+  height: 26px;
 }
 
-.cart a {
+.cart-nav__cart-link {
   text-decoration: none;
   color: black;
   display: flex;
@@ -164,20 +185,23 @@ h1 {
   flex-direction: column;
 }
 
-.login-sign {
+.cart-nav__login-sign {
   position: relative;
   top: 114px;
-  left: 92px;
-  display: flex;
+  right: 77px;
+  display: flex;  
   justify-content: space-around;
   width: 200px;
 }
 
-.login-sign a {
+.cart-nav__login-link,
+.cart-nav__signup-link {
   text-decoration: none;
   color: black;
   font-size: 20px;
   font-weight: bold;
+  width: 126px;
+  height: 29px;
 }
 
 </style>

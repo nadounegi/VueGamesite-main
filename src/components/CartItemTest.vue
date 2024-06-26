@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 html, body {
   height: 100%;
   /* overflow: hidden; */

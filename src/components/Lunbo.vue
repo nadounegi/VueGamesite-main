@@ -135,7 +135,7 @@ html, body {
 }
 
 .carousel__navigation {
-  width: 98.9%;
+  width: 97%;
   height: 120px;
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.5);

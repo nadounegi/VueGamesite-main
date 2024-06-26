@@ -340,12 +340,20 @@ export default {
   display: block;
 }
 
+.navigation__sub-item{
+  list-style-type: none;
+  position: relative;
+  left: 21px;
+}
+
 .navigation__sub-sub-item{
   list-style-type: none;
+  position: relative;
+  left: 15px;
 }
 
 .navigation__sub-dropdown-content {
-  left: 100%;
+  left: 91%;
   top: 0;
 }
 
