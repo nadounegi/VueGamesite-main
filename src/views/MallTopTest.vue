@@ -1,10 +1,13 @@
 <template>
   <div class="main">
+    <div class="main__content">
     <PS4PS5 class="main__ps4ps5"/>
     <NS class="main__ns"/>
-    <!-- <Xbox class="main__xobx"/>
-    <PC class="main__pc"/>  -->
+    <Xbox class="main__xbox"/>
+    <PC class="main__pc"/>  
   </div>
+  </div>
+  
 </template>
 
 <script>
@@ -28,29 +31,33 @@ export default {
 </script>
 
 <style scoped>
-
-.main__cart-list-item .main__cart-list {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    line-height: 1;
-    left: 198px;
-    bottom: 65px;
+html,body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 1091px;
+  margin-top: 0;
+  height: calc(100vh - 55px);
+  overflow: auto;
 }
 
-.main__cart-list-item {
+.main__content{
   position: relative;
-  margin-right: 107px;
-  margin-top: -29px;
-  left: -20px;
   top: 27px;
+  right: 40px;
 }
+
 .cate-title {
   position: relative;
   left: 27px;
   top: 34px;
   margin-bottom: 40px;
 }
+
 .cate-title__h2 {
   color: black;
 }
@@ -62,7 +69,7 @@ export default {
   cursor: pointer;
 }
 
-.cart-item{
+.cart-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +83,7 @@ export default {
   position: relative;
   left: 100px;
 }
+
 .breadcrumb {
   margin-left: 120px;
   font-size: 14px;
@@ -91,7 +99,5 @@ export default {
   width: 100%;
   z-index: 1000;
 }
-
-
 
 </style>

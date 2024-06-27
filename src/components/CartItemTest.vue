@@ -133,7 +133,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 215px;
+  width: 245px;
   height: 350px;
   margin-left: 419px;
   padding: 10px;
@@ -157,15 +157,26 @@ html, body {
 }
 
 .cart-item__name{
-  font-size: 12px;
+  font-size: 11px;
   width: 205px;
 }
 
 .cart-item__category{
-  font-size: 15px;
+  font-size: 11px;
   width: 205px;
-
 }
+
+.cart-item__price{
+  font-size: 12px;
+  width: 205px;
+}
+
+.cart-item__stock{
+  font-size: 12px;
+  width: 205px;
+  margin-bottom: 10px;
+}
+
 .cart-item__btns {
   display: flex;
   justify-content: center;

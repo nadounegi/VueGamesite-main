@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <CateTitle id="XboxTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
-        <div class="CartListItem">
-            <div class="CartList">
-            <CartItemTest class="Xbox" v-for="item in XboxList" :key="item.id" :item="item"/>
+    <div class="xbox">
+        <CateTitle class="xbox__title" :title="gameCategory" :to="categoryLink" :showLink="true"/>
+        <div class="xbox__cart-list-item">
+            <div class="xbox__cart-list">
+            <CartItemTest class="xbox__item" v-for="item in XboxList" :key="item.id" :item="item"/>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
     </template>
     
     <script>
@@ -34,30 +34,56 @@
     }
     </script>
     
-    <style>
-    #XboxTitle {
+    <style scoped>
+    .xbox.main__xbox {
+        margin-top: 66px;
+    }
+    .xbox__title {
         position: relative;
-        left: 219px;
-        top: 9px;
-        margin-top: -54px;
+        height: 33px;
+        left: 327px;
+        top: -132px;
+        margin-bottom: -27px;
     }
     
-    .CartListItem .CartList {
+    .xbox__cart-list-item .xbox__cart-list {
         display: flex;
         flex-wrap: wrap;
         position: relative;
         line-height: 1;
         left: 130px;
-        bottom: 65px;
+        bottom: 85px;
+    }
+    
+    .xbox__item >>> .cart-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 167px;
+        margin-left: 17px;
+        height: 350px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: rgb(162, 157, 157) solid 1px;
+        position: relative;
+        left: 184px;
+        top: 48px;
     }
 
-    .cartBtns {
-        display: flex;
-        margin: auto;
-        gap: 9px;
+    .xbox__item >>> .cart-item__count{
         position: relative;
-        bottom: 30px;
-        left: 46px;
-    }    
-  
+        top: 3px;
+        font-size: 20px;
+    }
+
+    .xbox__item >>> .cart-item__button-container {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    margin-top: 10px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
     </style>

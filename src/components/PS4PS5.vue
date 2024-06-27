@@ -35,11 +35,14 @@
   </script>
   
   <style scoped>
+  .ps4ps5.main__ps4ps5 {
+    margin-top: 38px;
+  }
   .ps4ps5__title {
     position: relative;
     height: 33px;
     left: 327px;
-    top: -132px;
+    top: -114px;
     margin-bottom: -27px;
   }
 

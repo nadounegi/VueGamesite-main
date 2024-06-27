@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <CateTitle id="PCTitle" :title="gameCategory" :to="categoryLink" :showLink="true"/>
-        <div class="CartListItem">
-            <div class="CartList">
-            <CartItemTest class="PC" v-for="item in PCList" :key="item.id" :item="item"/>
+    <div class="pc">
+        <CateTitle class="pc__title" :title="gameCategory" :to="categoryLink" :showLink="true"/>
+        <div class="pc__cart-list-item">
+            <div class="pc__cart-list">
+            <CartItemTest class="pc__item" v-for="item in PCList" :key="item.id" :item="item"/>
         </div>
         </div>
         </div>
@@ -34,20 +34,54 @@
     }
     </script>
     
-    <style>
-    #PCTitle {
-        position: relative;
-        left: 218px;
-        top: 9px;
-        margin-top: -54px;
+    <style scoped>
+    .pc.main__pc{
+        margin-top: 66px;
     }
-    
-    .CartListItem .CartList {
+    .pc__title {
+        position: relative;
+        left: 326px;
+        top: -121px;
+    }
+
+    .pc__cart-list-item .pc__cart-list {
         display: flex;
         flex-wrap: wrap;
         position: relative;
         line-height: 1;
         left: 130px;
-        bottom: 65px;
+        bottom: 185px;
+    }
+
+    .pc__item >>> .cart-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 167px;
+        margin-left: 17px;
+        height: 350px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: rgb(162, 157, 157) solid 1px;
+        position: relative;
+        left: 184px;
+        top: 48px;
+    }
+
+    .pc__item >>> .cart-item__count{
+        position: relative;
+        top: 0px;
+        font-size: 20px;
+    }
+
+    .pc__item >>> .cart-item__button-container {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin-top: 10px;
+        position: relative;
+        top: 10px;
+        left: 10px;
     }
     </style>

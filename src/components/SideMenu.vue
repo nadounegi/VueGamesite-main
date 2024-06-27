@@ -56,7 +56,7 @@ html, body {
     position: fixed;
     top: 181px;
     left: 0;
-    width: 250px;
+    width: 200px;
     height: 70%;
     background-color: #f1f1f1;
     border-right: solid 1px #8080804d;

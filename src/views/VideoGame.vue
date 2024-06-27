@@ -55,7 +55,7 @@ html, body {
 .main-component__container {
   flex-grow: 1;
   margin-left: 8px;
-  margin-top: 200px;
+  margin-top: 145px;
   padding-top: 51px;
   position: relative;
 }
@@ -69,28 +69,29 @@ html, body {
 }
 
 .main-component__cate-title {
-  margin-left: 275px;
-  bottom: 0px;
-  position: absolute;
+  top: 10px;
+  left: 200px;
+  height: 50px;
   margin-bottom: 0px;
+  position: absolute;
   width: 206px;
 }
 
 .main-component__cate-title >>> h2 {
   position: relative;
-  bottom: 48px;
+  left: -1px;
+  top: 0px;
 }
 
 .main-component__cart-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  height: calc(87vh - 160px);
-  overflow-x: hidden;
-  margin-left: 20px;
+  height: calc(87vh - 112px);
+  margin-left: 45px;
   position: relative;
   left: 21px;
-    /* bottom: 106px; */
+  bottom: 11px;
 }
 
 .main-component__cart-item {
@@ -98,14 +99,15 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 271px;
-  height: 381px;
-  margin-left: -42px;
+  width: 245px;
+  height: 364px;
+  margin-bottom: -21px;
+  margin-left: -58px;
   padding-right: 32px;
   box-sizing: border-box;
   position: relative;
-  right: -4px;
-  bottom: 48px;
+  right: -18px;
+  bottom: 28px;
 }
 
 .main-component__cart-item >>> .cart-item {
@@ -113,9 +115,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 197px;
+  width: 175px;
   height: 350px;
-  margin-left: 419px;
+  margin-left: 269px;
   padding: 10px;
   box-sizing: border-box;
   border: rgb(162, 157, 157) solid 1px;
@@ -131,13 +133,13 @@ html, body {
 .main-component__cart-item >>> .cart-item__info .cart-item__name{
   position: relative;
   bottom: 8px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .main-component__cart-item >>> .cart-item__info .cart-item__category{
   position: relative;
   bottom: 8px;
-  font-size: 14px;
+  font-size: 12px;
     
 }
 

@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <CateTitle id="ns__title" :title="gameCategory" :to="categoryLink" :showLink="true"/>
-        <div class="ns__cart-list-item">
-            <div class="ns__cart-list">
+    <div class="ns">
+        <CateTitle class="ns__title" :title="gameCategory" :to="categoryLink" :showLink="true"/>
+            <div class="ns__cart-list-item">
+                <div class="ns__cart-list">
             <CartItemTest class="ns__item" v-for="item in NSList" :key="item.id" :item="item"/>
-        </div>
-        </div>
+                </div>
+            </div>
         </div>
     </template>
     
@@ -36,11 +36,15 @@
     </script>
     
     <style scoped>
+    .ns.main__ns {
+        margin-top: 66px;
+    }
     .ns__title {
         position: relative;
-        left: 215px;
-        top: 9px;
-        margin-top: -54px;
+        height: 33px;
+        left: 327px;
+        top: -132px;
+        margin-bottom: -27px;
     }
     
     .ns__cart-list-item .ns__cart-list {
@@ -49,7 +53,7 @@
         position: relative;
         line-height: 1;
         left: 130px;
-        bottom: 65px;
+        bottom: 85px;
     }
     .ns__item >>> .cart-item {
         display: flex;
@@ -65,5 +69,21 @@
         position: relative;
         left: 184px;
         top: 48px;
+    }
+
+    .ns__item >>> .cart-item__count{
+        position: relative;
+        top: 0px;
+        font-size: 20px;
+    }
+
+    .ns__item >>> .cart-item__button-container {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin-top: 10px;
+        position: relative;
+        top: 10px;
+        left: 10px;
     }
     </style>

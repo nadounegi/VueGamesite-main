@@ -1,8 +1,8 @@
 <template>
   <div>
-    <CartNav/>
+    <CartNav class="cart-nav"/>
     <div class="main">
-      <SideMenu />
+      <SideMenu class="side-menu"/>
       <div class="content">
         <router-view />
       </div>
@@ -27,11 +27,11 @@ methods: {
   };
 </script>
 
-<style >
+<style>
 html,body{
   height: 100%;
-  /* margin: 0; */
-  overflow: hidden;
+  margin: 0;
+  /* overflow: hidden; */
 }
 
 .main{
@@ -45,8 +45,8 @@ html,body{
   left: 198px;
   margin-top: 110px;
   margin-left: -19px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
   width: 1530px;
 }
 
@@ -56,7 +56,7 @@ html,body{
 }
 
 /* Fixed CartNav */
-.CartNav{
+.cart-nav{
   position: fixed;
   top: 0;
   width: 100%;
