@@ -60,16 +60,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 167px;
-        margin-left: 17px;
+        width: 192px;
+        margin-left: 12px;
         height: 350px;
         padding: 10px;
         box-sizing: border-box;
         border: rgb(162, 157, 157) solid 1px;
         position: relative;
-        left: 184px;
+        left: 164px;
         top: 48px;
     }
+
+    .ns__item >>> .cart-item__name {
+    font-size: 13px;
+    font-weight: bold;
+  }
 
     .ns__item >>> .cart-item__count{
         position: relative;

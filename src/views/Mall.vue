@@ -31,6 +31,8 @@ methods: {
 html,body{
   height: 100%;
   margin: 0;
+  max-width: 2048px;
+
   /* overflow: hidden; */
 }
 

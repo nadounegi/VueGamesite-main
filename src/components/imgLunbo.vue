@@ -50,16 +50,19 @@
       padding: 20px;
       box-sizing: border-box;
   }
+
   .images {
-      width: 72%;
+      width: 36%;
       height: 500px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      right: 139px;
+      bottom: 45px;
       overflow: hidden;
-      margin-bottom: 20px;
   }
+
   .img {
       width: 100%;
       height: 100%;
@@ -76,16 +79,16 @@
     object-fit: contain;
   }
   .lunboBtns {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-      margin-right: 27px;
-      position: relative;
-      left: 389px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 135px;
+    bottom: -11px;
   }
+
   .lunboBtn {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       position: relative;
       border: 4px solid transparent;
       box-sizing: border-box;
@@ -101,7 +104,7 @@
   .lunboBtn img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       transition: transform 0.2s ease-out;
   }
   .lunboBtn:hover {

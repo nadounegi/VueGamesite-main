@@ -15,7 +15,7 @@
       </div>
       <div class="cart-item__info">
         <p class="cart-item__name">ゲーム名:{{ item.name }}</p>
-        <h3 class="cart-item__category">カテゴリー:{{ item.category }}</h3>
+        <p class="cart-item__category">カテゴリー:{{ item.category }}</p>
         <p class="cart-item__price">価格:{{formattedPrice(item.price) }}</p>
         <p class="cart-item__stock">在庫:残り{{ item.stock }}個</p>
         <!-- 按钮部分 -->
@@ -94,6 +94,7 @@ export default {
 html, body {
   height: 100%;
   /* overflow: hidden; */
+  max-width: 2048px;
   margin: 0;
   padding: 0;
 }

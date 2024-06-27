@@ -1,6 +1,5 @@
 <template>
   <div class="cartDetail">
-    <BreadCrumb/>
     <div class="gameDetail">
       <div class="gameCard">
         <imgLunbo :images="game.images"/>
@@ -83,13 +82,6 @@ export default {
   position: relative;
   bottom: 12px;
 }
-.breadcrumb{
-  margin-left: 120px;
-  font-size: 14px;
-  top: 191px;
-  left: 268px;
-  position: fixed;
-}
 
 .gameDetail{
   display: flex;
@@ -102,9 +94,9 @@ export default {
 
 #hr1{
   position: relative;
-  top: 9px;
-  left: 17px;
-  width: 376px;
+  top: -54px;
+  right: 51px;
+  width: 331px;
   border-color: #c5d9dae3;
 }
 
@@ -119,12 +111,65 @@ export default {
 .gameCard{
   display: flex;
   position: relative;
-  left: 76px;
+  left: 165px;
   border-radius: 20px;
-  width: 873px;
-  height: 556px;
+  width: 557px;
+  height: 410px;
   background-color: #e0e0e081;
 }
+
+.gameInfo{
+  display: flex;
+  position: relative;
+  bottom: 36px;
+  left: -273px;
+  margin-top: 30px;
+  flex-direction: column;
+  right: 76px;
+}
+
+.gameInfo h1{
+  position: relative;
+  left: 3px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.gameInfo p:nth-child(2){
+  position: relative;
+  font-size: 17px;
+  top: -32px;
+}
+
+.gameInfo p:nth-child(3){
+  margin-left: 19px;
+  width: 428px;
+  position: relative;
+  top: -46px;
+  right: 13px;
+}
+.syokai{
+  position: relative;
+  bottom: 71px;
+  width: 358px;
+  font-size: 12px;
+}
+.tax-included{
+  font-size: 12px;
+  color: #555;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.tax-included2{
+  font-size: 12px;
+  margin-left: 8px;
+  color: #555;
+  position: relative;
+  top: 25px;
+}
+
 .gameImg{
   display: flex;
   margin-top: 53px;
@@ -137,11 +182,12 @@ export default {
   display: flex;
   border-radius: 20px;
   flex-direction: column;
-  margin-left: 71px;
+  margin-left: 183px;
   background-color: #e0e0e081;
   width: 200px;
-  height: 278px;
+  height: 320px;
 }
+
 .cartItem span:nth-child(1){
   font-size: 35px;
   position: relative;
@@ -163,13 +209,14 @@ export default {
   margin: auto;
   gap: 9px;
   position: relative;
-  left: 8px;
-  bottom: 56px;
+  left: 6px;
+  bottom: 19px;
 }
 
 .cartBtn{
-  width: 30px;
-  height: 30px;
+  width: 46px;
+  height: 46px;
+  font-size: 32px;
   border: none;
   background-color: #e0e0e0;
   border-radius: 29%;
@@ -182,18 +229,19 @@ export default {
   justify-content: center;
   color: white;
   font-weight: bold;
-  margin-left: 13px;
+  margin-left: 45px;
   height: 41px;
   width: 115px;
   border-radius: 20px;
   border: none;
-  background-image: linear-gradient(to left ,rgb(130, 130, 255),rgb(237, 46, 237));
+  background-image: linear-gradient(to left, rgb(130, 130, 255), rgb(237, 46, 237));
   cursor: pointer;
   transition: background-image 0.5s ease;
   position: absolute;
-  bottom: 10px;
+  bottom: 103px;
   text-decoration: none;
 }
+
 .btn-primary:hover{
   animation:gradient-animation 3s infinite alternate;
 }
@@ -206,58 +254,14 @@ export default {
   }
 }
 
-span{
+span:nth-child(2){
   position: relative;
-  top: 22px;
+  font-size: 18px;
+  top: 11px;
 }
 
-.gameInfo{
-  display: flex;
+span:nth-child(3){
   position: relative;
-  margin-top: 30px;
-  flex-direction: column;
-  right: 76px;
-}
-.gameInfo h1{
-  position: relative;
-  left: 2px;
-  font-weight: bold;
-  font-size: 22px;
-}
-/* .gameInfo p{
-  position: relative;
-  top: 8px;
-  width: 384px;
-  margin-top: 11px;
-  margin-left: 18px;
-} */
-
-.gameInfo p:nth-child(2){
-  position: relative;
-  font-size: 25px;
-  top: -11px;
-}
-
-.gameInfo p:nth-child(3){
-  margin-left: 19px;
-  width: 428px;
-}
-.syokai{
-  width: 428px;
-}
-.tax-included{
-  font-size: 12px;
-  color: #555;
-  margin-left: 5px;
-  position: relative;
-  top: 2px;
-}
-
-.tax-included2{
-  font-size: 12px;
-  margin-left: 8px;
-  color: #555;
-  position: relative;
-  top: 25px;
+  top: 4px;
 }
 </style>

@@ -60,15 +60,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 167px;
-        margin-left: 17px;
+        width: 192px;
+        margin-left: 12px;
         height: 350px;
         padding: 10px;
         box-sizing: border-box;
         border: rgb(162, 157, 157) solid 1px;
         position: relative;
-        left: 184px;
+        left: 164px;
         top: 48px;
+    }
+
+    .xbox__item >>> .cart-item__name {
+        width: 15vw;
+        font-size: 13px;
+        font-weight: bold;
     }
 
     .xbox__item >>> .cart-item__count{
@@ -78,12 +84,32 @@
     }
 
     .xbox__item >>> .cart-item__button-container {
-    display: flex;
-    justify-content: center;
-    width: 85%;
-    margin-top: 10px;
-    position: relative;
-    top: 10px;
-    left: 10px;
-  }
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin-top: 10px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+
+    .xbox__item:first-child >>> .cart-item__button-container {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin-top: 10px;
+        position: relative;
+        top: 22px;
+        left: 10px;
+    }
+
+    .xbox__item:nth-child(4) >>> .cart-item__button-container {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin-top: 10px;
+        position: relative;
+        top: 22px;
+        left: 10px;
+    }
     </style>
