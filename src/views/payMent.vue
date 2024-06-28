@@ -1,9 +1,9 @@
 <template>
-    <div>
-      <BreadCrumb/>
+    <div class="order-history">
       <h1 class="title">注文履歴</h1>
+      <div class="table-container">
       <table>
-        <thead>
+        <thead class="thead">
           <tr>
             <th class="col-id">注文番号</th>
             <th class="col-date">注文日時</th>
@@ -30,6 +30,7 @@
         </tbody>
       </table>
     </div>
+    </div>
   </template>
   
 
@@ -43,27 +44,39 @@ export default {
 }
 </script>
 
-<style>
-h1 {
-  text-align: left;
-  left: 136px;
+<style scoped>
+.order-history{
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(94% - -3px);
 }
 
+.title {
+  width: 171px;
+  text-align: left;
+  margin-left: 254px;
+}
 
-table {
-  width: 80%;
+.table-container {
+  width: 63%;
   margin: auto;
   border-collapse: collapse;
   margin-top: 20px;
+  
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 .thead th {
+  position: sticky;
+  top: 0;
   padding: 10px;
   background-color: #f2f2f2;
   text-align: center;
-}
-
-.thead {
-  background-color: #f2f2f2;
+  z-index: 1;
 }
 
 </style>

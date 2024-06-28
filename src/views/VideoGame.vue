@@ -80,7 +80,7 @@ html, body {
 .main-component__cate-title >>> h2 {
   position: relative;
   left: -1px;
-  top: 0px;
+  top: -25px;
 }
 
 .main-component__cart-list {

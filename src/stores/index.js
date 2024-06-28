@@ -33,7 +33,7 @@ const store = new Vuex.Store({
         item.quantity = quantity;
       }
     },
-    SetCartItems(state, cartItems) {
+    setCartItems(state, cartItems) {
       state.cart = cartItems;
     },
     AddOrder(state, order) {

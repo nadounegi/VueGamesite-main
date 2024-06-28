@@ -1,59 +1,81 @@
 <template>
-  <div>
-    <BreadCrumb/>
-    <h1 class="title">ショッピングカート</h1>
+  <div class="cart-page">
+  <h1 class="cart__title">ショッピングカート</h1>
+  <div class="cart">
     <!-- 购物车内有商品时 -->
-    <div v-if="cartItems.length > 0">  
-      <table>
-        <thead>
-          <tr class="thead">
-            <th>
-              <div class="selected">
-                <input type="checkbox" v-model="isAll">
-                <h3>全選</h3>
+    <div class="cart__container" v-if="cartItems.length > 0">  
+      <table class="cart__table">
+        <thead class="cart__thead">
+          <tr class="cart__tr">
+            <th class="cart__th">
+              <div class="cart__selected">
+                <input type="checkbox" class="cart__checkbox" v-model="isAll">
+                <h3 class="cart__checkbox-label">全選</h3>
               </div>
             </th>
-            <th>写真</th>
-            <th>ゲーム名</th>
-            <th>数量</th>
-            <th>単価</th>
-            <th>合計</th>
-            <th>操作</th>
+            <th class="cart__th">写真</th>
+            <th class="cart__th">ゲーム名</th>
+            <th class="cart__th">数量</th>
+            <th class="cart__th">単価</th>
+            <th class="cart__th">合計</th>
+            <th class="cart__th">操作</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="cart__tbody">
           <!-- <tr class="tr" :class="{active:true}" v-for="item in cartItems" :key="item.id"> -->
-            <tr class="tr" :class="{active:item.isChecked}" v-for="item in cartItems" :key="item.id">
-            <td class="ckb"><input type="checkbox" v-model="item.isChecked"></td>
-            <td><img :src="item.url" :alt="item.name" width="80px" height="100px"></td>
-            <td>{{ item.name }}</td>
-            <td>
-              <div class="my-input-number">
-                <button class="btn" @click="decreaseQuantity(item)">
+            <tr class="cart__tr" 
+            :class="{'cart__tr--active':item.isChecked}" 
+            v-for="item in cartItems" 
+            :key="item.id"
+            >
+            <td class="cart__td">
+              <input type="checkbox" v-model="item.isChecked">
+            </td>
+            <td class="cart__td">
+              <img class="cart__image" :src="item.url" 
+              :alt="item.name" 
+              width="80px" height="100px"
+              >
+            </td>
+            <td class="cart__td">{{ item.name }}</td>
+            <td class="cart__td">
+              <div class="cart__quantity-control">
+                <button class="cart__quantity-btn" 
+                @click="decreaseQuantity(item)">
                    - 
-                  </button>
-                <span class="my-input__inner">{{ item.quantity }}</span>
-                <button class="btn" @click="increaseQuantity(item)">
+                </button>
+                <span class="cart__quantity">
+                  {{ item.quantity }}
+                </span>
+                <button class="cart__quantity-btn" @click="increaseQuantity(item)">
                    +
                    </button>
               </div>
             </td>
-            <td>￥{{ item.price }}</td>
-            <td>￥{{ item.price * item.quantity }}</td>
-            <td>
-              <button @click="removeFromCart(item.id)" class="delbtn">削除</button>
+            <td class="cart__td">
+              ￥{{ item.price }}
+            </td>
+            <td class="cart__td">
+              ￥{{ item.price * item.quantity }}
+            </td>
+            <td class="cart__td">
+              <button class="cart__button--del" @click="removeFromCart(item.id)">削除</button>
             </td>
           </tr>
         </tbody>
       </table>
-      <div class="bottom">
-        <span class="totalAmount">合計&nbsp;&nbsp;:&nbsp;&nbsp;¥{{ cartTotal }}</span>
-        <button class="pay" @click="pay">決済({{ cartQuantity }})</button>
+    <!-- 底部 -->
+      <div class="cart__bottom">
+        <span class="cart__total">
+          合計&nbsp;&nbsp;:&nbsp;&nbsp;¥{{ cartTotal }}
+        </span>
+        <button class="cart__button--pay" @click="pay">決済({{ cartQuantity }})</button>
       </div>
     </div>
     <!-- 购物车内无商品时 -->
-    <div v-else class="empty">🛒カートに商品はありません</div> 
+    <div v-else class="cart__empty">🛒カートに商品はありません</div> 
   </div>
+</div>
 </template>
 
 <script>
@@ -117,51 +139,67 @@ export default {
 
 <style scoped>
 /* 现有样式 */
-body {
+html,body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
-.main .content {
-    position: relative;
-    left: 120px;
-    margin-top: 159px;
-    margin-left: -211px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 1339px;
+.cart-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.breadcrumb[data-v-a07f5df1] {
-    position: fixed;
-    top: 176px;
-    left: 208px;
-    z-index: 1001;
-}
-
-h1 {
+.cart__title {
+  margin-bottom: -24px;
+  margin-left: 292px;
+  width: 208px;
+  color: rgb(94, 92, 92);
+  z-index: 100;
   text-align: left;
-  left: 136px;
+  font-size: 20px;
 }
 
+.cart{
+  flex: 1;
+  overflow-y: scroll;
+  padding: 20px;
+  width: 1048px;
+}
 
-table {
-  width: 80%;
-  margin: auto;
+.cart__container {
+  width: 119%;
+  margin: 0 auto;
+  position: relative;
+  left: 133px;
+}
+
+.cart__table {
+  width: 65%;
   border-collapse: collapse;
   margin-top: 20px;
+  position: relative;
+  left: 115px;
 }
 
-.thead th {
-  padding: 10px;
+.cart__thead {
+  top: 50px;
+  z-index: 100;
+}
+
+.cart__thead .cart__tr{
+  line-height: 1;
+}
+
+.cart__thead .cart__th {
+  padding-left: 10px;
   background-color: #f2f2f2;
   text-align: center;
 }
 
-.thead {
-  background-color: #f2f2f2;
-}
-
-.selected {
+.cart__selected {
   display: flex;
   position: relative;
   left: 20px;
@@ -170,55 +208,51 @@ table {
   justify-content: center;
 }
 
-.selected h3 {
-  margin-top: 8px;
-  font-size: 15px;
+.cart__checkbox-label {
+  margin-top: 15px;
+  font-size: 16px;
   font-weight: bold;
 }
 
-.selected input {
-  width: 20px;
-  height: 20px;
+.cart__checkbox {
+  width: 13px;
+  height: 13px;
   margin-top: 1px;
 }
 
-tbody tr {
-  line-height: 7;
+.cart__tbody .cart__tr {
+  line-height: 1;
 }
 
-tbody tr td {
+.cart__tbody .cart__tr .cart__td {
   text-align: center;
+  border: 1px solid #ddd;
+
 }
 
-.tr td {
+.cart__tr .cart__td {
   border: 1px solid #ddd;
 }
 
-.tr.active td {
+.cart__tr--active .cart__td {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
 }
 
-.ckb {
+.cart__td {
   text-align: center;
   width: 99px;
 }
 
-.ckb input {
-  width: 20px;
-  height: 20px;
-  margin-top: 7px;
-}
-
-td img {
+.cart__td .cart__image {
   display: block;
   margin: auto;
 }
 
-.delbtn {
+.cart__button--del {
   position: relative;
-  left: 43px;
-  bottom: 6px;
+  left: 21px;
+  bottom: -4px;
   width: 69px;
   height: 44px;
   display: flex;
@@ -227,120 +261,79 @@ td img {
   background-color: #ff4d4d;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 
-/* .btn {
-  width: 30px;
-  height: 30px;
-  border: none;
-  background-color: #e0e0e0;
-  border-radius: 29%;
-  cursor: pointer;
-} */
-
-td button:hover {
+.cart__button--del:hover {
   background-color: #ff1a1a;
 }
 
-.my-input-number {
+.cart__quantity-control {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.my-input-number button {
+.cart__quantity-btn {
+  font-size: 26px;
+  color: #535151;
   width: 30px;
   height: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   background-color: #e0e0e0;
   padding-bottom: 2px;
+  border: none;
+  cursor: pointer;
 }
 
-.my-input__inner {
-  margin-top: 15px;
+.cart__quantity {
+  font-size: 23px;
+  margin-top: 5px;
+  color: #6e6b6b;
 }
 
 /* 底部 */
-.bottom {
+.cart__bottom {
   display: flex;
+  width: 296px;
   justify-content: flex-end;
-  margin-right: 167px;
+  margin-left: 79px;
 }
 
-.bottom span {
+.cart__total {
   margin-top: 20px;
   margin-right: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.bottom button {
+.cart__button--pay {
   font-size: 16px;
   padding-left: 6px;
   font-weight: bold;
   width: 87px;
   height: 32px;
   color: white;
+  position: relative;
+  top: 15px;
   background-color: #ff4d4d;
+  border: none;
+  cursor: pointer;
 }
 
-.empty {
-  padding: 75px;
+.cart__button--pay:hover {
+  background-color: #ff1a1a;
+}  
+
+.cart__empty {
+  width: 410px;
+  position: relative;
+  left: 718px;
   text-align: center;
   font-size: 30px;
   color: #909399;
-}
-
-/* 使面包屑导航固定 */
-.breadcrumb {
-  position: fixed;
-  top: 10px; /* 具体高度可以根据需要调整 */
-  left: 20px; /* 具体位置可以根据需要调整 */
-  z-index: 1001; /* 确保在其他内容之上显示 */
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .thead, .tr {
-    display: block;
-  }
-
-  .thead th, .tr td {
-    display: block;
-    text-align: right;
-    padding: 10px;
-  }
-
-  .thead th {
-    text-align: left;
-  }
-
-  .tr td {
-    text-align: left;
-    position: relative;
-    padding-left: 50%;
-  }
-
-  .tr td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 10px;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .bottom span, .bottom button {
-    margin: 10px 0;
-  }
 }
 
 </style>

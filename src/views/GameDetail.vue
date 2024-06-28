@@ -196,7 +196,9 @@ export default {
 
 #stockAmount{
   color: #9f0707;
+  font-size: 14px;
   margin-top: 2px;
+  margin-left: 16px;
 }
 
 #stock{
