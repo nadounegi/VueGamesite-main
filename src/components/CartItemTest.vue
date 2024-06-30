@@ -68,7 +68,8 @@ export default {
         name: this.item.name,
         price: this.item.price,
         quantity: this.count
-      });   
+      }); 
+      console.log('Adding to cart:', this.item);  
     },
     formattedPrice(price) {
       return price.toLocaleString('ja-JP', {

@@ -11,36 +11,41 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    cart: [],
+    cart: JSON.parse(localStorage.getItem('cartItems')) || [],
     orderHistory: []
   },
   mutations: {
-    AddToCart(state, cartLoad) {
+    AddToCart(state, cartLoad) {// 添加商品到购物车
       const existItem = state.cart.find(item => item.id === cartLoad.id);
-      if (existItem) {
+      if (existItem) {// 如果购物车中已经有该商品，则只增加数量
         existItem.quantity += cartLoad.quantity;
-      } else {
+      } else {// 如果购物车中没有该商品，则添加到购物车
         cartLoad.isChecked = false;
         state.cart.push(cartLoad);
       }
+      localStorage.setItem('cartItems', JSON.stringify(state.cart));// 将购物车数据保存到本地存储
     },
-    RemoveFromCart(state, itemId) {
-      state.cart = state.cart.filter(item => item.id !== itemId);
+    RemoveFromCart(state, itemId) {// 从购物车中删除商品
+      state.cart = state.cart.filter(item => item.id !== itemId);// 过滤掉要删除的商品
+      localStorage.setItem('cartItems', JSON.stringify(state.cart));// 将购物车数据保存到本地存储
     },
-    UpdateCart(state, { itemId, quantity }) {
+    UpdateCart(state, { itemId, quantity }) {// 更新购物车中商品的数量
       const item = state.cart.find(item => item.id === itemId);
-      if (item) {
+      if (item) {// 如果购物车中有该商品，则更新数量
         item.quantity = quantity;
       }
+      localStorage.setItem('cartItems', JSON.stringify(state.cart));// 将购物车数据保存到本地存储
     },
     setCartItems(state, cartItems) {
       state.cart = cartItems;
+      localStorage.setItem('cartItems', JSON.stringify(state.cart));
     },
     AddOrder(state, order) {
       state.orderHistory.push(order);
     },
     ClearCart(state) {
       state.cart = [];
+      localStorage.setItem('cartItems', JSON.stringify(state.cart));
     }
   },
   actions: {

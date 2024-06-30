@@ -21,19 +21,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.hd {
-    width: 100vw;
-    position: relative;
-    top: 69px;
-    background-color: white;
-    z-index: 1000;
-}
+<style>
 
-.bottom_header img{
-    position: relative;
-    width: 97px;
-    height: 129px;
-    bottom: -1px;
-}
 </style>

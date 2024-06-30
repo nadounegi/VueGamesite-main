@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="cartDetail">
     <div class="gameDetail">
       <div class="gameCard">
@@ -75,8 +75,90 @@ export default {
     }
   }
 };
-</script>
+</script> -->
+<template>
+  <div class="cartDetail">
+    <div class="gameDetail">
+      <div class="gameCard">
+        <imgLunbo :images="game.images"/>
+        <div class="detailItem">
+          <div class="gameInfo">
+            <h1>{{ game.name }}</h1>
+            <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included2">税込</span></p>
+            <p>カテゴリ:{{ game.category }}</p>
+            <hr id="hr1">
+            <p class="syokai">紹介:{{ game.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="cartItem">
+        <p><span v-html="formattedPrice(game.price)"></span><span class="tax-included">税込</span></p>
+        <p id="stockAmount">残り{{game.stock}}個<span id="stock">ご注文は早めに</span></p>
+        <hr id="hr2">
+        <div class="cartBtns">
+          <button @click="decreaseCount" :disabled="count <= 0" class="cartBtn">-</button>
+          <span>{{ count }}</span>
+          <button @click="increaseCount" :disabled="count >= game.stock" class="cartBtn">+</button>
+        </div>
+        <button class="btn-primary" @click="addToCart">カートに追加</button>
+      </div>
+    </div>
+  </div>
+</template>
 
+<script>
+export default {
+  data() {
+    return {
+      count: 0,
+      game: {}
+    };
+  },
+  created() {
+    const gameId = this.$route.params.id;
+    if (this.$store.getters['allGames/allGames'].length === 0) {
+      console.log();
+      this.$store.dispatch('allGames/getallGames').then(() => {
+        this.fetchGameDetail(gameId);
+      });
+    } else {
+      this.fetchGameDetail(gameId);
+    }
+  },
+  methods: {
+    addToCart() {
+      if (this.count > 0) {
+        const product = {
+          id: this.game.id,
+          url: this.game.url,
+          name: this.game.name,
+          price: this.game.price,
+          quantity: this.count
+        };
+        console.log('Adding to cart:', product);
+        this.$store.dispatch('addToCart', product);
+      }
+    },
+    increaseCount() {
+      if (this.count < this.game.stock) {
+        this.count++;
+      }
+    },
+    decreaseCount() {
+      if (this.count > 0) {
+        this.count--;
+      }
+    },
+    fetchGameDetail(id) {
+      const allGames = this.$store.getters['allGames/allGames'];
+      this.game = allGames.find(game => game.id == id);
+    },
+    formattedPrice(price) {
+      return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(price);
+    }
+  }
+};
+</script>
 <style scoped>
 .cartDetail{
   position: relative;

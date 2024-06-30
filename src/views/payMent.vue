@@ -45,24 +45,30 @@ export default {
 </script>
 
 <style scoped>
-.order-history{
+
+.order-history {
   padding: 20px;
-  overflow-y: auto;
-  height: calc(94% - -3px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.title {
-  width: 171px;
-  text-align: left;
-  margin-left: 254px;
+.title{
+  font-size: 29px;
+  color: rgb(81, 81, 80);
+  width: 100%;
+  text-align: center;;
+  margin-bottom: 20px;
 }
 
 .table-container {
-  width: 63%;
+  width: 50%;
   margin: auto;
-  border-collapse: collapse;
   margin-top: 20px;
-  
+  height: calc(56% - 50px);
+  overflow-y: scroll;
+  position: relative;
+  right: 51px;
 }
 
 table {
